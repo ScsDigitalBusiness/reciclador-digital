@@ -8,7 +8,7 @@ DEVELOPER  : THIAGO
   justify-content: start;
   flex-direction: column;
   padding: 1vh;
-  background-color: #011105;
+  background-image: linear-gradient(to right, #010f04, #0b1e0f, #0d2c15, #0f3b19, #114b1d);
   padding-bottom: 15vh;
   border-bottom: 1px solid #00421f;
 }

@@ -9,7 +9,7 @@ ELEMENTO e AREA : CARROUSEL DE PROJETOS
     justify-content:start;
      flex-direction: row;    
      flex-wrap:wrap; 
-     background-color: #010F04;
+     background-image: linear-gradient(to right top, #010f04, #071a0c, #0b2411, #0c2e14, #0d3916);
     gap: 2vh; 
      grid-area: clientes; 
     padding: 2vh; 
