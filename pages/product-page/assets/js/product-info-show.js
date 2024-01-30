@@ -1,21 +1,38 @@
-fetch("../../data/products.JSON").then((response) => { 
-   response.json().then((dados) => {
+const CreateCardElement = (el, areaId) => {
+  document.getElementById(areaId).innerHTML += `<div class="projetct-card-body">
+  <div class="info-project-name">
+    <div class="img-project">
+    <img src="${el.img}" alt="" />
+     
+    </div>
+    <h2>${el.nome}</h2>
+  </div>
+  <div class="description">
+    ${el.description}
+  </div>
+  <button class="project-card-button" type="button">
+    Saiba Mais
+  </button>
+</div>`;
+};
+
+const GetAndShowMaterialData = (url, callback, id) => {
+  fetch(url).then((response) => {
+    response.json().then((dados) => {
+      try {
+        //Vai tentar resolver
         dados.cards.map((elemento) => {
-            document.getElementById("cards-area-projects").innerHTML += `<div class="projetct-card-body">
-           <div class="info-project-name">
-             <div class="img-project">
-             <img src="${elemento.img}" alt="" />
-              
-             </div>
-             <h2>${elemento.nome}</h2>
-           </div>
-           <div class="description">
-             ${elemento.description}
-           </div>
-           <button class="project-card-button" type="button">
-             Saiba Mais
-           </button>
-         </div>`;
-       }) 
-    });  
-})
+          callback(elemento, id); //função de callback executada.
+        });
+      } catch (e) {
+        //caso dê um erro ele executa.
+        alert("Erro encontrado !");
+      }
+    });
+  });
+};
+GetAndShowMaterialData(
+  "../../data/products.JSON",
+  CreateCardElement,
+  "cards-area-projects"
+);

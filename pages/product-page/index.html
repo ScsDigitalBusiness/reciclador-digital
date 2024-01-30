@@ -3,23 +3,54 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- css principal  -->
     <link rel="stylesheet" href="assets/css/main.css" />
+   <!-- layout -->
     <link rel="stylesheet" href="assets/css/layout.css" />
+   <!-- SECTION HOME- STYLE  -->
     <link rel="stylesheet" href="assets/css/home.css" />
+   <!-- SECTION -PROJECTS- STYLE -->
     <link rel="stylesheet" href="assets/css/clients.css" />
+   <!-- SECTION VANTAGES- STYLE  -->
     <link rel="stylesheet" href="assets/css/vantage.css" />
+   <!-- SECTION PRODUCTS- STYLE -->
     <link rel="stylesheet" href="assets/css/projects.css" /> 
+   <!-- SECTION MORE- STYLE -->
     <link rel="stylesheet" href="assets/css/more.css"> 
+   <!-- SECTION FOOTER- STYLE -->
     <link rel="stylesheet" href="assets/css/footer.css"> 
+   <!-- MEDIA QUERIES(TABLET VERSION) -->
     <link rel="stylesheet" href="assets/css/mediaQueries/tablet.css"> 
+   <!-- MEDIA QUERIES (DESKTOP VERSION) -->
     <link rel="stylesheet" href="assets/css/mediaQueries/desktop.css">
+    <!-- META TAGS --> 
+    <meta name = "author" content="Thiago Duarte e André Lyra"> 
+    
+    <meta name="description" content=""> 
+    
+    <meta name="keywords" content=""> 
+
+    <!-- TITLE --> 
+
     <title>Reciclador Digital</title>
   </head>
   <body>  
     
-    <!-- CONTEUDO PRINCIPAL -->
-    <main class="content"> 
+    <!-- CONTEUDO PRINCIPAL --> 
+    <!-- Nesse container temos 5 sections que formam 
+    a estrutura do site, no começo de cada section, temos uma breve descrição --> 
+
+    <main class="content">  
+      
+      <!-- SECTION - HOME 
+      Essa seção possui  2 divisões: 
+      HEADER e  a section "Principal-content", 
+      Aqui é a primeira section do site, onde informações 
+      como CTA e botões de navegação vão ficar
+      -->
+      
       <section class="home" id="home">
+        
         <header class="cabecalho">
           <!--header structure  -->
           <div class="logo">
@@ -38,7 +69,12 @@
             </ul>
           </nav>
         </header>
-        <!-- principal content -->
+    
+        <!-- principal content --> 
+        <!-- Essa section é a primeira section do site, 
+          temos uma CTA (chamada para ação) 
+        e botões para navegação entre essas páginas -->
+    
         <section id="principal-content" class="principal-content">
           <div class="img-content">
             <img src="../../assets/utilites/ARTE-01.png" />
@@ -69,8 +105,18 @@
             </div>
           </div>
         </section>
-      </section>
-      <!-- CARROUSEL CLIENTES --> 
+      </section> 
+    
+      <!-- SECTION - PROJETOS 
+       É ima seção curta onde vamos aprensentar as logos 
+       dos projetos da Saulo Reciclcáveis
+       -->
+      <!-- 
+        MODIFICAÇÃO :  Mudar o nome da class utilizada. 
+        Adicionar um nome que tem sentido  com o que está exbido para o user 
+        Nessa section estamos exibindo os projetos, não tem nada haver com clientes
+      --> 
+    
       <section class="carrousel-clients">
         <div class="project">
           <img src="../../assets/utilites/logos/1.png" alt="" />
@@ -88,8 +134,20 @@
           <img src="../../assets/utilites/logo.png" alt="" />
         </div>
       </section>
-     <!-- PRODUCTS-AREA  -->
-      <section class="projects">
+    
+      <!-- PRODUCTS-AREA  --> 
+      <!--
+        Nessa section vamos apresentar os produtos que fazem 
+        união com o reciclador Digital, o objetivo é fazer com que 
+        o usuário navegue para uma página individual de cada produto. 
+      -->
+     <!-- ALTERAR O NOME DA CLASS: 
+      Mudar o nome da section para um nome relacionado aos produtos. 
+      Essa section possui um nome que se refere aos projetos do Reciclador Digital. 
+
+    --> 
+    
+    <section class="projects">
         <div class="projects-title">
           <h2 class="title-projects">Conheça Nossos Produtos </h2>
           <p>
@@ -98,11 +156,19 @@
           </p>
         </div>
         <div id="cards-area-projects" class="cards-area-projects">
-                <!--  -->
+                <!-- ÁREA ONDE OS DADOS DOS PRODUTOS SÃO ADICIONADOS
+                 OS DADOS SÃO PASSADOS COMO TEMPLATE STRINGS 
+                 OBS: VEJA O SCRIPT. 
+                  -->
         </div>
       </section>  
-    <!-- MORE-AREA -->
-      <section class="more-cta">
+    
+      <!-- MORE-AREA --> 
+    <!-- Nessa section temos mais uma CTA para convenser o usuário, 
+        além disso, temos alguns botões de navegação entre as páginas. 
+    -->
+      
+    <section class="more-cta">
         <div class="title-text-more">
           <span class="pre-title" style="color: #0ce93c;">Investir na sustentabilidade!</span>
           <h2 class="title-more">Seja parte da mudança, seja um investidor agora!</h1> <br><br>
@@ -123,7 +189,13 @@
         </div> 
         <div class="image-more"><img src="../../assets/utilites/celular.png" alt=""></div>
       </section>  
-      <!-- footer-area -->
+      
+      <!-- footer-area --> 
+      <!-- 
+        RODAPÉ da página, onde informações básicas são exibidas ao 
+        user, copyright... etc
+      --> 
+
       <footer class="footer">
         <div class="logo-footer">
             <img src="../../assets/utilites/logo.png" alt="">
