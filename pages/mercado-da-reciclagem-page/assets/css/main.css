@@ -58,7 +58,7 @@
 .links li {
   color: #949d96;
 }
-.links #home-link,
+ .links #vantage-link,  #home-link,
 #quem-somos-link,
 #product {
   display: none;
@@ -71,17 +71,25 @@
   border-radius: 1vh;
   position: relative;
   color: #011105;
-  right: 30%;
+  left: 4%;
 }
 .product-image {
   width: 100vw;
   grid-area: product;
-  background-color:#0CE93C;
+  background-image: linear-gradient(to bottom, #051b0a, #06481e, #007a2c, #00b037, #0ce93c);
   height: 100vh;
-} 
+}  
+
 .bg{
     background-color: #011105; 
     height: 50%
+} 
+.product-image img {
+  height:50vh;  
+  position: relative;
+  bottom : 25%; 
+
+
 }
 .product-descriptions {
   grid-area: desc;
@@ -144,4 +152,83 @@
   border: 1px solid black; 
   color: white;
   border: 1px solid white; 
+}
+@media(min-width: 1000px) {
+  .cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: row;
+    width: 95%;
+    
+    padding: 0.5vh;
+    margin-top: 0.7%;
+    border-radius: 2vh;
+    background-color: #08260f70;
+    backdrop-filter: blur(10px);
+    border: 1px solid #00421f67;
+  }
+  .nav-links {
+    padding: 2vh;
+    width: 90%;
+  }
+  .links {
+    align-items: center;
+    justify-content: start;
+  }
+  .links a {
+    text-decoration: none;
+    color: black;
+  }
+  .links #home-link,
+  #quem-somos-link,
+  #product {
+    display: block;
+    color: #a3aba5; 
+    cursor: pointer;
+  }
+
+  #contato-link {
+    background-color: #0ce93c;
+    padding: 1vh;
+    width: 13vw;
+    position: relative;
+    left: 35vw;
+    text-align: center;
+    border-radius: 1vh; 
+    cursor: pointer;
+  } 
+  .content {
+    grid-template-areas:
+    "header header"
+    "product desc "
+     
+  } 
+  .product-image {
+    width: 50vw; 
+    display: flex;
+    align-items: end;
+    flex-direction: row-reverse; 
+    background-image: linear-gradient(to left, #051b0a, #06481e, #007a2c, #00b037, #0ce93c);
+
+  } 
+  .product-image .bg {
+    width: 20vw; 
+    height:100%;
+  } 
+  .product-image img { 
+    height: 60vh; 
+
+    left: 15vw;
+  } 
+  .product-descriptions{
+    
+   width:  75%; 
+
+  }  
+  .product-text {
+    align-items: start;
+    text-align:start;
+  }
+  ;
 }
