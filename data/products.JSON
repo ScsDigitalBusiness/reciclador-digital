@@ -3,7 +3,8 @@
     {
       "nome": "Mercado da Reciclagem",
       "description": "Marketplace voltado para a venda de materiais do nicho da reciclagem.",
-      "img": "../../assets/utilites/logos/4.png"
+      "img": "../../assets/utilites/logos/4.png",  
+       "id": "mercado-reciclagem"
     },
     {
       "nome": "Reciclador Digital",

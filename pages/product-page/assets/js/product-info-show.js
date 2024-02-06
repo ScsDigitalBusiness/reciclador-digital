@@ -12,7 +12,7 @@ const CreateCardElement = (el, areaId) => {
   <div class="description">
     ${el.description}
   </div>
-  <button class="project-card-button" type="button">
+  <button id="${el.id}" class="project-card-button" type="button">
     Saiba Mais
   </button>
 </div>`;
