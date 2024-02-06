@@ -9,27 +9,32 @@
     {
       "nome": "Reciclador Digital",
       "description": "Aplicativo voltado para gerar a conexão de recicladores e empresários.",
-      "img": "../../assets/utilites/logos2/3.png"
+      "img": "../../assets/utilites/logos2/3.png",
+      "id": "reciclador"
     },
     {
       "nome": "Curso a Jornada da Reciclagem",
       "description": "Programa de treinamento intensivo que visa te fazer alcançar novos patamares nos aspectos profissionais e pessoais por meio do autoconhecimento.",
-      "img": "../../assets/utilites/logos2/1.png"
+      "img": "../../assets/utilites/logos2/1.png", 
+      "id": "jornada-curso"
     },
     {
       "nome": "Ativação Brutal Software",
       "description": "Programa de treinamento intensivo que visa te fazer alcançar novos patamares nos aspectos profissionais e pessoais por meio do autoconhecimento.",
-      "img": "../../assets/utilites/logos/2.png"
+      "img": "../../assets/utilites/logos/2.png", 
+      "id": "atb"
     },
     {
       "nome": "Mentoria",
       "description": "Programa de treinamento intensivo que visa te fazer alcançar novos patamares nos aspectos profissionais e pessoais por meio do autoconhecimento.",
-      "img": "../../assets/utilites/logos2/4.png"
+      "img": "../../assets/utilites/logos2/4.png",  
+      "id": "mentoria" 
     },
     {
       "nome": "Palestra",
       "description": "Programa de treinamento intensivo que visa te fazer alcançar novos patamares nos aspectos profissionais e pessoais por meio do autoconhecimento.",
-      "img": "../../assets/utilites/logos2/5.png"
+      "img": "../../assets/utilites/logos2/5.png", 
+      "id": "palestra" 
     }
   ]
 }
