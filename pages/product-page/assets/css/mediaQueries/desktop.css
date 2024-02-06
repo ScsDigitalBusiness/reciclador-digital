@@ -1,15 +1,11 @@
 @media (min-width: 1200px) {
-  .principal-content {
-    flex-direction: row-reverse;
-    overflow: hidden;
-  }
   .cabecalho {
     display: flex;
     align-items: center;
     justify-content: start;
     flex-direction: row;
-    width: 95%;
-    height: 9%;
+    width: 100%;
+    
     padding: 0.5vh;
     margin-top: 0.7%;
     border-radius: 2vh;
@@ -42,74 +38,42 @@
     padding: 1vh;
     width: 13vw;
     position: relative;
-    left: 35vw;
+    left: 55vw;
     text-align: center;
     border-radius: 1vh; 
     cursor: pointer;
-  }
-  .content-text {
-    text-align: start;
+  } 
+  .content {
+    grid-template-areas:
+    "header header"
+    "product desc "
+     
+  } 
+  .product-image {
+    width: 50vw; 
     display: flex;
-    align-items: start;
-    justify-content: start;
-    padding: 7vh;
-  }
-  .buttons {
-    align-items: start;
-    justify-content: start;
-  }
-  .more {
-    padding: 3vh;
-    width: 20%;
-  }
+    align-items: end;
+    flex-direction: row-reverse; 
+    background-image: linear-gradient(to left, #051b0a, #06481e, #007a2c, #00b037, #0ce93c);
 
-  .projects-title {
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
+  } 
+  .product-image .bg {
+    width: 20vw; 
+    height:100%;
+  } 
+  .product-image img { 
+    height: 60vh; 
 
-  .projects-title p {
-    width: 50vw;
-  }
-  .all-products {
-    width: 20%;
-    padding: 3vh;
-  }
-  .img-content img {
-    height: 90vh;
-  }
-  .carrousel-clients {
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: center;
-    gap: 0vh;
-    gap: 2vh;
-    width: 100%;
-  }
-  .project {
-    width: 20%;
-  }
-  .project img {
-    height: 20vh;
-  }
-  .card-vantage {
-    width: 30%;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
+    left: 15vw;
+  } 
+  .product-descriptions{
+    
+   width:  75%; 
+
+  }  
+  .product-text {
     align-items: start;
+    text-align:start;
   }
-  .more-cta {
-    flex-direction: row;
-  }
-  .title-text-more {
-    width: 50%;
-  }
-  .image-more img {
-    height: 90vh;
-  }
+  ;
 }
