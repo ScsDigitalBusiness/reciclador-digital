@@ -4,32 +4,43 @@
       "nome": "Mercado da Reciclagem",
       "description": "Marketplace voltado para a venda de materiais do nicho da reciclagem.",
       "img": "../../assets/utilites/logos/4.png",  
-       "id": "mercado-reciclagem"
+       "id": "mercado-reciclagem",
+       "link" : "../mercado-da-reciclagem-page/index.html"
     },
     {
       "nome": "Reciclador Digital",
       "description": "Aplicativo voltado para gerar a conexão de recicladores e empresários.",
-      "img": "../../assets/utilites/logos2/3.png"
+      "img": "../../assets/utilites/logos2/3.png", 
+      "id": "reciclador" , 
+      "link" : "../reciclador-digital/index.html"
     },
     {
       "nome": "Curso a Jornada da Reciclagem",
       "description": "Programa de treinamento intensivo que visa te fazer alcançar novos patamares nos aspectos profissionais e pessoais por meio do autoconhecimento.",
-      "img": "../../assets/utilites/logos2/1.png"
+      "img": "../../assets/utilites/logos2/1.png", 
+      "id": "curso-jornada", 
+      "link" : "../escola-da-reciclagem/index.html"
     },
     {
       "nome": "Ativação Brutal Software",
       "description": "Programa de treinamento intensivo que visa te fazer alcançar novos patamares nos aspectos profissionais e pessoais por meio do autoconhecimento.",
-      "img": "../../assets/utilites/logos/2.png"
+      "img": "../../assets/utilites/logos/2.png", 
+      "id": "atb", 
+      "link" : "../ativacao-brutal/index.html"      
     },
     {
       "nome": "Mentoria",
       "description": "Programa de treinamento intensivo que visa te fazer alcançar novos patamares nos aspectos profissionais e pessoais por meio do autoconhecimento.",
-      "img": "../../assets/utilites/logos2/4.png"
+      "img": "../../assets/utilites/logos2/4.png", 
+      "id": "Mentoria", 
+      "link" : "../mentoria/index.html"
     },
     {
       "nome": "Palestra",
       "description": "Programa de treinamento intensivo que visa te fazer alcançar novos patamares nos aspectos profissionais e pessoais por meio do autoconhecimento.",
-      "img": "../../assets/utilites/logos2/5.png"
+      "img": "../../assets/utilites/logos2/5.png",  
+      "id": "Palestra", 
+      "link" : "../palestra/index.html"
     }
   ]
 }
