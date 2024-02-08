@@ -154,6 +154,7 @@
   color: white;
   border: 1px solid white; 
 }
+
 @media(min-width: 1000px) {
   .cabecalho {
     display: flex;
