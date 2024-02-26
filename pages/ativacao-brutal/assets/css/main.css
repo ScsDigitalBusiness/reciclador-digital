@@ -72,7 +72,7 @@
   border-radius: 1vh;
   position: relative;
   color: #011105;
-  left: 4%;
+  left: 55vw;
 }
 .product-image {
   width: 100vw;
@@ -140,12 +140,15 @@
   border: none;
   border-radius: 1vh;
   width: 90%;
-}
+} 
+
 .comnprar-button {
   background-color: #0CE93C;
   color: #011105;
   font-size: 1.2em;
-  font-weight: bold;
+  font-weight: bold;  
+  cursor:pointer; 
+
 }
 .buttons .more-products {
   font-size: 1.2em; 
