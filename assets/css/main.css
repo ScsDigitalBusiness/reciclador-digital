@@ -18,7 +18,8 @@ body{
 .more-cta {
   grid-area: contato;
   
-} 
+}  
+
 .footer{
   grid-area: footer;
 }
