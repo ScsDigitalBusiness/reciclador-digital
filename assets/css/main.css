@@ -6,9 +6,11 @@
   font-family: sans-serif; 
 
 } 
+ 
 body{
   overflow-x: hidden;
-}
+} 
+
 .home {
 
   grid-area: home;
