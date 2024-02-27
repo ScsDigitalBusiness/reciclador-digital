@@ -146,9 +146,11 @@
   color: #011105;
   font-size: 1.2em;
   font-weight: bold;
+  cursor: pointer;
 }
 .buttons .more-products {
   font-size: 1.2em; 
+  cursor: pointer;
   background-color: #011105;
   border: 1px solid black; 
   color: white;
