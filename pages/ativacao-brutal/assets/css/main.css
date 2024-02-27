@@ -122,6 +122,21 @@
 }
 .product-text h1 {
   font-size: 3em;
+} 
+.price {
+  
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  gap: 2vh;
+
+} 
+.price small {
+  font-size: 1em; 
+} 
+.price h2 {
+   font-size: 3em;
 }
 .buttons {
   height: 10vh;

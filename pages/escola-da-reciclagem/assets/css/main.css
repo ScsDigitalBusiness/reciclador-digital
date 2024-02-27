@@ -124,6 +124,22 @@
 }
 .product-text h1 {
   font-size: 3em;
+} 
+.price {
+  
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  flex-direction: column;
+  gap: 2vh;
+
+} 
+.price small {
+  font-size: 1em; 
+} 
+.price h2 {
+   font-size: 3em;
 }
 .buttons {
   height: 10vh;
@@ -134,6 +150,12 @@
   gap: 2vh;
   width: 100%;
   padding: 1vh;
+} 
+.value {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
 }
 .buttons button {
   padding: 2vh;
@@ -155,7 +177,8 @@
   color: white;
   border: 1px solid white;  
   cursor: pointer;
-}
+} 
+
 @media(min-width: 1000px) {
   .cabecalho {
     display: flex;

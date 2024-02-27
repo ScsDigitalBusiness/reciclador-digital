@@ -130,6 +130,21 @@
 }
 .product-text h1 {
   font-size: 3em;
+} 
+.price {
+  
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  gap: 2vh;
+
+} 
+.price small {
+  font-size: 1em; 
+} 
+.price h2 {
+   font-size: 3em;
 }
 .buttons {
   height: 10vh;
@@ -146,7 +161,8 @@
   border: none;
   border-radius: 1vh;
   width: 90%;
-}
+} 
+
 .comnprar-button {
   background-color: #0ce93c;
   color: #011105;
@@ -161,7 +177,7 @@
   border: 1px solid black;
   color: white;
   border: 1px solid white;
-}
+} 
 @media (min-width: 1000px) {
   .cabecalho {
     display: flex;
