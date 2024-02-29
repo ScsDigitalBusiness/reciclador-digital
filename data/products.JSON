@@ -3,52 +3,52 @@
     {
       "nome": "Mercado da Reciclagem",
       "description": "Marketplace voltado para a venda de materiais do nicho da reciclagem.",
-      "img": "../../assets/utilites/logos/4.png",  
-       "id": "mercado-reciclagem",
-       "link" : "../mercado-da-reciclagem-page/index.html"
+      "img": "../../assets/utilites/logos/4.png",
+      "id": "mercado-reciclagem",
+      "link": "../mercado-da-reciclagem-page/index.html"
+    },
+
+    {
+      "nome": "Plataforma Reciclador Digital",
+      "description": "Aplicativo voltado para gerar a conexão de recicladores e empresários.",
+      "img": "../../assets/utilites/logos2/3.png",
+      "id": "reciclador",
+      "link": "../reciclador-digital/index.html"
     },
     {
       "nome": " Comunidade Reciclador Digital",
       "description": "Aplicativo voltado para gerar a conexão de recicladores e empresários.",
-      "img": "../../assets/utilites/logos2/3.png", 
-      "id": "reciclador" , 
-      "link" : "../reciclador-digital/index.html"
-    },
-    {
-      "nome": "Plataforma Reciclador Digital",
-      "description": "Aplicativo voltado para gerar a conexão de recicladores e empresários.",
-      "img": "../../assets/utilites/logos2/3.png", 
-      "id": "reciclador" , 
-      "link" : "../reciclador-digital/index.html"
+      "img": "../../assets/utilites/logos2/3.png",
+      "id": "reciclador",
+      "link": "../comunidade-reciclador/index.html"
     },
     {
       "nome": "Curso a Jornada da Reciclagem",
       "description": "Programa de treinamento intensivo que visa te fazer alcançar novos patamares nos aspectos profissionais e pessoais por meio do autoconhecimento.",
-      "img": "../../assets/utilites/logos2/1.png", 
-      "id": "curso-jornada", 
-      "link" : "../escola-da-reciclagem/index.html"
+      "img": "../../assets/utilites/logos2/1.png",
+      "id": "curso-jornada",
+      "link": "../escola-da-reciclagem/index.html"
     },
     {
       "nome": "Ativação Brutal Software",
       "description": "Programa de treinamento intensivo que visa te fazer alcançar novos patamares nos aspectos profissionais e pessoais por meio do autoconhecimento.",
-      "img": "../../assets/utilites/logos/2.png", 
-      "id": "atb", 
-      "link" : "../ativacao-brutal/index.html"      
+      "img": "../../assets/utilites/logos/2.png",
+      "id": "atb",
+      "link": "../ativacao-brutal/index.html"
     },
     {
       "nome": "Mentoria",
       "description": "Programa de treinamento intensivo que visa te fazer alcançar novos patamares nos aspectos profissionais e pessoais por meio do autoconhecimento.",
-      "img": "../../assets/utilites/logos2/4.png", 
-      "id": "Mentoria", 
-      "link" : "../mentoria/index.html"
+      "img": "../../assets/utilites/logos2/4.png",
+      "id": "Mentoria",
+      "link": "../mentoria/index.html"
     },
     {
       "nome": "Treinamento Comercial",
       "description": "Programa de treinamento intensivo que visa te fazer alcançar novos patamares nos aspectos profissionais e pessoais por meio do autoconhecimento.",
-      "img": "../../assets/utilites/logos2/LOGO TREN.png",  
-      "id": "Treinamento", 
-      "link" : "../palestra/index.html"
-    } 
-   
+      "img": "../../assets/utilites/logos2/LOGO TREN.png",
+      "id": "Treinamento",
+      "link": "../palestra/index.html"
+    }
   ]
 }
