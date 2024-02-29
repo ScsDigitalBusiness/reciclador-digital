@@ -1,0 +1,2 @@
+document.getElementById("compra").addEventListener("click", () => window.location.href = "https://pay.kiwify.com.br/IN2Y7eN");
+document.getElementById("return").addEventListener("click", () => window.location.href = "../product-page/index.html");

@@ -8,7 +8,14 @@
        "link" : "../mercado-da-reciclagem-page/index.html"
     },
     {
-      "nome": "Reciclador Digital",
+      "nome": " Comunidade Reciclador Digital",
+      "description": "Aplicativo voltado para gerar a conexão de recicladores e empresários.",
+      "img": "../../assets/utilites/logos2/3.png", 
+      "id": "reciclador" , 
+      "link" : "../reciclador-digital/index.html"
+    },
+    {
+      "nome": "Plataforma Reciclador Digital",
       "description": "Aplicativo voltado para gerar a conexão de recicladores e empresários.",
       "img": "../../assets/utilites/logos2/3.png", 
       "id": "reciclador" , 
@@ -36,10 +43,10 @@
       "link" : "../mentoria/index.html"
     },
     {
-      "nome": "Palestra",
+      "nome": "Treinamento Comercial",
       "description": "Programa de treinamento intensivo que visa te fazer alcançar novos patamares nos aspectos profissionais e pessoais por meio do autoconhecimento.",
-      "img": "../../assets/utilites/logos2/5.png",  
-      "id": "Palestra", 
+      "img": "../../assets/utilites/logos2/LOGO TREN.png",  
+      "id": "Treinamento", 
       "link" : "../palestra/index.html"
     } 
    
