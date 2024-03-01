@@ -17,28 +17,28 @@
     },
     {
       "nome": " Comunidade Reciclador Digital",
-      "description": "Aplicativo voltado para gerar a conexão de recicladores e empresários.",
+      "description": "Junte-se à Comunidade Reciclador Digital, onde transformamos resíduos em oportunidades lucrativas! Aqui, a compra e venda de materiais recicláveis é mais do que um negócio - é um movimento em direção a um futuro.",
       "img": "../../assets/utilites/logos2/3.png",
       "id": "reciclador",
       "link": "../comunidade-reciclador/index.html"
     },
     {
       "nome": "Curso a Jornada da Reciclagem",
-      "description": "Programa de treinamento intensivo que visa te fazer alcançar novos patamares nos aspectos profissionais e pessoais por meio do autoconhecimento.",
+      "description": "Pronto para transformar seu interesse em reciclagem em uma jornada lucrativa? Bem-vindo à 'A Jornada na Reciclagem', o curso definitivo que vai te ensinar passo a passo como ganhar dinheiro com materiais recicláveis.",
       "img": "../../assets/utilites/logos2/1.png",
       "id": "curso-jornada",
       "link": "../escola-da-reciclagem/index.html"
     },
     {
-      "nome": "Ativação Brutal Software",
-      "description": "Programa de treinamento intensivo que visa te fazer alcançar novos patamares nos aspectos profissionais e pessoais por meio do autoconhecimento.",
+      "nome": "Ativação Brutal",
+      "description": " Desperte seu potencial oculto, desafie seus limites e alcance o sucesso de maneira inigualável. Seja o arquiteto de sua própria jornada para o sucesso com Ativação Brutal.",
       "img": "../../assets/utilites/logos/2.png",
       "id": "atb",
       "link": "../ativacao-brutal/index.html"
     },
     {
       "nome": "Mentoria",
-      "description": "Programa de treinamento intensivo que visa te fazer alcançar novos patamares nos aspectos profissionais e pessoais por meio do autoconhecimento.",
+      "description": "Imagine ter acesso a insights valiosos, orientação estratégica e apoio contínuo de um mentor dedicado. Com nossa Mentoria, você alcançará seus objetivos mais rapidamente e com confiança.",
       "img": "../../assets/utilites/logos2/4.png",
       "id": "Mentoria",
       "link": "../mentoria/index.html"
