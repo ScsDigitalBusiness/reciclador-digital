@@ -170,20 +170,20 @@
   font-size: 1.1em;
   border-radius: 2vh;
   transition: 0.5s;
-} 
+}
 
 .area-plans button:hover {
   background-color: white;
   color: #011105;
   cursor: pointer;
-} 
+}
 
 .price {
   width: 90%;
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  justify-content: start;
+  flex-direction: column; 
   gap: 2vh;
 }
 .price small {
@@ -196,11 +196,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-} 
+}
 .area-plans .individual {
   background-color: white;
   color: #011105;
-} 
+}
 @media (min-width: 1000px) {
   .price {
     flex-direction: row;
@@ -284,6 +284,5 @@
   .product-text {
     align-items: start;
     text-align: start;
-  } 
-  
+  }
 }
