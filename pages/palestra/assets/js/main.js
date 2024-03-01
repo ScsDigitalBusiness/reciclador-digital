@@ -21,4 +21,6 @@ document.getElementById('individual').onclick = () => {
     document.getElementById('sale').addEventListener('click', () => {
         window.location.href = "https://pay.kiwify.com.br/8GI0EG2";      
     })
-} 
+}  
+
+document.getElementById("return").addEventListener("click", () => window.location.href = "../product-page/index.html");
