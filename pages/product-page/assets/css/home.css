@@ -66,9 +66,9 @@
   width: 36vw;
   text-align: center;
   border-radius: 1vh;
-  position: relative; 
+  position: relative;
   color: #011105;
-  left:2%;
+  right: 4%;
 }
 
 .principal-content {
