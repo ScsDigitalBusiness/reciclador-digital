@@ -128,10 +128,16 @@
 }
 .product-text h1 {
   font-size: 3em;
+} 
+.value {
+  display: flex; 
+  align-items: center;
+  justify-content: center; 
 }
 .price {
   width: 90%;
-  display: flex;
+  display: flex; 
+  flex-direction: column;
   align-items: center;
   justify-content: start;
   gap: 2vh;
@@ -273,5 +279,8 @@
   .product-text {
     align-items: start;
     text-align: start;
+  } 
+  .price {
+    flex-direction : row; 
   }
 }

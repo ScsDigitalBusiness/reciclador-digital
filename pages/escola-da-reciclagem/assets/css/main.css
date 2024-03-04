@@ -255,5 +255,10 @@
     align-items: start;
     text-align:start;
   }
-  ;
+  .price {
+  
+    flex-direction: row;
+   
+  
+  }
 }
