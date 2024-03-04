@@ -22,6 +22,9 @@ document.getElementById('individual').onclick = () => {
         window.location.href = "https://pay.kiwify.com.br/8GI0EG2";      
     })
 } 
- 
+
+setTimeout(() => {
+    document.getElementById("spiner-area").style.display = "none"; 
+},3000)
 
 document.getElementById("return").addEventListener("click", () => window.location.href = "../product-page/index.html");

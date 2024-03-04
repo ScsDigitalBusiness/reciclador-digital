@@ -13,4 +13,11 @@ document.getElementById("product").addEventListener("click", () => {
 }) 
 document.getElementById("product-btn").addEventListener("click", () => window.location.href = "pages/product-page/index.html")
 document.getElementById("product-btn2").addEventListener("click", () => window.location.href = "pages/product-page/index.html") 
+// redirections
 
+document.getElementById("go-to-form").addEventListener("click",() => {
+    window.location.href = "https://form.jotform.com/232325925942055"; 
+})
+document.getElementById("go-to-form2").addEventListener("click",() => {
+    window.location.href = "https://form.jotform.com/232325925942055"; 
+})

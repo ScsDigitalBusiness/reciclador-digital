@@ -8,3 +8,6 @@ document.getElementById("home-btn").addEventListener("click", () => {
 document.getElementById("home-btn2").addEventListener("click", () => {
     window.location.href = "../../index.html";  
 });
+document.getElementById("home-link").addEventListener('click', () => {
+  window.location.href = "../../index.html"  
+})
