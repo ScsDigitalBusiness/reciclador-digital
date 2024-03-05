@@ -66,13 +66,15 @@
 #contato-link {
   background-color: #0ce93c;
   padding: 1vh;
-  width: 36vw;
+  width: 33vw;
+  position: relative;
+  right : 2%;
   text-align: center;
   border-radius: 1vh;
-  position: relative;
-  color: #011105;
-  left: 55vw;
+  cursor: pointer; 
+  color: black;
 }
+
 .product-image {
   width: 100vw;
   grid-area: product;
@@ -238,12 +240,12 @@
   #contato-link {
     background-color: #0ce93c;
     padding: 1vh;
-    width: 36vw;
+    width: 13vw;
+    position: relative;
+    left: 55vw;
     text-align: center;
     border-radius: 1vh;
-    position: relative;
-    color: #011105;
-    right: 4%;
+    cursor: pointer;
   }
   .content {
     grid-template-areas:
