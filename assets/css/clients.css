@@ -17,13 +17,13 @@ ELEMENTO e AREA : CARROUSEL DE PROJETOS
   } 
   
   .project {
-    width: 40%; 
+    width: 30%; 
     display: flex;
     align-items: center;  
-   flex-wrap: wrap;
+    flex-wrap: wrap;
      justify-content: center; 
     flex-direction: row;
   } 
   .project img  {
-    height: 10vh;
+    height: 13vh;
   } 
