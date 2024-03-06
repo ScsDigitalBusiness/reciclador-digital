@@ -186,6 +186,7 @@
     justify-content: start;
     flex-direction: row;
     width: 100%;
+
     padding: 0.5vh;
     margin-top: 0.7%;
     border-radius: 2vh;
@@ -209,7 +210,7 @@
   #quem-somos-link,
   #product {
     display: block;
-    color: #a3aba5; 
+    color: #a3aba5;
     cursor: pointer;
   }
 
@@ -220,9 +221,9 @@
     position: relative;
     left: 55vw;
     text-align: center;
-    border-radius: 1vh; 
+    border-radius: 1vh;
     cursor: pointer;
-  } 
+  }
   .content {
     grid-template-areas:
     "header header"

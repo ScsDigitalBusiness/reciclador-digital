@@ -223,12 +223,12 @@
   #contato-link {
     background-color: #0ce93c;
     padding: 1vh;
-    width: 36vw;
+    width: 13vw;
+    position: relative;
+    left: 55vw;
     text-align: center;
     border-radius: 1vh;
-    position: relative;
-    color: #011105;
-    right: 4%;
+    cursor: pointer;
   }
   .content {
     grid-template-areas:
