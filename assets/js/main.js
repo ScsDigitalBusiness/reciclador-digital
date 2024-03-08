@@ -1,4 +1,4 @@
-import {elementShow} from "./getDataJson"
+import { elementShow } from "./getDataJson.js";
  
 const elementShowData = new elementShow("projects");
 

@@ -27,9 +27,11 @@ elementShow.prototype.createElementInDOM = function (el) {
 
 elementShow.prototype.getAndShowDataOf = function (url, callback) {
   try {
-    fetch(url)
+    fetch(url) 
+
       .then((response) => response.json())
       .then((data) => {
+        console.log(data);
         data.projects.map((el) => {
           callback(el);
         });

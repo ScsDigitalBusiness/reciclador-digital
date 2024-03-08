@@ -1,35 +1,35 @@
 {
-    "projects": [
-      {
-        "nome": "Injecto X",
-        "description": "Marketplace do ramo da reciclagem voltado para o negócio Business to Business, tendo como principal objetivo facilitar a compra e venda de materiais injetados.",
-        "img":  "../../assets/utilites/peblogos/2.svg",
-        "link": "https://scsdigitalbusiness.com.br"
-      },
-  
-      {
-        "nome": "Saulo Recicláveis",
-        "description": "Empresa do ramo da reciclagem há mais de vinte anos, atuando nacionalmente com a compra e venda de materiais recicláveis, como sacos de ráfia e garrafas pet.",
-        "img": "../../assets/utilites/peblogos/3.svg",
-        "link": "https://sauloreciclaveis.com.br/"
-      },
-      {
-        "nome": "Mercado da Reciclagem",
-        "description": "Marketplace do ramo da reciclagem voltado para o negócio Business to Business, tendo como principal objetivo facilitar a compra e venda desses materiais.",
-        "img": "../../assets/utilites/peblogos/1.svg",
-         "link": "https://mercadodareciclagem.com.br/"
-      },
-      {
-        "nome": "Ativação Brutal",
-        "description": "Programa de treinamento intensivo que visa te fazer alcançar novos patamares nos aspectos profissionais e pessoais por meio do autoconhecimento.",
-        "img": "../../assets/utilites/peblogos/5.svg",
-        "link": "https://ativacaobrutal.com.br/"
-      },
-      {
-        "nome": "Treinamento Comercial",
-        "description": "Nosso programa de treinamento empresarial é uma jornada transformadora projetada para impulsionar o sucesso e o crescimento contínuo do seu negócio.",
-        "img": "../../assets/utilites/peblogos/4.svg",
-        "link": "https://saulocruzsantos.com.br/"
-      }
-    ]
-  }
+  "projects": [
+    {
+      "nome": "Injecto X",
+      "description": "Marketplace do ramo da reciclagem voltado para o negócio Business to Business, tendo como principal objetivo facilitar a compra e venda de materiais injetados.",
+      "img":  "../../assets/utilites/logos/5.png",
+      "link": "https://scsdigitalbusiness.com.br"
+    },
+
+    {
+      "nome": "Saulo Recicláveis",
+      "description": "Empresa do ramo da reciclagem há mais de vinte anos, atuando nacionalmente com a compra e venda de materiais recicláveis, como sacos de ráfia e garrafas pet.",
+      "img": "../../assets/utilites/logos/1.png",
+      "link": "https://sauloreciclaveis.com.br/"
+    },
+    {
+      "nome": "Mercado da Reciclagem",
+      "description": "Marketplace do ramo da reciclagem voltado para o negócio Business to Business, tendo como principal objetivo facilitar a compra e venda desses materiais.",
+      "img": "../../assets/utilites/logos/4.png",
+       "link": "https://mercadodareciclagem.com.br/"
+    },
+    {
+      "nome": "Ativação Brutal",
+      "description": "Programa de treinamento intensivo que visa te fazer alcançar novos patamares nos aspectos profissionais e pessoais por meio do autoconhecimento.",
+      "img": "../../assets/utilites/logos/2.png",
+      "link": "https://ativacaobrutal.com.br/"
+    },
+    {
+      "nome": "Treinamento Comercial",
+      "description": "Nosso programa de treinamento empresarial é uma jornada transformadora projetada para impulsionar o sucesso e o crescimento contínuo do seu negócio.",
+      "img": "../../assets/utilites/logos/6.png",
+      "link": "https://saulocruzsantos.com.br/"
+    }
+  ]
+}

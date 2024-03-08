@@ -17,7 +17,7 @@ document.getElementById('individual').onclick = () => {
     document.getElementById('individual').style.backgroundColor = "white";
     document.getElementById('individual').style.color = "black";  
     document.getElementById('value-of-plan').innerHTML = "967,00" 
-    document.getElementById('payment-methods').innerHTML = "à vista ou 10x de R$ 96,70 sem juros" 
+    document.getElementById('payment-methods').innerHTML = "à vista ou parcelado." 
     document.getElementById('sale').addEventListener('click', () => {
         window.location.href = "https://pay.kiwify.com.br/6r6v5vH";      
     })
