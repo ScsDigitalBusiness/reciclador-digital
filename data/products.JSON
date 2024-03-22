@@ -10,14 +10,14 @@
 
     {
       "nome": "Plataforma Reciclador Digital",
-      "description": "Aplicativo voltado para gerar a conexão de recicladores e empresários.",
+      "description": "Conheça o seu potencial de reciclagem com nosso aplicativo Reciclador Digital que identifica e mapeia os principais produtos recicláveis do Brasil.",
       "img": "../../assets/utilites/logos2/3.png",
       "id": "reciclador",
       "link": "../reciclador-digital/index.html"
     },
     {
       "nome": " Comunidade Reciclador Digital",
-      "description": "Junte-se à Comunidade Reciclador Digital, onde transformamos resíduos em oportunidades lucrativas! Aqui, a compra e venda de materiais recicláveis é mais do que um negócio - é um movimento em direção a um futuro.",
+      "description": "Descubra o poder da colaboração em nossa comunidade exclusiva para empreendedores da reciclagem! Juntos, vamos impulsionar as vendas, compartilhar melhores práticas e alcançar novos patamares de sucesso no mercado sustentável.",
       "img": "../../assets/utilites/logos2/3.png",
       "id": "reciclador",
       "link": "../comunidade-reciclador/index.html"
@@ -31,7 +31,7 @@
     },
     {
       "nome": "Ativação Brutal",
-      "description": " Desperte seu potencial oculto, desafie seus limites e alcance o sucesso de maneira inigualável. Seja o arquiteto de sua própria jornada para o sucesso com Ativação Brutal.",
+      "description": "Liberte seu potencial interior, domine seu tempo e descubra sua verdadeira paixão com nosso curso de Ativação Total. Torne-se o mestre de sua própria narrativa e alcance novos horizontes de sucesso e realização.",
       "img": "../../assets/utilites/logos2/2.png",
       "id": "atb",
       "link": "../ativacao-brutal/index.html"
