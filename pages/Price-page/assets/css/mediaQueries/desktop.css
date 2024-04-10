@@ -1,0 +1,121 @@
+/* PC VERSION   
+DEVELOPER : THIAGO DUARTE
+PIXELS:  1200X 
+ALL ELEMENTS 
+*/
+@media (min-width: 1200px) {
+    .principal-content {
+      flex-direction: row-reverse;
+      overflow: hidden;
+    }
+    .cabecalho {
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      flex-direction: row;
+      width: 95%;
+      height: 10vh;
+      padding: 0.5vh;
+      margin-top: 0.7%;
+      border-radius: 2vh;
+      background-color: #08260f70;
+      backdrop-filter: blur(10px);
+      border: 1px solid #00421f67;
+    }
+    .nav-links {
+      padding: 2vh;
+      width: 90%;
+    }
+    .links {
+      align-items: center;
+      justify-content: start;
+    }
+    .links a {
+      text-decoration: none;
+      color: black;
+    }
+    .links #home-link,
+    #quem-somos-link,
+    #product {
+      display: block;
+      color: #a3aba5; 
+      cursor: pointer;
+    }
+  
+    #contato-link {
+      background-color: #0ce93c;
+      padding: 1vh;
+      width: 13vw;
+      position: relative;
+      left: 35vw;
+      text-align: center;
+      border-radius: 1vh; 
+      cursor: pointer;
+    }
+    .content-text {
+      text-align: start;
+      display: flex;
+      align-items: start;
+      justify-content: start;
+      padding: 7vh;
+    }
+    .buttons {
+      align-items: start;
+      justify-content: start;
+    }
+    .more {
+      padding: 3vh;
+      width: 30%;
+    }
+    
+    .projects-title {
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+  
+    .projects-title p {
+      width: 50vw;
+    }
+    .all-products {
+      width: 30%;
+      padding: 3vh;
+    }
+    .img-content img {
+      height: 90vh;
+    }
+    .carrousel-clients {
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: center;
+      gap: 0vh;
+      gap: 2vh;
+      width: 100%;
+    }
+    .project {
+      width: 20%;
+    }
+    .project img {
+      height: 20vh;
+    }
+    .card-vantage {
+      width: 30%;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: start;
+    }
+    .more-cta {
+      flex-direction: row;
+    }
+    .title-text-more {
+      width: 50%;
+    }
+    .image-more img {
+      height: 90vh;
+    }
+  }
+  

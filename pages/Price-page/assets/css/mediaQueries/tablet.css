@@ -1,0 +1,210 @@
+
+/*  
+DEVELOPER : THIAGO DUARTE 
+TABLET VERSION 
+768PX 
+ */
+ @media (min-width: 768px) {
+    .home {
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      flex-direction: column;
+      padding: 1vh;
+      background-color: #011105;
+      padding-bottom: 15vh;
+      border-bottom: 1px solid #00421f;
+    }
+    .cabecalho {
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      flex-direction: row;
+      width: 100%;
+      padding: 0.5vh;
+      margin-top: 4%;
+      border-radius: 1vh;
+      background-color: #08260f70;
+      backdrop-filter: blur(10px);
+      border: 1px solid #00421f67;
+    }
+    .logo {
+      height: 30vh;
+  
+      width: 25vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    .logo img {
+      height: 100%;
+    }
+    .links {
+      display: flex;
+      align-items: center;
+      justify-content: end;
+      flex-direction: row;
+      gap: 2vh;
+      list-style: none;
+      padding: 2vh;
+      font-size: 1.2em;
+    }
+    .links a {
+      text-decoration: none;
+      color: black;
+    }
+    .links #home-link,
+    #quem-somos-link {
+      display: none;
+    }
+    #contato-link {
+      background-color: #0ce93c;
+      padding: 1vh;
+      width: 36vw;
+      text-align: center;
+      border-radius: 1vh;
+      position: relative;
+      left: 70%;
+    }
+  
+    .principal-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding-top: 4vh;
+  
+      gap: 2vh;
+    }
+    .img-content img {
+      height: 70vh;
+    }
+    .content-text {
+      display: flex;
+      text-align: center;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 5vh;
+      color: white;
+    }
+    .content-title {
+      font-size: 3.5em;
+      width: 80%;
+    }
+    .subtitle {
+      font-size: 1.1em;
+      color: #98a19a;
+      width: 100%;
+    }
+    .paragraph-text {
+      font-size: 1em;
+      color: #98a19a;
+    }
+    .buttons {
+      padding-top: 4vh;
+      gap: 2vh;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+    }
+    .more {
+      background-color: #0ce93c;
+      padding: 2vh;
+      width: 25%;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      gap: 1vh;
+      font-size: 1.2em;
+      text-align: center;
+      border-radius: 1vh;
+      border: none;
+    }
+    .more img {
+      height: 2.5vh;
+    }
+    .all-products {
+      background-color: transparent;
+      padding: 2vh;
+      width: 25%;
+      font-size: 1.2em;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      gap: 1vh;
+      text-align: center;
+      border-radius: 1vh;
+      border: 1px solid #00421f;
+      color: #0ce93c;
+    }
+    .all-products img {
+      height: 3.5vh;
+    }
+    .vantege {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    .card-vantage {
+      width: 45%;
+    }
+    .card-img {
+      width: 50%;
+      padding: 3vh;
+    }
+    .card-text {
+      font-size: 1.2em;
+    }
+    .card-text p {
+      font-size: 0.9em;
+    }
+    .projects-title h2 {
+      font-size: 3em;
+    }
+    .projects-title p {
+      font-size: 1.1em;
+      color: #aab1ac;
+    }
+    .cards-area-projects {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    .projetct-card-body {
+      width: 45%;
+    }
+    .info-project-name h2 {
+      font-size: 1.5em;
+      color: white;
+    }
+    .description {
+      color: #737a74;
+      font-size: 1.2em;
+      width: 90%;
+      text-align: center;
+    }
+    .title-more {
+      color: white;
+      width: 100%;
+      font-size: 4em;
+    }
+    .subtitle-more {
+      font-size: 1.5em;
+    }
+    .paragraph-more {
+      font-size: 1.2em;
+    }
+    .buttons-2 {
+      gap: 2vh;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      flex-direction: row;
+    }
+    .image-more img {
+      height: 75vh;
+    }
+  }
