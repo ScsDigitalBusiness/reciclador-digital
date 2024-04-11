@@ -154,7 +154,44 @@ DEVELOPER  : THIAGO
   height: 3.5vh;
 }
  
-
+.price-table {
   
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; 
+  gap: 3vh;  
+  background-image: linear-gradient(to right, #010f04, #0b1e0f, #0d2c15, #0f3b19, #114b1d);
+  padding-bottom: 15vh;
+  border-bottom: 1px solid #00421f;
+}
 
 
+.tile-table {
+  color: white;
+  font-size: 3.3em;  
+  text-align: center;
+} 
+.thead-table {
+  background-color: #0C2F14;  
+  color: white;  
+  
+  border: 1px solid  #008A44;
+
+} 
+
+.area-table {
+  
+  width: 100%; 
+  
+} 
+.area-table tr {
+ font-size: 1.1em;
+  text-align: center; 
+  color: white;
+}
+.body-table { 
+  width: 100%; 
+  border-collapse: collapse;  
+  
+}
