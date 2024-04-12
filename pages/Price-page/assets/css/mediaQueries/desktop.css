@@ -116,6 +116,18 @@ ALL ELEMENTS
     }
     .image-more img {
       height: 90vh;
+    }  
+
+    .area-table th{
+      font-size: 1.3em; 
+      padding: 2vh;
+    }
+    .area-table tr{
+      font-size: 1.2em; 
+       
+    } 
+    .area-table td{
+      padding: 1vh;
     }
   }
   
