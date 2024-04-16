@@ -117,7 +117,9 @@ ALL ELEMENTS
     .image-more img {
       height: 90vh;
     }  
-
+    .area-table  {
+      width: 95%;
+    }
     .area-table th{
       font-size: 1.3em; 
       padding: 2vh;
