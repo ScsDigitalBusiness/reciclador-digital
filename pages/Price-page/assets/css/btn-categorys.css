@@ -1,0 +1,29 @@
+/* Congiguração dos btns de categorias da pagina de cotação */
+/* Developer: André Luiz */
+
+.container {
+    text-align: center;
+  }
+  
+  .btn-rounded {
+    border-radius: 20px; 
+    background-color: #0ce93c; 
+    border-color: #0ce93c; 
+    color: #113c14; 
+    padding: 10px; 
+    width: 80%; 
+    font-size: 19px; 
+  }
+
+  .btn-rounded:hover {
+    background-color: #113c14;
+    border-color: #113c14;
+    border-color: #0ce93c;
+    border-width: 2px; 
+    color: #0ce93c; 
+  }
+
+  h4 {
+    color: #0ce93c;
+    margin-bottom: 50px; 
+  }
