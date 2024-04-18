@@ -11,6 +11,8 @@ export class Table {
     }
      async  getData(api) {
         let database = await fetch(api).then(response => response.json()).then(data => {
+           
+            
             return data.output;
         })
         return database;
