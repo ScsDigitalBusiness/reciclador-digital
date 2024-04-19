@@ -2,32 +2,19 @@
 /* Developer: André Luiz */
 
 .container {
-  display: flex;
+  text-align: center;
 
-   
-   justify-content: center; 
-  align-items: center;
- flex-direction: column;  
-}   
-.row {
-  display: flex;
-  gap: 2vh;
 }
-.col-sm-3 {
- 
-  display: flex;
-  align-items: center; 
-  justify-content: center;
-}
+
   
   .btn-rounded {
     border-radius: 20px; 
     background-color: #0ce93c; 
     border-color: #0ce93c; 
     color: #113c14; 
-    padding: 10px; 
-    width: 80%; 
-    font-size: 19px; 
+    padding: 5px; 
+    width: 100%; 
+    font-size: 20px; 
   }
 
   .btn-rounded:hover {
@@ -43,3 +30,25 @@
     margin-bottom: 50px; 
   } 
   
+
+  @media (max-width: 768px) {
+    .btn-rounded {
+      width: 100%; 
+      margin: 0 5px; 
+    }
+    
+  
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-left: -5px; 
+      margin-right: -5px;
+    }
+  
+  }
+
+/* Estilos específicos para tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+ 
+}
