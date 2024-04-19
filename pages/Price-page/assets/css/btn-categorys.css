@@ -6,49 +6,45 @@
 
 }
 
-  
-  .btn-rounded {
-    border-radius: 20px; 
-    background-color: #0ce93c; 
-    border-color: #0ce93c; 
-    color: #113c14; 
-    padding: 5px; 
-    width: 100%; 
-    font-size: 20px; 
-  }
 
-  .btn-rounded:hover {
-    background-color: #113c14;
-    border-color: #113c14;
-    border-color: #0ce93c;
-    border-width: 2px; 
-    color: #0ce93c; 
-  }
-
-  h4 {
-    color: #0ce93c;
-    margin-bottom: 50px; 
-  } 
-  
-
-  @media (max-width: 768px) {
-    .btn-rounded {
-      width: 100%; 
-      margin: 0 5px; 
-    }
-    
-  
-    .row {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin-left: -5px; 
-      margin-right: -5px;
-    }
-  
-  }
-
-/* Estilos específicos para tablets */
-@media (min-width: 768px) and (max-width: 1024px) {
- 
+.btn-rounded {
+  border-radius: 20px;
+  background-color: #0ce93c;
+  border-color: #0ce93c;
+  color: #113c14;
+  padding: 5px;
+  width: 100%;
+  font-size: 20px;
 }
+
+.btn-rounded:hover {
+  background-color: #113c14;
+  border-color: #113c14;
+  border-color: #0ce93c;
+  border-width: 2px;
+  color: #0ce93c;
+}
+
+h4 {
+  color: #0ce93c;
+  margin-bottom: 50px;
+}
+
+/* Controle de tamanho de tela para celular e tablet */
+@media (max-width: 412px) and (max-width: 1024px) {
+  .btn-rounded {
+    width: 100%;
+    margin: 0 5px;
+  }
+
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: -5px;
+    margin-right: -5px;
+  }
+
+}
+

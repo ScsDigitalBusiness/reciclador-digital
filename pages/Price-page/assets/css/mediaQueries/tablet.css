@@ -4,7 +4,7 @@ DEVELOPER : THIAGO DUARTE
 TABLET VERSION 
 768PX 
  */
- @media (min-width: 768px) {
+ @media (min-width: 768px){  
     .home {
       display: flex;
       align-items: center;
