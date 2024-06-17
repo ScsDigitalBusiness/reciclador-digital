@@ -7,6 +7,7 @@ const MongoStore = require("connect-mongo");
 const path = require("path");
 require("dotenv").config();
 const router = require("./router");
+const {middlewareGlobal} = require("./src/middlewares/middlewars")
 
 app.use(express.urlencoded({ extended: true })); //body parse configuration
 
@@ -47,3 +48,4 @@ const sessionOptions = session({
 app.use(sessionOptions);
 app.use(flash());
 app.use(router);
+app.use(middlewareGlobal)
