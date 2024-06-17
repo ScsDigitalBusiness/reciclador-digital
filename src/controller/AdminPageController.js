@@ -1,3 +1,3 @@
 exports.indexAdmin =(req,res) =>{ 
-    res.render("AdminPage"); 
+    res.render("AdminPage");  //render
 } 
