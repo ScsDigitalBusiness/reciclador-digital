@@ -1,0 +1,1 @@
+const {SingUp} = require("../models/SingupAndLoginModel")
