@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/spinner.css" /> 
+    
+    <link
+      rel="shortcut icon"
+      href="../../assets/utilites/logos2/3.png"
+      type="image/x-icon"
+    />
+    <title>Treinamentos</title>   
+    <meta name="description" content="Descubra como potencializar a performance da sua equipe comercial com nossos treinamentos especializados. Desenvolvemos habilidades em vendas, liderança e negociação para impulsionar os resultados do seu negócio. Capacite sua equipe com técnicas eficazes e estratégias inovadoras. Alcance o sucesso comercial com nossa expertise!">
+    <meta name="keywords" content="capacitação, vendas, equipe, habilidades, técnicas, coaching, desenvolvimento, performance, liderança, motivação, estratégias, negociação, atendimento, comunicação, gestão, clientes, mercado, aprimoramento, resultados, treinador, workshop, mentoria, ação, prática, feedback, metas, inovação, networking, sucesso, planejamento, competências, aperfeiçoamento, desempenho, vendas consultivas, abordagem, liderança de equipe, técnicas de vendas, prospecção, fechamento, follow-up, resolução de objeções, pitch de vendas, inteligência emocional, rapport, gestão de tempo, análise de mercado, persuasão, relacionamento, treinamento em vendas, influência, coaching empresarial.">
+    <meta name="author" content="Thiago Duarte e André Lyra">
+  </head>
+
+  <body>
+    <div id="spiner-area" class="spiner-area">
+      <span class="loader"></span>
+    </div>
+    <main class="content">
+      <header class="cabecalho">
+        <!--header structure  -->
+        <div class="logo">
+          <img src="../../assets/utilites/logo.png" alt="logo" />
+        </div>
+        <!-- nav-links -->
+        <nav class="nav-links">
+          <ul class="links">
+            <a href="../../index.html">
+              <li id="home-link">Home</li>
+            </a>
+            <a href="../product-page/index.html">
+              <li id="product">Produtos</li>
+            </a>
+            <a href="https://553199550479.wa.pulse.is/">
+              <li id="contato-link">Contato</li>
+            </a>
+          </ul>
+        </nav>
+      </header>
+      <div class="product-image">
+        <div class="bg"></div>
+        <img src="assets/utilites/logo.svg" alt="" />
+      </div>
+      <div class="product-descriptions">
+        <div class="product-text">
+          <small class="desc-title">Popular</small>
+          <h1>Treinamento Comercial</h1>
+          <p>
+            Programa de treinamento intensivo que visa te fazer alcançar novos
+            patamares nos aspectos profissionais e pessoais por meio do
+            autoconhecimento.
+          </p>
+          <div class="area-plans">
+            <button class="individual" id="individual" type="button">
+              Individual
+            </button>
+            <button class="team" id="teamBtn" type="button">
+              Equipe 3+ colaboradores
+            </button>
+          </div>
+          <div class="price">
+            <div class="value">
+              <small>R$</small>
+              <h2 id="value-of-plan">967,00</h2>
+            </div>
+            <p id="payment-methods">à vista ou parcelado.</p>
+          </div>
+        </div>
+        <div class="buttons">
+          <button type="button" id="sale" class="comnprar-button">
+            Comprar
+          </button>
+          <button class="more-products" id="return" type="button">
+            Mais produtos
+          </button>
+        </div>
+      </div>
+    </main>
+    <script type="module" src="assets/js/main.js"></script>
+    <a
+      href="https://wa.me/553199550479?text=Olá, quero saber mais sobre o Reciclador Digital!"
+      class="wa-float-img-circle"
+      target="_blank"
+    >
+      <img
+        src="https://cdn.sendpulse.com/img/messengers/sp-i-small-forms-wa.svg"
+        alt="WhatsApp"
+      />
+    </a>
+    <style type="text/css">
+      .wa-float-img-circle {
+        width: 56px;
+        height: 56px;
+        bottom: 20px;
+        right: 20px;
+        border-radius: 100%;
+        position: fixed;
+        z-index: 99999;
+        display: flex;
+        transition: all 0.3s;
+        align-items: center;
+        justify-content: center;
+        background: #25d366;
+      }
+      .wa-float-img-circle img {
+        position: relative;
+      }
+      .wa-float-img-circle:before {
+        position: absolute;
+        content: "";
+        background-color: #25d366;
+        width: 70px;
+        height: 70px;
+        bottom: -7px;
+        right: -7px;
+        border-radius: 100%;
+        animation: wa-float-circle-fill-anim 2.3s infinite ease-in-out;
+        transform-origin: center;
+        opacity: 0.2;
+      }
+      .wa-float-img-circle:hover {
+        box-shadow: 0px 3px 16px #24af588a;
+      }
+      .wa-float-img-circle:focus {
+        box-shadow: 0px 0 0 3px #25d36645;
+      }
+      .wa-float-img-circle:hover:before,
+      .wa-float-img-circle:focus:before {
+        display: none;
+      }
+      @keyframes wa-float-circle-fill-anim {
+        0% {
+          transform: rotate(0deg) scale(0.7) skew(1deg);
+        }
+        50% {
+          transform: rotate(0deg) scale(1) skew(1deg);
+        }
+        100% {
+          transform: rotate(0deg) scale(0.7) skew(1deg);
+        }
+      }
+    </style>
+    <script src="assets/js/redirections.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
