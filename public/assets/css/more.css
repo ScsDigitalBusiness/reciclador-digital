@@ -1,0 +1,31 @@
+/*ÚTIMA SEÇÃO DO SITE */ 
+
+.more-cta {
+  background-color: #010f04;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.title-text-more {
+  padding: 2vh;
+}
+.title-more {
+  color: white;
+  width: 70%;
+}
+.subtitle-more {
+  margin-top: 4vh;
+  color: white;
+}
+.paragraph-more {
+  margin-top: 5vh;
+  color: #737a74;
+} 
+.image-more {
+    margin-top: 10vh;
+}
+.image-more img {
+  height: 40vh;
+}
