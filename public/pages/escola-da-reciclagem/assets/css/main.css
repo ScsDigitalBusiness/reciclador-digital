@@ -1,0 +1,265 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+} 
+
+.content {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "desc desc "
+    "product product"; 
+    overflow-x: hidden; 
+    background-color: #011105;
+}
+.cabecalho {
+  grid-area: header;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: row;
+  width: 100%;
+  padding: 0.5vh;
+  height: 13vh;
+
+  margin-top: 4%;
+  border-radius: 1vh;
+  background-color: #051B0A;
+  backdrop-filter: blur(10px);
+  border: 1px solid #00421f67;
+}
+.logo {
+  height: 25vh;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.logo img {
+  height: 100%;
+}
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  flex-direction: row;
+  gap: 2vh;
+  list-style: none;
+  padding: 2vh;
+  font-size: 1.2em;
+}
+.links a {
+  text-decoration: none;
+  color: black;
+}
+.links li {
+  color: #949d96;
+}
+ .links #vantage-link,  #home-link,
+#quem-somos-link,
+#product {
+  display: none;
+}
+#contato-link {
+  background-color: #0ce93c;
+  padding: 1vh;
+  width: 36vw;
+  text-align: center;
+  border-radius: 1vh;
+  position: relative;
+  color: #011105;
+  left: 4%;
+}
+.product-image {
+  width: 100vw;
+  grid-area: product;
+  background-image: linear-gradient(to bottom, #051b0a, #06481e, #007a2c, #00b037, #0ce93c);
+  height: 100vh;
+}  
+
+.bg{
+    background-color: #011105; 
+    height: 50%
+} 
+.product-image img {
+  height:50vh;  
+  position: relative;
+  bottom : 25%; 
+
+
+}
+.product-descriptions {
+  grid-area: desc;
+  height: 100vh;
+  display: flex; 
+  background-color: #011105;
+  align-items: center;
+  gap: 4vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+}
+.product-text { 
+    color: white;
+  text-align: center;
+  gap: 3vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.desc-title { 
+    font-size: 1.2em; 
+    white-space: 2px;
+  background-color: orange;
+    letter-spacing: 5px ; 
+    background-color: white;
+    color: #011105; 
+    padding: 1vh 4vh; 
+    border-radius: 2vh ;
+}
+.product-text h1 {
+  font-size: 3em;
+} 
+.price {
+  
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  flex-direction: column;
+  gap: 2vh;
+
+} 
+.price small {
+  font-size: 1em; 
+} 
+.price h2 {
+   font-size: 3em;
+}
+.buttons {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 2vh;
+  width: 100%;
+  padding: 1vh;
+} 
+.value {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+.buttons button {
+  padding: 2vh;
+  border: none;
+  border-radius: 1vh;
+  width: 90%;
+}
+.comnprar-button {
+  background-color: #0CE93C;
+  color: #011105;
+  font-size: 1.2em;
+  font-weight: bold; 
+  cursor: pointer; 
+}
+.buttons .more-products {
+  font-size: 1.2em; 
+  background-color: #011105;
+  border: 1px solid black; 
+  color: white;
+  border: 1px solid white;  
+  cursor: pointer;
+} 
+
+@media(min-width: 1000px) {
+  .cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: row;
+    width: 100%;
+
+    padding: 0.5vh;
+    margin-top: 0.7%;
+    border-radius: 2vh;
+    background-color: #08260f70;
+    backdrop-filter: blur(10px);
+    border: 1px solid #00421f67;
+  }
+  .nav-links {
+    padding: 2vh;
+    width: 90%;
+  }
+  .links {
+    align-items: center;
+    justify-content: start;
+  }
+  .links a {
+    text-decoration: none;
+    color: black;
+  }
+  .links #home-link,
+  #quem-somos-link,
+  #product {
+    display: block;
+    color: #a3aba5;
+    cursor: pointer;
+  }
+
+  #contato-link {
+    background-color: #0ce93c;
+    padding: 1vh;
+    width: 13vw;
+    position: relative;
+    left: 55vw;
+    text-align: center;
+    border-radius: 1vh;
+    cursor: pointer;
+  }
+  .content {
+    grid-template-areas:
+    "header header"
+    "product desc "
+     
+  } 
+  .product-image {
+    width: 50vw; 
+    display: flex;
+    align-items: end;
+    flex-direction: row-reverse; 
+    background-image: linear-gradient(to left, #051b0a, #06481e, #007a2c, #00b037, #0ce93c);
+
+  } 
+  .product-image .bg {
+    width: 20vw; 
+    height:100%;
+  } 
+  .product-image img { 
+    height: 60vh; 
+
+    left: 15vw;
+  } 
+  .product-descriptions{
+    
+   width:  75%; 
+
+  }  
+  .product-text {
+    align-items: start;
+    text-align:start;
+  }
+  .price {
+  
+    flex-direction: row;
+   
+  
+  }
+}
