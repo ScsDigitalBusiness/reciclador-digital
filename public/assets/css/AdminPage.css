@@ -52,8 +52,7 @@
 .content {
   display: flex;
   align-items: center;
-  justify-content: center;
-  background-color: red;
+  justify-content: end;
 }
 .content .home-section {
   width: 81vw;
@@ -84,6 +83,7 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: end;
   gap: 20px;
   background-color: #fff;
   padding: 24px;
