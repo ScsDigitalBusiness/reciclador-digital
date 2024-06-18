@@ -9,7 +9,8 @@
     <script src="https://unpkg.com/@phosphor-icons/web"></script> 
     <script src="https://cdn.tailwindcss.com"></script>  
  </head>
-   <body> 
+   <body>  
+    
   <div class="container-side">
   <div class="sidebar">
     <div class="menu-btn"><i class="ph-bold ph-caret-left"></i></div>
@@ -87,7 +88,11 @@
                     <th scope="col">Preço</th>
                     <th scope="col">Marca</th>
                     <th scope="col">Responsável</th>
-                    <th scope="col">Ações</th>
+                    <th scope="col">Ações
+                      <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        <i class="icon ph-bold ph-plus-circle"></i></button>
+
+                    </th>
       
                   </tr>
                 </thead>
@@ -147,7 +152,23 @@
       
         </div>
       
-      </main>
+      </main> 
+      <div class="modal  fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+              <button type="button" class="btn btn-primary">Cadastrar</button>
+            </div>
+          </div>
+        </div>
     </div>   
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.js" integrity="sha512-8Z5++K1rB3U+USaLKG6oO8uWWBhdYsM3hmdirnOEWp8h2B1aOikj5zBzlXs8QOrvY9OxEnD2QDkbSKKpfqcIWw==" crossorigin="anonymous"></script>
