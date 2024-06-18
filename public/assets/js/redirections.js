@@ -6,6 +6,6 @@ document.getElementById("vantage-link").addEventListener("click", () => {
 }) 
 document.getElementById("product").addEventListener("click", () => {
     window.location.href = "pages/product-page/index.html"; 
-}) 
+})
 document.getElementById("product-btn").addEventListener("click", () => window.location.href = "pages/product-page/index.html")
 document.getElementById("product-btn2").addEventListener("click", () => window.location.href = "pages/product-page/index.html")

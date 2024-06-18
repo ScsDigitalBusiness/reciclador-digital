@@ -118,7 +118,7 @@
                     <th scope="col">Marca</th>
                     <th scope="col">Responsável</th>
                     <th scope="col">Ações
-                      <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                      <button type="button" class="btn btn-transparent" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                         <i class="icon ph-bold ph-plus-circle"></i></button>
 
                     </th>
@@ -193,24 +193,21 @@
               <form class="row g-3">
                 <div class="col-md-6">
                   <label for="inputEmail4" class="form-label">Nome do Produto</label>
-                  <input type="email" class="form-control" id="inputEmail4">
+                  <input type="text" class="form-control" placeholder="Nome do Produto" id="inputEmail4">
                 </div>
                 <div class="col-md-6">
-                  <label for="inputPassword4" class="form-label">Categoria</label>
-                  <input name="category" type="password" class="form-control" id="inputPassword4">
+                  <label for="category" class="form-label">Categoria</label>
+                  <input name="category" type="text" class="form-control" id="category">
                 </div>
                 <div class="col-12">
-                  <label for="inputAddress" class="form-label">Descrição</label>
-                  <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                  <label for="desc" class="form-label">Descrição</label>
+                  <input type="text" class="form-control" id="desc" placeholder="Descrição">
                 </div>
                 <div class="col-4">
                   <label for="inputAddress2" class="form-label">SKU</label>
-                  <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                  <input type="text" class="form-control" id="inputAddress2" placeholder="Código SKU">
                 </div>
-                <div class="col-md-6">
-                  <label for="inputCity" class="form-label">Peso</label>
-                  <input type="text"  name="weight" class="form-control" id="weight">
-                </div>
+                
                 <div class="col-md-4">
                   <label for="inputPrice" class="form-label">Preço</label> 
                   <input type="text" name="price" class="form-control" id="price" >
@@ -219,15 +216,10 @@
                   <label for="branding" class="form-label">Marca</label>
                   <input type="text" name="branding" class="form-control" id="branding">
                 </div>
-                <div class="col-md-4">
-                  <label for="process" class="form-label">Processo</label>
-                  <select type="text" name="process" class="form-control" id="branding">
-                    <option value=""></option>  
-                  </select>
-                </div> 
+               
                 
                 <div class="col-12">
-                  <button type="submit" class="btn btn-primary">Sign in</button>
+                  <button type="submit" class="btn btn-primary">Cadastrar</button>
                 </div>
               </div>
             </form>
