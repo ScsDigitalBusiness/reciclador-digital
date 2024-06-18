@@ -107,89 +107,137 @@
         </div>
         
         <div class="content">
-            <section class="home-section">
-              <div class="table-area w-100">
-                <table class="table w-100 table-striped">
-                  <thead>
-                    <tr>
-                      <th scope="col">ID</th>
-                      <th scope="col">Produto</th>
-                      <th scope="col">Preço</th>
-                      <th scope="col">Marca</th> 
-                      <th scope="col">Responsável</th>
-                      <th scope="col">Ações
-                        <button type="button" class="btn btn-secondary"><i class="icon ph-bold ph-plus-circle"></i></button>
-                      </th>
-                      
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th scope="row">1</th>
-                      <td>Mark</td>
-                      <td>Otto</td>
-                      <td>@mdo</td> 
-                      <td>@mdo</td> 
-                      <td> 
-                        <button type="button" class="btn btn-danger"><i class="icon ph-bold ph-trash"></i></button> 
-                        <button type="button" class="btn btn-dark"><i class="icon ph-bold ph-pen"></i></button> 
-                      </td>
-                      
-                    </tr>
-                    <tr>
-                      <th scope="row">1</th>
-                      <td>Mark</td>
-                      <td>Otto</td>
-                      <td>@mdo</td> 
-                      <td>@mdo</td> 
-                      <td> 
-                        <button type="button" class="btn btn-danger"><i class="icon ph-bold ph-trash"></i></button> 
-                        <button type="button" class="btn btn-dark"><i class="icon ph-bold ph-pen"></i></button> 
-                      </td>
-                      
-                    </tr> 
-                    <tr>
-                      <th scope="row">1</th>
-                      <td>Mark</td>
-                      <td>Otto</td>
-                      <td>@mdo</td> 
-                      <td>@mdo</td> 
-                      <td> 
-                        <button type="button" class="btn btn-danger"><i class="icon ph-bold ph-trash"></i></button> 
-                        <button type="button" class="btn btn-dark"><i class="icon ph-bold ph-pen"></i></button> 
-                      </td>
-                      
-                    </tr>
-                    <tr>
-                      <th scope="row">1</th>
-                      <td>Mark</td>
-                      <td>Otto</td>
-                      <td>@mdo</td> 
-                      <td>@mdo</td> 
-                      <td> 
-                        <button type="button" class="btn btn-danger"><i class="icon ph-bold ph-trash"></i></button> 
-                        <button type="button" class="btn btn-dark"><i class="icon ph-bold ph-pen"></i></button> 
-                      </td>
-                      
-                    </tr>
-                  </tbody>
-                </table>
+          <section class="home-section">
+            <div class="table-area w-100">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Produto</th>
+                    <th scope="col">Preço</th>
+                    <th scope="col">Marca</th>
+                    <th scope="col">Responsável</th>
+                    <th scope="col">Ações
+                      <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        <i class="icon ph-bold ph-plus-circle"></i></button>
+
+                    </th>
+      
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                    <td>@mdo</td>
+                    <td>
+                      <button type="button" class="btn btn-danger"><i class="icon ph-bold ph-trash"></i></button>
+                      <button type="button" class="btn btn-dark"><i class="icon ph-bold ph-pen"></i></button>
+                    </td>
+      
+                  </tr>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                    <td>@mdo</td>
+                    <td>
+                      <button type="button" class="btn btn-danger"><i class="icon ph-bold ph-trash"></i></button>
+                      <button type="button" class="btn btn-dark"><i class="icon ph-bold ph-pen"></i></button>
+                    </td>
+      
+                  </tr>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                    <td>@mdo</td>
+                    <td>
+                      <button type="button" class="btn btn-danger"><i class="icon ph-bold ph-trash"></i></button>
+                      <button type="button" class="btn btn-dark"><i class="icon ph-bold ph-pen"></i></button>
+                    </td>
+      
+                  </tr>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                    <td>@mdo</td>
+                    <td>
+                      <button type="button" class="btn btn-danger"><i class="icon ph-bold ph-trash"></i></button>
+                      <button type="button" class="btn btn-dark"><i class="icon ph-bold ph-pen"></i></button>
+                    </td>
+      
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+      
+        </div>
+      
+      </main> 
+      <div class="modal  fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">Cadastrar Produto</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form class="row g-3">
+                <div class="col-md-6">
+                  <label for="inputEmail4" class="form-label">Nome do Produto</label>
+                  <input type="email" class="form-control" id="inputEmail4">
+                </div>
+                <div class="col-md-6">
+                  <label for="inputPassword4" class="form-label">Categoria</label>
+                  <input name="category" type="password" class="form-control" id="inputPassword4">
+                </div>
+                <div class="col-12">
+                  <label for="inputAddress" class="form-label">Descrição</label>
+                  <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                </div>
+                <div class="col-4">
+                  <label for="inputAddress2" class="form-label">SKU</label>
+                  <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                </div>
+                <div class="col-md-6">
+                  <label for="inputCity" class="form-label">Peso</label>
+                  <input type="text"  name="weight" class="form-control" id="weight">
+                </div>
+                <div class="col-md-4">
+                  <label for="inputPrice" class="form-label">Preço</label> 
+                  <input type="text" name="price" class="form-control" id="price" >
+                </div>
+                <div class="col-md-4">
+                  <label for="branding" class="form-label">Marca</label>
+                  <input type="text" name="branding" class="form-control" id="branding">
+                </div>
+                <div class="col-md-4">
+                  <label for="process" class="form-label">Processo</label>
+                  <select type="text" name="process" class="form-control" id="branding">
+                    <option value=""></option>  
+                  </select>
+                </div> 
+                
+                <div class="col-12">
+                  <button type="submit" class="btn btn-primary">Sign in</button>
+                </div>
               </div>
-            </section>
-      </main>   
-  </div>
- 
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              clifford: '#da373d',
-            }
-          }
-        }
-      }
-    </script>
+            </form>
+            <div class="modal-footer">
+             
+            </div>
+          </div>
+        </div>
+    </div>   
+    <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.js" integrity="sha512-8Z5++K1rB3U+USaLKG6oO8uWWBhdYsM3hmdirnOEWp8h2B1aOikj5zBzlXs8QOrvY9OxEnD2QDkbSKKpfqcIWw==" crossorigin="anonymous"></script>
     <script src="/assets/js/AdminPage.js"></script>    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
