@@ -22,8 +22,13 @@
           font-weight: bold;
          }
 
-         .but a {
+         .but a, .but button {
           padding: 10px;
+          text-transform: uppercase;
+
+              i {
+                font-size: 20px;
+              }
          }
         }
 
@@ -31,6 +36,7 @@
           border: 2px solid blue;
           background-color: #fff;
           color: blue;
+          padding: 10px;
          }
   }
 

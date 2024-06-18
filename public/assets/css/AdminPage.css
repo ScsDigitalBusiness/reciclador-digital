@@ -23,13 +23,18 @@
   margin: 0 0 0 -13px;
   font-weight: bold;
 }
-.principal div.row .but a {
+.principal div.row .but a, .principal div.row .but button {
   padding: 10px;
+  text-transform: uppercase;
+}
+.principal div.row .but a i, .principal div.row .but button i {
+  font-size: 20px;
 }
 .principal .but .b2 {
   border: 2px solid blue;
   background-color: #fff;
   color: blue;
+  padding: 10px;
 }
 
 .form .but {
