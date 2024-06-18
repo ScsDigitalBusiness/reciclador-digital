@@ -1,20 +1,38 @@
 @import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900);
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Inter", sans-serif;
-}
-body {
-  background-color: #ff8080;
-}
-.container {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  min-height: 100vh;
-}
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; 
+    font-family: verdana;
+} 
+.content  {
+    background-color: rgb(238, 238, 238);  
+    display: flex; 
+    width: 100vw;   
+    height: 100vh; 
+    align-items: center;
+    justify-content: end;
+    background-color: red;
+    .home-section {
+        width: 86vw;  
+        height: 100vh;
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        .table-area {
+            width: 100%; 
+            table {
+                width: 100%;
+            }
+        }
+    }
+} 
+ 
+@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900);
+
+
+
 .sidebar {
   position: relative;
   width: 256px;
