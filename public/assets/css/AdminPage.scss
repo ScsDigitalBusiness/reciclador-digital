@@ -12,7 +12,7 @@
     width: 100vw;   
     height: 100vh; 
     align-items: center;
-    justify-content: end;
+    justify-content: center;
     background-color: red;
     .home-section {
         width: 86vw;  
@@ -39,7 +39,8 @@
   display: flex;
   align-items: center;
   width: 100%;
-  min-height: 100vh;
+  min-height: 100vh; 
+  background-color: pink;
 }
 .sidebar {
   position: relative;
