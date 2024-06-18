@@ -12,71 +12,100 @@
    <body>  
     
   <div class="container-side">
-  <div class="sidebar">
-    <div class="menu-btn"><i class="ph-bold ph-caret-left"></i></div>
-    <div class="head">
-      <div class="user-img"><img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MTUzMjAyMTh8&ixlib=rb-4.0.3&q=85" alt=""></div>
-      <div class="user-details">
-        <p class="title">Administrador</p>
-        <p class="name">Kalvin Calimag</p>
+    <div class="sidebar">
+      <div class="menu-btn"><i class="ph-bold ph-caret-left"></i></div>
+      <div class="head">
+        <div class="user-img"><img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MTUzMjAyMTh8&ixlib=rb-4.0.3&q=85" alt=""></div>
+        <div class="user-details">
+          <p class="title">Administrador</p>
+          <p class="name">Kalvin Calimag</p>
+        </div>
       </div>
-    </div>
-    <div class="nav">
+      <div class="nav">
+        <div class="menu">
+          <p class="title">Main</p>
+          <ul>
+            <li><a href="#"><i class="icon ph-bold ph-house-simple"></i><span class="text">Dashboard</span></a></li>
+            <li><a href="#"><i class="icon ph-bold ph-cube"></i><span class="text">Materiais</span><i class="arrow ph-bold ph-caret-down"></i></a>
+              <ul class="sub-menu">
+                <li><a href="#"><span class="text">Pláticos</span></a></li>
+                <li><a href="#"><span class="text">Metais</span></a></li> 
+                <li><a href="#"><span class="text">Papeis </span></a></li> 
+                <li><a href="#"><span class="text">Vidros</span></a></li>
+  
+                
+              </ul>
+            </li>
+            <li  class="active"><a href="#"><i class="icon ph-bold ph-box-arrow-up"></i><span class="text">Produtos</span></a></li>
+            <li><a href="#"><i class="icon ph-bold ph-user"></i><span class="text">Usuários</span></a>
+             
+            </li>
+            <li><a href="#"><i class="icon ph-bold ph-file-text"></i><span class="text">Articles</span></a></li>
+          </ul>
+        </div>
+        <div class="menu">
+          <p class="title">Settings</p>
+          <ul>
+            <li><a href="#"><i class="icon ph-bold ph-gear"></i><span class="text">Settings</span></a></li>
+          </ul>
+        </div>
+      </div>
       <div class="menu">
-        <p class="title">Main</p>
+        <p class="title">Account</p>
         <ul>
-          <li><a href="#"><i class="icon ph-bold ph-house-simple"></i><span class="text">Dashboard</span></a></li>
-          <li><a href="#"><i class="icon ph-bold ph-cube"></i><span class="text">Materiais</span><i class="arrow ph-bold ph-caret-down"></i></a>
-            <ul class="sub-menu">
-              <li><a href="#"><span class="text">Pláticos</span></a></li>
-              <li><a href="#"><span class="text">Metais</span></a></li> 
-              <li><a href="#"><span class="text">Papeis </span></a></li> 
-              <li><a href="#"><span class="text">Vidros</span></a></li>
-
-              
-            </ul>
-          </li>
-          <li  class="active"><a href="#"><i class="icon ph-bold ph-box-arrow-up"></i><span class="text">Produtos</span></a></li>
-          <li><a href="#"><i class="icon ph-bold ph-user"></i><span class="text">Usuários</span></a>
-           
-          </li>
-          <li><a href="#"><i class="icon ph-bold ph-file-text"></i><span class="text">Articles</span></a></li>
+          <li><a href="#"><i class="icon ph-bold ph-info"></i><span class="text">FAQ</span></a></li>
+          <li><a href="#"><i class="icon ph-bold ph-sign-out"></i><span class="text">Logout</span></a></li>
         </ul>
       </div>
-      <div class="menu">
-        <p class="title">Settings</p>
-        <ul>
-          <li><a href="#"><i class="icon ph-bold ph-gear"></i><span class="text">Settings</span></a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="menu">
-      <p class="title">Account</p>
-      <ul>
-        <li><a href="#"><i class="icon ph-bold ph-info"></i><span class="text">FAQ</span></a></li>
-        <li><a href="#"><i class="icon ph-bold ph-sign-out"></i><span class="text">Logout</span></a></li>
-      </ul>
     </div>
   </div>
+      <main class="principal">
 
-      <main class="principal-content">
-        <section class="filter">
-          <div class="row">
-            <div class="col-md-8">
-              <h4 class="text-3xl font-bold underline text-clifford">Produtos</h4>
-            </div>
-      
-            <div class="col-md-3 but bg-zinc-500">
-              <a href="" class="btn btn-primary">TDS CERTIFICATE</a>
-              <a href="" class="btn btn-primary">SET REMINDER</a>
-            </div>
-            <div class="row">
-              <div class="col-md-12">
-              </div>
+        <div class="row">
+
+          <div class="col-md-9">
+            <h4>Produtos</h4>
+          </div>
+
+          <div class="col-md-3 but">
+            <a href="" class="btn btn-primary b1">Teste</a>
+            <a href="" class="btn btn-primary b2">Teste 2</a>
+          </div>
+
+        </div>
+
+        <div class="row form">
+
+          <div class="col-md-4 but">
+
+            <div class="input-group mb-3">
+              <label class="input-group-text" for="inputGroupSelect01">Filtro:</label>
+              <select class="form-select" id="inputGroupSelect01">
+                <option selected>status</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+  
+              <select class="form-select" id="inputGroupSelect01">
+                <option selected>product</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
             </div>
           </div>
-      
-        </section>
+
+          <div class="col-md-3 search-btn">
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Pesquise um produto" aria-label="Recipient's username" aria-describedby="button-addon2">
+
+              <button class="btn" type="button" id="button"><ion-icon name="search"></ion-icon></button>
+            </div>
+          </div>
+
+        </div>
+        
         <div class="content">
           <section class="home-section">
             <div class="table-area w-100">

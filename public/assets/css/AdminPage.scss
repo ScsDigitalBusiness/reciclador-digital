@@ -6,20 +6,69 @@
     box-sizing: border-box; 
     font-family: verdana;
 } 
-.content  {
-    background-color: rgb(238, 238, 238);  
+
+.principal {
+  width: 100vw;   
+  height: 100vh;
+  background-color: rgb(238, 238, 238); 
+  overflow: hidden;
+     div.row {
+         width: 81vw;
+         margin: 0 0 0 19vw;
+         padding: 25px 0;
+
+         div h4 {
+          margin: 0 0 0 -13px;
+          font-weight: bold;
+         }
+
+         .but a {
+          padding: 10px;
+         }
+        }
+
+         .but .b2 {
+          border: 2px solid blue;
+          background-color: #fff;
+          color: blue;
+         }
+  }
+
+  .form {
+
+    .but {
+      margin: 0 0 0 -13px;
+    }
+
+    div.search-btn {
+
+      button {
+        width: 50px;
+        color: #fff;
+        background-color: blue;
+        font-size: 20px;
+      }
+
+    }
+  }
+
+.form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content  { 
     display: flex; 
-    width: 100vw;   
-    height: 100vh; 
     align-items: center;
-    justify-content: center;
-    background-color: red;
+    justify-content: end;
+
     .home-section {
-        width: 86vw;  
+        width: 81vw;  
         height: 100vh;
         display: flex;
         align-items: start;
         justify-content: center;
+        
         .table-area {
             width: 100%; 
             table {
@@ -38,16 +87,18 @@
 .container-side {
   display: flex;
   align-items: center;
-  width: 100%;
-  min-height: 100vh; 
-  background-color: pink;
+  width: 256px;
+  min-height: 100vh;
+  position: fixed;
+  z-index: 20;
 }
 .sidebar {
   position: relative;
-  width: 256px;
+  width: 500%;
   height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: end;
   gap: 20px;
   background-color: #fff;
   padding: 24px;
