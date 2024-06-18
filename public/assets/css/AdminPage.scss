@@ -55,7 +55,7 @@
   }
 
 .form {
-  display: flexbox;
+  display: flex;
   justify-content: space-between;
 }
 
@@ -63,12 +63,14 @@
     display: flex; 
     align-items: center;
     justify-content: end;
+
     .home-section {
         width: 81vw;  
         height: 100vh;
         display: flex;
         align-items: start;
         justify-content: end;
+        
         .table-area {
             width: 100%; 
             table {
