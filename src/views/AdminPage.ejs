@@ -60,10 +60,9 @@
     </div>
   </div>
       <main class="principal">
-
-        <div class="row">
-
-          <div class="col-md-6">
+        
+       <div class="row ">
+        <div class="col-md-6">
             <h4>Produtos</h4>
           </div>
 
@@ -107,7 +106,7 @@
 
         </div>
         
-        <div class="content">
+        <div class="content d-flex align-items-center justify-content-center">
           <section class="home-section">
             <div class="table-area w-100">
               <table class="table table-striped">
@@ -118,8 +117,7 @@
                     <th scope="col">Categoria</th>
                     <th scope="col">Preço</th>
                     <th scope="col">Marca</th>
-                    <th scope="col">Ações</th>
-      
+                    <th scope="col d-flex align-items-center justify-content-center">Ações</th>
                   </tr>
                 </thead>
                 <tbody>  
@@ -130,7 +128,7 @@
                       <th scope="row"><%= i%></th>
                       <td><%=products.name %></td>
                       <td><%=products.category %></td>
-                      <td><%=products.price %></td>
+                      <td>R$ <%=products.price %></td>
                       <td><%=products.brand %></td>
                       <td>
                         <a href="/admin/delete/<%= products._id %>"><button type="button" class="btn btn-danger"><i class="icon ph-bold ph-trash"></i></button></a>

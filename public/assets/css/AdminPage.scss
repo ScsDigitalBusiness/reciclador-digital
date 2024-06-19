@@ -9,22 +9,32 @@
 
 .principal {
   width: 100vw;   
-  height: 100vh;
-  background-color: rgb(238, 238, 238); 
+  height: 100vh; 
+
+  background-color: rgb(249, 249, 249); 
+
   overflow: hidden;
      div.row {
          width: 81vw;
          margin: 0 0 0 19vw;
-         padding: 25px 0;
-
+         padding: 15px 0;
+         display: flex;
+          align-items: end;
+          justify-content: start; 
+         
          div h4 {
-          margin: 0 0 0 -13px;
-          font-weight: bold;
-         }
+          font-size: 2em;
+          font-weight: bold; 
+          color: rgb(131, 131, 131);
+         } 
+        
 
          .but a, .but button {
           padding: 10px;
-          text-transform: uppercase;
+          text-transform: uppercase; 
+          position: relative; 
+          top: 3vh; 
+          left: 26%;
 
               i {
                 font-size: 20px;
@@ -36,7 +46,8 @@
           border: 2px solid blue;
           background-color: #fff;
           color: blue;
-          padding: 10px;
+          padding: 10px; 
+          width: 12vw;
          }
   }
 
@@ -47,12 +58,18 @@
     }
 
     div.search-btn {
+      position: relative; 
+      width: 30vw;
+      left: 25%; 
+      top: 2vh; 
+   
 
       button {
-        width: 50px;
+        width: 50px; 
         color: #fff;
         background-color: blue;
-        font-size: 20px;
+        font-size: 20px; 
+       
       }
 
     }
@@ -66,19 +83,22 @@
 .content  { 
     display: flex; 
     align-items: center;
-    justify-content: end;
-
+    justify-content: center; 
+    width: 100vw;    
     .home-section {
-        width: 81vw;  
+        width: 90vw;  
         height: 100vh;
         display: flex;
-        align-items: start;
-        justify-content: center;
+        align-items: start; 
+        justify-content: end;
         
         .table-area {
-            width: 100%; 
+            width: 90%;  
+            display: flex; 
+            align-items: center;
+            justify-content: end;
             table {
-                width: 100%;
+                width: 90%;
             }
         }
     }
@@ -284,4 +304,31 @@
   border: 1px solid #f6f6f6;
   background-color: #fff;
   box-shadow: 0px 10px 8px rgba(0, 0, 0, 0.1);
+} 
+.header-of-content {
+  display: flex; 
+  height: 10vh;
+  align-items: end;
+  justify-content: end;
+  .user-infos  {
+    height: 100%;
+    width: 20vw; 
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    p {
+      font-size: 1.4em; 
+      font-weight: bold;
+      color: rgb(101, 101, 101);
+    }
+  } 
+  .userImage {
+    background-color: silver;
+    height: 90%;
+    width: 30%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    clip-path: circle(); 
+  }
 }
