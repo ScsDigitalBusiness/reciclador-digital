@@ -1,5 +1,5 @@
 const mongoose = require("mongoose")
-import {validator} from "validator"; 
+import validator from "validator"; 
 import bcrypt from "bcryptjs"; 
 
 import {  AccountIn } from "../interfaces/Account.interface";

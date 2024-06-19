@@ -1,12 +1,11 @@
-const express = require ("express"); 
+import express from "express"; 
 const router = express.Router();  
 import {index} from "./src/controller/HomeControler";  
-const {indexProductPage} = require("./src/controller/ProductPageController.js")
-import  {indexAdmin,create,deleteProduct,editProduct} from "./src/controller/AdminPageController.js";  
-const  multer =  require('multer');    
-const {ativacaoIndex} = require("./src/controller/AtbPageController.js") 
-const multerConfig = require("./src/config/multerConfig");
-const uploads = multer (multerConfig);  
+import { indexProductPage } from "./src/controller/ProductPageController";
+import  {indexAdmin,create,deleteProduct,editProduct} from "./src/controller/AdminPageController";  
+import multer from 'multer';    
+import { ativacaoIndex } from "./src/controller/AtbPageController.js"; 
+import Multer from "./src/config/multerConfig"; 
 
 router.get("/", index) 
 router.get("/products/",indexProductPage);   

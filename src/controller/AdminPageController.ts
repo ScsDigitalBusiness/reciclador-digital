@@ -1,4 +1,5 @@
-import  Products from "../models/ProductsModels.js"
+import  Products from "../models/ProductsModels"
+
 export const indexAdmin = async (req:any,res:any) : Promise<any> =>{  
     const productModel = new Products(req.body);   
     const allProducts =  await productModel.GetProducts(); 

@@ -1,3 +1,3 @@
-exports.ativacaoIndex = (req,res) =>{
+export const ativacaoIndex = (req:any,res:any) =>{
   res.send("AtivacaoBrutalPage")   
 }

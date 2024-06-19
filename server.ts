@@ -1,10 +1,10 @@
-const express =require ("express"); 
+import express from "express"; 
 const app = express();
 import  session from "express-session";
 import  flash from "connect-flash";
 import  mongoose  from "mongoose";
 import  MongoStore  from "connect-mongo"; 
-const   path =  require("path") ;
+import path from "path";
 require("dotenv").config();
 import  routs from "./router";
 import {middlewareGlobal} from "./src/middlewares/middlewars"
