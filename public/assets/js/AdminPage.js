@@ -15,3 +15,5 @@ $(".menu-btn").click(function () {
     // Toggle the 'active' class on the sidebar
     $(".sidebar").toggleClass("active");
 });
+ 
+$('.money').mask('000.000.000.000.000,00', {reverse: true})
