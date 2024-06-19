@@ -4,7 +4,7 @@ import  session from "express-session";
 import  flash from "connect-flash";
 import  mongoose  from "mongoose";
 import  MongoStore  from "connect-mongo"; 
-const   path  require("path") ;
+const   path = require("path") ;
 require("dotenv").config();
 import  routs from "./router";
 import {middlewareGlobal} from "./src/middlewares/middlewars"
