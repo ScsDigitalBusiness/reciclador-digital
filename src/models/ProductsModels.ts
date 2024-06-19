@@ -39,6 +39,20 @@ const ProductModel = mongoose.model("Products", ProductSchema)
         } catch (e:any) {
             throw new Error(e)
         }
+    } 
+    public async delete(id:string) {
+        try  {
+            this.product = await ProductModel.findByIdAndDelete({_id:id}); 
+        }catch(e:any) {
+            throw new Error(e);
+        }
+    } 
+    public async  edit(id:string) {
+        try{
+            this.product = await ProductModel.findByIdAndUpdate(id,this.body); 
+        }catch(e:any) {
+            throw new Error(e); 
+        }
     }
 }
 

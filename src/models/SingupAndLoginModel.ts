@@ -18,7 +18,7 @@ class SingUp {
    public errors: Array<string>;  
    public user: any;
    constructor(body: object) {
-      this.body = body,
+         this.body = body,
          this.errors = [],
          this.user = null
    }

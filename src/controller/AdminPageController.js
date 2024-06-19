@@ -12,7 +12,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.create = exports.indexAdmin = void 0;
+exports.editProduct = exports.deleteProduct = exports.create = exports.indexAdmin = void 0;
 const ProductsModels_js_1 = __importDefault(require("../models/ProductsModels.js"));
 const indexAdmin = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const productModel = new ProductsModels_js_1.default(req.body);
@@ -26,3 +26,15 @@ const create = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     res.redirect("back");
 });
 exports.create = create;
+const deleteProduct = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    const productModel = new ProductsModels_js_1.default(req.body);
+    yield productModel.delete(req.params.id);
+    res.redirect("back");
+});
+exports.deleteProduct = deleteProduct;
+const editProduct = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    const productModel = new ProductsModels_js_1.default(req.body);
+    yield productModel.edit(req.params.id);
+    res.redirect("back");
+});
+exports.editProduct = editProduct;

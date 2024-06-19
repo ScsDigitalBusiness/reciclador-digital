@@ -142,7 +142,7 @@
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                               </div>
                               <div class="modal-body">
-                                <form class="row g-3" action="/admin/create/" method="POST">
+                                <form class="row g-3" action="/admin/edit/<%= products._id %>" method="POST">
                                   <div class="col-md-6">
                                     <label for="inputEmail4" class="form-label">Nome do Produto</label>
                                     <input type="text" name="name" value="<%= products.name %>" class="form-control" placeholder="Nome do Produto" id="inputEmail4">
@@ -171,7 +171,7 @@
                                  
                                   
                                   <div class="col-12">
-                                    <button type="submit" class="btn btn-primary">Editar</button>
+                                   <button type="submit" class="btn btn-primary">Editar</button>
                                   </div>
                                 </div>
                               </form>

@@ -8,9 +8,13 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
 const mongoose = require("mongoose");
-const validator = require("validator");
-const bcrypt = require("bcryptjs");
+const validator_1 = require("validator");
+const bcryptjs_1 = __importDefault(require("bcryptjs"));
 const SingupSchema = mongoose.Schema({
     name: { type: String, required: true },
     email: { type: String, required: true },
@@ -34,7 +38,7 @@ class SingUp {
     ;
     Validation() {
         this.CleanUp();
-        if (!validator.isEmail(this.body.email)) {
+        if (!validator_1.validator.isEmail(this.body.email)) {
             this.errors.push("E-mail Incorreto!");
             return;
         }
@@ -49,7 +53,7 @@ class SingUp {
                     this.errors.push("Já possui uma conta com esse E-mail!");
                     return;
                 }
-                if (!bcrypt.compare(this.body.password, this.body.passwordConfirmed)) {
+                if (!bcryptjs_1.default.compare(this.body.password, this.body.passwordConfirmed)) {
                     this.errors.push("Senhas não conferem!");
                     return;
                 }
@@ -62,9 +66,9 @@ class SingUp {
     ;
     Register() {
         return __awaiter(this, void 0, void 0, function* () {
-            const salt = bcrypt.genSaltSync();
-            this.body.password = bcrypt.hashSync(this.body.password, salt);
-            this.body.passwordConfirmed = bcrypt.hashSync(this.body.passwordConfirmed, salt);
+            const salt = bcryptjs_1.default.genSaltSync();
+            this.body.password = bcryptjs_1.default.hashSync(this.body.password, salt);
+            this.body.passwordConfirmed = bcryptjs_1.default.hashSync(this.body.passwordConfirmed, salt);
             this.Validation();
             if (this.errors.length === 0) {
                 try {
@@ -85,7 +89,7 @@ class SingUp {
                     this.errors.push("Usuário não existe!");
                     return;
                 }
-                if (!bcrypt.compareSync(this.body.password, this.user.password)) {
+                if (!bcryptjs_1.default.compareSync(this.body.password, this.user.password)) {
                     this.errors.push("Senha incorreta!");
                     return;
                 }
@@ -96,4 +100,4 @@ class SingUp {
         });
     }
 }
-exports.SingUp = SingUp;
+exports.default = SingUp;
