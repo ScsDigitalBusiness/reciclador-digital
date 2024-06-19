@@ -84,6 +84,7 @@
   display: flex;
   align-items: center;
   justify-content: end;
+  overflow-y: scroll;
 }
 .content .home-section .table-area table {
   width: 90%;

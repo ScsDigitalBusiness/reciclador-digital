@@ -1,1 +1,2 @@
-const {SingUp} = require("../models/SingupAndLoginModel")
+"use strict";
+const { SingUp } = require("../models/SingupAndLoginModel");

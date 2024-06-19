@@ -1,4 +1,8 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
 const express = require('express');
 const app = express();
 const session = require("express-session");
@@ -7,7 +11,7 @@ const mongoose = require("mongoose");
 const MongoStore = require("connect-mongo");
 const path = require("path");
 require("dotenv").config();
-const router = require("./router");
+const router_1 = __importDefault(require("./router"));
 const { middlewareGlobal } = require("./src/middlewares/middlewars");
 app.use(express.urlencoded({ extended: true })); //body parse configuration 
 //confugurando arquivos estáticos
@@ -40,5 +44,5 @@ const sessionOptions = session({
 //usando as configurações
 app.use(sessionOptions);
 app.use(flash());
-app.use(router);
+app.use(router_1.default);
 app.use(middlewareGlobal);

@@ -1,7 +1,4 @@
-
-exports.index = (req,res) =>{
-  res.render("Home"); 
-}  
- 
-
-
+"use strict";
+exports.index = (req, res) => {
+    res.render("Home");
+};

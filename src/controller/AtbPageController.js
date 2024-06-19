@@ -1,3 +1,4 @@
-exports.ativacaoIndex = (req,res) =>{
-  res.send("AtivacaoBrutalPage")   
-}
+"use strict";
+exports.ativacaoIndex = (req, res) => {
+    res.send("AtivacaoBrutalPage");
+};

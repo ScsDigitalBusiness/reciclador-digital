@@ -1,1 +1,2 @@
-const {Products} = require("../models/ProductsModels")
+"use strict";
+const { Products } = require("../models/ProductsModels");

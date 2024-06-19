@@ -96,7 +96,8 @@
             width: 90%;  
             display: flex; 
             align-items: center;
-            justify-content: end;
+            justify-content: end; 
+            overflow-y: scroll;
             table {
                 width: 90%;
             }

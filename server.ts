@@ -1,13 +1,13 @@
-const express = require('express')
+import {express} from "express"; 
 const app = express();
-const session = require("express-session");
-const flash = require("connect-flash");
-const mongoose = require("mongoose");
-const MongoStore = require("connect-mongo");
-const path = require("path");
+import  session from "express-session";
+import  flash from "connect-flash";
+import  mongoose  from "mongoose";
+import  MongoStore  from "connect-mongo"; 
+const   path  require("path") ;
 require("dotenv").config();
-const routs = require("./router");
-const {middlewareGlobal} = require("./src/middlewares/middlewars")
+import  routs from "./router";
+import {middlewareGlobal} from "./src/middlewares/middlewars"
 
 app.use(express.urlencoded({ extended: true }));  //body parse configuration 
 
