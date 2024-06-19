@@ -15,4 +15,5 @@ router.get("/products/atb/index", ativacaoIndex);
 router.get("/admin/", AdminPageController_js_1.indexAdmin);
 router.post("/admin/create/", AdminPageController_js_1.create);
 router.get("/admin/delete/:id", AdminPageController_js_1.deleteProduct);
+router.post("/admin/edit/:id", AdminPageController_js_1.editProduct);
 exports.default = router;
