@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <link rel="stylesheet" href="/assets/css/AdminPage.css">
-    <title>Admin Page - Home</title>  
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://unpkg.com/@phosphor-icons/web"></script> 
-    <script src="https://cdn.tailwindcss.com"></script>  
- </head>
-   <body>  
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/assets/css/AdminPage.css">
+  <title>Admin Page - Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+
   <div class="container-side">
     <div class="sidebar">
       <div class="menu-btn"><i class="ph-bold ph-caret-left"></i></div>
       <div class="head">
-        <div class="user-img"><img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MTUzMjAyMTh8&ixlib=rb-4.0.3&q=85" alt=""></div>
+        <div class="user-img"><img
+            src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MTUzMjAyMTh8&ixlib=rb-4.0.3&q=85"
+            alt=""></div>
         <div class="user-details">
           <p class="title">Administrador</p>
           <p class="name">Reciclador Digital</p>
@@ -26,19 +31,21 @@
           <p class="title">Main</p>
           <ul>
             <li><a href="#"><i class="icon ph-bold ph-house-simple"></i><span class="text">Dashboard</span></a></li>
-            <li><a href="#"><i class="icon ph-bold ph-cube"></i><span class="text">Materiais</span><i class="arrow ph-bold ph-caret-down"></i></a>
+            <li><a href="#"><i class="icon ph-bold ph-cube"></i><span class="text">Materiais</span><i
+                  class="arrow ph-bold ph-caret-down"></i></a>
               <ul class="sub-menu">
                 <li><a href="#"><span class="text">Pláticos</span></a></li>
-                <li><a href="#"><span class="text">Metais</span></a></li> 
-                <li><a href="#"><span class="text">Papeis </span></a></li> 
+                <li><a href="#"><span class="text">Metais</span></a></li>
+                <li><a href="#"><span class="text">Papeis </span></a></li>
                 <li><a href="#"><span class="text">Vidros</span></a></li>
-  
-                
+
+
               </ul>
             </li>
-            <li  class="active"><a href="#"><i class="icon ph-bold ph-box-arrow-up"></i><span class="text">Produtos</span></a></li>
+            <li class="active"><a href="#"><i class="icon ph-bold ph-box-arrow-up"></i><span
+                  class="text">Produtos</span></a></li>
             <li><a href="#"><i class="icon ph-bold ph-user"></i><span class="text">Usuários</span></a>
-             
+
             </li>
             <li><a href="#"><i class="icon ph-bold ph-file-text"></i><span class="text">Articles</span></a></li>
           </ul>
@@ -59,58 +66,59 @@
       </div>
     </div>
   </div>
-      <main class="principal">
-        
-       <div class="row ">
-        <div class="col-md-5">
-            <h4>Produtos</h4>
-          </div>
+  <main class="principal">
 
-          <div class="col-md-7 but"> 
-            <a href="" class="btn btn-primary b1" > <i class="ph ph-arrow-circle-up"></i> Exportar produtos</a>
-            <button type="button" class="btn btn-primary b2" data-bs-toggle="modal" data-bs-target="#staticBackdrop"> <i class="ph ph-plus-circle"></i> Adicionar produto</button>
-          </div>
+    <div class="row ">
+      <div class="col-md-5">
+        <h4>Produtos</h4>
+      </div>
 
+      <div class="col-md-7 but">
+        <a href="" class="btn btn-primary b1"> <i class="ph ph-arrow-circle-up"></i> Exportar produtos</a>
+        <button type="button" class="btn btn-primary b2" data-bs-toggle="modal" data-bs-target="#staticBackdrop"> <i
+            class="ph ph-plus-circle"></i> Adicionar produto</button>
+      </div>
+
+    </div>
+
+    <div class="row form">
+
+      <div class="col-md-4 but">
+
+        <div class="input-group mb-3">
+          <label class="input-group-text" for="inputGroupSelect01">Filtro:</label>
+          <select class="form-select" id="inputGroupSelect01">
+            <option selected>status</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+
+          <select class="form-select" id="inputGroupSelect01">
+            <option selected>product</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="col-md-3 search-btn">
+
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Pesquise um produto" aria-label="Recipient's username"
+            aria-describedby="button-addon2">
+          <button class="btn" type="button" id="button"><i class="ph ph-magnifying-glass"></i></button>
         </div>
 
-        <div class="row form">
-
-          <div class="col-md-4 but">
-
-            <div class="input-group mb-3">
-              <label class="input-group-text" for="inputGroupSelect01">Filtro:</label>
-              <select class="form-select" id="inputGroupSelect01">
-                <option selected>status</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-              </select>
-  
-              <select class="form-select" id="inputGroupSelect01">
-                <option selected>product</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="col-md-3 search-btn">
-
-            <div class="input-group mb-3">
-              <input type="text" class="form-control" placeholder="Pesquise um produto" aria-label="Recipient's username" aria-describedby="button-addon2">
-              <button class="btn" type="button" id="button"><i class="ph ph-magnifying-glass"></i></button>
-            </div>
-
-          </div>
+      </div>
 
         </div>
         
         <div class="content d-flex align-items-center justify-content-center">
           <section class="home-section">
-            <div class="table-area w-100"> 
-              <table class="table table-striped"> 
-              
+            <div class="table-area w-100">
+              <table class="table table-striped">
                 <thead>
                   <tr>
                     <th scope="col">ID</th>
@@ -121,131 +129,169 @@
                     <th scope="col d-flex align-items-center justify-content-center">Ações</th>
                   </tr>
                 </thead>
-                <tbody>   
-                
+                <tbody>  
                   <% let i = 0;  %>
                   <% allProducts.forEach(products=>{ %>  
                     <% i++ %>
                     <tr>
-                      <th scope="row"><%= i%></th>
-                      <td><%=products.name %></td>
-                      <td><%=products.category %></td>
-                      <td>R$ <%=products.price %></td>
-                      <td><%=products.brand %></td>
+                      <th scope="row">
+                        <%= i%>
+                      </th>
+                      <td class="d-flex align-items-center justify-content-start">
+                        <div class="product-photo" style="background: url('/uploads/<%= products.productImage %>'); background-position: center; background-size: cover;   background-repeat: no-repeat; "> </div>
+                        <%=products.name %>
+                      </td>
                       <td>
-                        <a href="/admin/delete/<%= products._id %>"><button type="button" class="btn btn-danger"><i class="icon ph-bold ph-trash"></i></button></a>
-                        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#staticBackdrop-<%= i %>"><i class="icon ph-bold ph-pen"></i></button>
-                        
-                        <div class="modal  fade" id="staticBackdrop-<%= i %>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <%=products.category %>
+                      </td>
+                      <td>R$ <%=products.price %>
+                      </td>
+                      <td>
+                        <%=products.brand %>
+                      </td>
+                      <td>
+                        <a href="/admin/delete/<%= products._id %>"><button type="button" class="btn btn-danger"><i
+                              class="icon ph-bold ph-trash"></i></button></a>
+                        <button type="button" class="btn btn-dark" data-bs-toggle="modal"
+                          data-bs-target="#staticBackdrop-<%= i %>"><i class="icon ph-bold ph-pen"></i></button>
+
+                        <div class="modal  fade" id="staticBackdrop-<%= i %>" data-bs-backdrop="static"
+                          data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                          aria-hidden="true">
                           <div class="modal-dialog modal-lg">
                             <div class="modal-content">
                               <div class="modal-header">
                                 <h1 class="modal-title fs-5" id="staticBackdropLabel">Editar Produto</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                  aria-label="Close"></button>
                               </div>
                               <div class="modal-body">
                                 <form class="row g-3" action="/admin/edit/<%= products._id %>" method="POST">
                                   <div class="col-md-6">
                                     <label for="inputEmail4" class="form-label">Nome do Produto</label>
-                                    <input type="text" name="name" value="<%= products.name %>" class="form-control" placeholder="Nome do Produto" id="inputEmail4">
+                                    <input type="text" name="name" value="<%= products.name %>" class="form-control"
+                                      placeholder="Nome do Produto" id="inputEmail4">
                                   </div>
                                   <div class="col-md-6">
                                     <label for="category" class="form-label">Categoria</label>
-                                    <input placeholder="Categoria do Produto" value= "<%= products.category %>" name="category" type="text" class="form-control" id="category">
+                                    <input placeholder="Categoria do Produto" value="<%= products.category %>"
+                                      name="category" type="text" class="form-control" id="category">
                                   </div>
                                   <div class="col-12">
                                     <label for="desc" class="form-label">Descrição</label>
-                                    <input type="text" class="form-control"  value = "<%= products.description %>" name="description"  id="desc" placeholder="Descrição">
+                                    <input type="text" class="form-control" value="<%= products.description %>"
+                                      name="description" id="desc" placeholder="Descrição">
                                   </div>
                                   <div class="col-4">
                                     <label for="inputAddress2" class="form-label">SKU</label>
-                                    <input type="text" class="form-control" id="inputAddress2"  value = "<%= products.sku %>" name="sku" placeholder="Código SKU">
+                                    <input type="text" class="form-control" id="inputAddress2"
+                                      value="<%= products.sku %>" name="sku" placeholder="Código SKU">
                                   </div>
-                                  
+
                                   <div class="col-md-4">
-                                    <label for="inputPrice"  class="form-label ">Preço</label> 
-                                    <input type="text" name="price" placeholder="Preço do Produto" name="price" value = "<%= products.price %>" class="form-control money" id="price" >
+                                    <label for="inputPrice" class="form-label ">Preço</label>
+                                    <input type="text" name="price" placeholder="Preço do Produto" name="price"
+                                      value="<%= products.price %>" class="form-control money" id="price">
                                   </div>
                                   <div class="col-md-4">
                                     <label for="branding" class="form-label">Marca</label>
-                                    <input type="text" placeholder="Marca do Produto" name="brand" value = "<%= products.brand %>"  class="form-control" id="branding">
+                                    <input type="text" placeholder="Marca do Produto" name="brand"
+                                      value="<%= products.brand %>" class="form-control" id="branding">
                                   </div>
-                                 
-                                  
+
+
                                   <div class="col-12">
-                                   <button type="submit" class="btn btn-primary">Editar</button>
+                                    <button type="submit" class="btn btn-primary">Editar</button>
                                   </div>
-                                </div>
+                              </div>
                               </form>
                               <div class="modal-footer">
-                               
+
                               </div>
                             </div>
                           </div>
                       </td>
-        
+
                     </tr>
-                   <% }) %>
-                 </tbody>
-              </table>
-            </div>
-          </section>
-      
+                    <% }) %>
+            </tbody>
+          </table>
         </div>
-      
-      </main> 
-      <div class="modal  fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="staticBackdropLabel">Cadastrar Produto</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <form class="row g-3" action="/admin/create/" method="POST">
-                <div class="col-md-6">
-                  <label for="inputEmail4" class="form-label">Nome do Produto</label>
-                  <input type="text" name="name" class="form-control" placeholder="Nome do Produto" id="inputEmail4">
-                </div>
-                <div class="col-md-6">
-                  <label for="category" class="form-label">Categoria</label>
-                  <input placeholder="Categoria do Produto" name="category" type="text" class="form-control" id="category">
-                </div>
-                <div class="col-12">
-                  <label for="desc" class="form-label">Descrição</label>
-                  <input type="text" class="form-control" name="description"  id="desc" placeholder="Descrição">
-                </div>
-                <div class="col-4">
-                  <label for="inputAddress2" class="form-label">SKU</label>
-                  <input type="text" class="form-control" id="inputAddress2" name="sku" placeholder="Código SKU">
-                </div>
-                
-                <div class="col-md-4">
-                  <label for="inputPrice"  class="form-label ">Preço</label> 
-                  <input type="text" name="price" placeholder="Preço do Produto" name="price" class="form-control money" id="price" >
-                </div>
-                <div class="col-md-4">
-                  <label for="branding" class="form-label">Marca</label>
-                  <input type="text" placeholder="Marca do Produto" name="brand"  class="form-control" id="branding">
-                </div>
-               
-                
-                <div class="col-12">
-                  <button type="submit" class="btn btn-primary">Cadastrar</button>
-                </div>
-              </div>
-            </form>
-            <div class="modal-footer">
-             
-            </div>
-          </div>
+      </section>
+
+    </div>
+
+  </main>
+  <div class="modal  fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Cadastrar Produto</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-    </div>    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.js" integrity="sha512-8Z5++K1rB3U+USaLKG6oO8uWWBhdYsM3hmdirnOEWp8h2B1aOikj5zBzlXs8QOrvY9OxEnD2QDkbSKKpfqcIWw==" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js" integrity="sha512-0XDfGxFliYJPFrideYOoxdgNIvrwGTLnmK20xZbCAvPfLGQMzHUsaqZK8ZoH+luXGRxTrS46+Aq400nCnAT0/w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="/assets/js/AdminPage.js"></script>    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-</body> 
+        <div class="modal-body">
+          <form class="row g-3" action="/admin/create/"  enctype="multipart/form-data" method="POST">
+
+            <div class="profile-pic">
+              <label class="-label" for="file">
+                <span class="glyphicon glyphicon-camera"></span>
+                <span>Change Image</span>
+              </label>
+              <input id="file"   name="productImage" type="file" onchange="loadFile(event)" />
+              <img src="https://cdn.pixabay.com/photo/2017/08/06/21/01/louvre-2596278_960_720.jpg" id="output"
+                width="200" />
+            </div>
+            <div class="col-md-6">
+              <label for="inputEmail4" class="form-label">Nome do Produto</label>
+              <input type="text" name="name" class="form-control" placeholder="Nome do Produto" id="inputEmail4">
+            </div>
+            <div class="col-md-6">
+              <label for="category" class="form-label">Categoria</label>
+              <input placeholder="Categoria do Produto" name="category" type="text" class="form-control" id="category">
+            </div>
+            <div class="col-12">
+              <label for="desc" class="form-label">Descrição</label>
+              <input type="text" class="form-control" name="description" id="desc" placeholder="Descrição">
+            </div>
+            <div class="col-4">
+              <label for="inputAddress2" class="form-label">SKU</label>
+              <input type="text" class="form-control" id="inputAddress2" name="sku" placeholder="Código SKU">
+            </div>
+
+            <div class="col-md-4">
+              <label for="inputPrice" class="form-label ">Preço</label>
+              <input type="text" name="price" placeholder="Preço do Produto" name="price" class="form-control money"
+                id="price">
+            </div>
+            <div class="col-md-4">
+              <label for="branding" class="form-label">Marca</label>
+              <input type="text" placeholder="Marca do Produto" name="brand" class="form-control" id="branding">
+            </div>
+
+
+            <div class="col-12">
+              <button type="submit" class="btn btn-primary">Cadastrar</button>
+            </div>
+        </div>
+        </form>
+        <div class="modal-footer">
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.js"
+    integrity="sha512-8Z5++K1rB3U+USaLKG6oO8uWWBhdYsM3hmdirnOEWp8h2B1aOikj5zBzlXs8QOrvY9OxEnD2QDkbSKKpfqcIWw=="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"
+    integrity="sha512-0XDfGxFliYJPFrideYOoxdgNIvrwGTLnmK20xZbCAvPfLGQMzHUsaqZK8ZoH+luXGRxTrS46+Aq400nCnAT0/w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/assets/js/AdminPage.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
 
 </html>

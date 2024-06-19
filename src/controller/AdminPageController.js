@@ -21,7 +21,14 @@ const indexAdmin = (req, res) => __awaiter(void 0, void 0, void 0, function* () 
 });
 exports.indexAdmin = indexAdmin;
 const create = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    const productModel = new ProductsModels_js_1.default(req.body);
+    let body = {};
+    if (!req.file) {
+        body = Object.assign({}, req.body);
+    }
+    else {
+        body = Object.assign(Object.assign({}, req.body), { productImage: req.file.filename });
+    }
+    const productModel = new ProductsModels_js_1.default(body);
     yield productModel.create();
     res.redirect("back");
 });
