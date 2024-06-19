@@ -29,6 +29,7 @@
 }
 .principal div.row .but a, .principal div.row .but button {
   padding: 10px;
+  width: 250px;
   text-transform: uppercase;
   position: relative;
   top: 3vh;
