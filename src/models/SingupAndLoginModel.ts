@@ -22,13 +22,13 @@ class SingUp {
          this.user = null
    }
 
-  public  CleanUp() {
+  private CleanUp() {
       for (let key in this.body) {
          if (typeof this.body[key] !== "string") this.body[key] = "";
       }
    };
 
-  public  Validation() {
+  private  Validation() {
       this.CleanUp();
       if (!validator.isEmail(this.body.email)) {
          this.errors.push("E-mail Incorreto!")

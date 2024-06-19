@@ -22,7 +22,7 @@ const ProductModel = mongoose.model("Products", ProductSchema)
         this.product = null;
     };
 
-    async create(): Promise<any> {
+   public async create(): Promise<any> {
         try {
             this.product  = await ProductModel.create(this.body)
 
@@ -31,7 +31,7 @@ const ProductModel = mongoose.model("Products", ProductSchema)
         }
     };
 
-    async GetProducts(): Promise<any>  {
+   public  async GetProducts(): Promise<any>  {
         try {
             const allProducts = await ProductModel.find();
             return allProducts;
