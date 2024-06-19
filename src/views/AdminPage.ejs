@@ -132,7 +132,54 @@
                       <td><%=products.brand %></td>
                       <td>
                         <a href="/admin/delete/<%= products._id %>"><button type="button" class="btn btn-danger"><i class="icon ph-bold ph-trash"></i></button></a>
-                        <button type="button" class="btn btn-dark"><i class="icon ph-bold ph-pen"></i></button>
+                        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#staticBackdrop-<%= i %>"><i class="icon ph-bold ph-pen"></i></button>
+                        
+                        <div class="modal  fade" id="staticBackdrop-<%= i %>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                          <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Editar Produto</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                              </div>
+                              <div class="modal-body">
+                                <form class="row g-3" action="/admin/create/" method="POST">
+                                  <div class="col-md-6">
+                                    <label for="inputEmail4" class="form-label">Nome do Produto</label>
+                                    <input type="text" name="name" value="<%= products.name %>" class="form-control" placeholder="Nome do Produto" id="inputEmail4">
+                                  </div>
+                                  <div class="col-md-6">
+                                    <label for="category" class="form-label">Categoria</label>
+                                    <input placeholder="Categoria do Produto" value= "<%= products.category %>" name="category" type="text" class="form-control" id="category">
+                                  </div>
+                                  <div class="col-12">
+                                    <label for="desc" class="form-label">Descrição</label>
+                                    <input type="text" class="form-control"  value = "<%= products.description %>" name="description"  id="desc" placeholder="Descrição">
+                                  </div>
+                                  <div class="col-4">
+                                    <label for="inputAddress2" class="form-label">SKU</label>
+                                    <input type="text" class="form-control" id="inputAddress2"  value = "<%= products.sku %>" name="sku" placeholder="Código SKU">
+                                  </div>
+                                  
+                                  <div class="col-md-4">
+                                    <label for="inputPrice"  class="form-label ">Preço</label> 
+                                    <input type="text" name="price" placeholder="Preço do Produto" name="price" value = "<%= products.price %>" class="form-control money" id="price" >
+                                  </div>
+                                  <div class="col-md-4">
+                                    <label for="branding" class="form-label">Marca</label>
+                                    <input type="text" placeholder="Marca do Produto" name="brand" value = "<%= products.brand %>"  class="form-control" id="branding">
+                                  </div>
+                                 
+                                  
+                                  <div class="col-12">
+                                    <button type="submit" class="btn btn-primary">Cadastrar</button>
+                                  </div>
+                                </div>
+                              </form>
+                              <div class="modal-footer">
+                               
+                              </div>
+                            </div>
+                          </div>
                       </td>
         
                     </tr>
