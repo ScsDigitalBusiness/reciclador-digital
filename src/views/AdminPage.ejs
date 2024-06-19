@@ -115,63 +115,31 @@
                   <tr>
                     <th scope="col">ID</th>
                     <th scope="col">Produto</th>
+                    <th scope="col">Categoria</th>
                     <th scope="col">Preço</th>
                     <th scope="col">Marca</th>
-                    <th scope="col">Responsável</th>
                     <th scope="col">Ações</th>
       
                   </tr>
                 </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>@mdo</td>
-                    <td>
-                      <button type="button" class="btn btn-danger"><i class="icon ph-bold ph-trash"></i></button>
-                      <button type="button" class="btn btn-dark"><i class="icon ph-bold ph-pen"></i></button>
-                    </td>
-      
-                  </tr>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>@mdo</td>
-                    <td>
-                      <button type="button" class="btn btn-danger"><i class="icon ph-bold ph-trash"></i></button>
-                      <button type="button" class="btn btn-dark"><i class="icon ph-bold ph-pen"></i></button>
-                    </td>
-      
-                  </tr>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>@mdo</td>
-                    <td>
-                      <button type="button" class="btn btn-danger"><i class="icon ph-bold ph-trash"></i></button>
-                      <button type="button" class="btn btn-dark"><i class="icon ph-bold ph-pen"></i></button>
-                    </td>
-      
-                  </tr>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>@mdo</td>
-                    <td>
-                      <button type="button" class="btn btn-danger"><i class="icon ph-bold ph-trash"></i></button>
-                      <button type="button" class="btn btn-dark"><i class="icon ph-bold ph-pen"></i></button>
-                    </td>
-      
-                  </tr>
-                </tbody>
+                <tbody>  
+                  <% let i = 0;  %>
+                  <% allProducts.forEach(products=>{ %>  
+                    <% i++ %>
+                    <tr>
+                      <th scope="row"><%= i%></th>
+                      <td><%=products.name %></td>
+                      <td><%=products.category %></td>
+                      <td><%=products.price %></td>
+                      <td><%=products.brand %></td>
+                      <td>
+                        <button type="button" class="btn btn-danger"><i class="icon ph-bold ph-trash"></i></button>
+                        <button type="button" class="btn btn-dark"><i class="icon ph-bold ph-pen"></i></button>
+                      </td>
+        
+                    </tr>
+                   <% }) %>
+                 </tbody>
               </table>
             </div>
           </section>
@@ -187,7 +155,7 @@
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-              <form class="row g-3" action="" method="/">
+              <form class="row g-3" action="/admin/create/" method="POST">
                 <div class="col-md-6">
                   <label for="inputEmail4" class="form-label">Nome do Produto</label>
                   <input type="text" name="name" class="form-control" placeholder="Nome do Produto" id="inputEmail4">
