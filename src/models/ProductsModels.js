@@ -49,5 +49,15 @@ class Products {
             }
         });
     }
+    delete(id) {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                this.product = yield ProductModel.findByIdAndDelete({ _id: id });
+            }
+            catch (e) {
+                throw new Error(e);
+            }
+        });
+    }
 }
 exports.default = Products;

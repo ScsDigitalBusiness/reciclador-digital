@@ -9,4 +9,9 @@ export  const create =  async (req : any,res :any): Promise<any> => {
     const productModel = new Products(req.body);  
     await productModel.create(); 
     res.redirect("back")
+} 
+export const deleteProduct = async (req :any,res:any) :Promise<any> =>{
+    const productModel = new Products(req.body);   
+    await productModel.delete(req.params.id); 
+    res.redirect("back"); 
 }
