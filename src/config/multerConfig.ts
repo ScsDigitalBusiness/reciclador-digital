@@ -3,7 +3,8 @@ import path from "path";
 
 let erroMsg:any = "Arquivo inválido!";
 
-module.exports =  {
+export const multerConfig =  {
+    
     fileFilter: (req:any,file:any,cb:any) =>{
         if(file.mimetype !== 'image/png' && file.mimetype !== 'image/jpeg' ) {
           
