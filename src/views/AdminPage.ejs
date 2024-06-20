@@ -2,9 +2,7 @@
 <html lang="pt-br">
 
 <head>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/assets/css/AdminPage.css">
@@ -70,8 +68,6 @@
     </div>
   </div>
   <main class="principal">
-=======
->>>>>>> teste-ts
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <link rel="stylesheet" href="/assets/css/AdminPage.css">
@@ -90,10 +86,6 @@
         <div class="col-md-5">
             <h4>Produtos</h4>
           </div>
-<<<<<<< HEAD
-=======
->>>>>>> 517f877580d3447b5aee3b4daa854b8e6db091ec
->>>>>>> teste-ts
 
     <div class="row ">
       <div class="col-md-5">
@@ -142,29 +134,6 @@
 
     </div>
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    <div class="content d-flex align-items-center justify-content-center">
-      <section class="home-section">
-        <div class="table-area w-100">
-          <table class="table table-striped">
-            <thead>
-              <tr>
-                <th scope="col">ID</th>
-                <th scope="col">Produto</th>
-                <th scope="col">Categoria</th>
-                <th scope="col">Preço</th>
-                <th scope="col">Marca</th>
-                <th scope="col d-flex align-items-center justify-content-center">Ações</th>
-              </tr>
-            </thead>
-            <tbody>
-              <% let i=0; %>
-                <% allProducts.forEach(products=>{ %>
-                  <% i++ %>
-=======
->>>>>>> teste-ts
             <div class="input-group mb-3">
               <label class="input-group-text" for="inputGroupSelect01">Filtro:</label>
               <select class="form-select" id="inputGroupSelect01">
@@ -212,10 +181,7 @@
                   <% let i = 0;  %>
                   <% allProducts.forEach(products=>{ %>  
                     <% i++ %>
-<<<<<<< HEAD
-=======
->>>>>>> 517f877580d3447b5aee3b4daa854b8e6db091ec
->>>>>>> teste-ts
+
                     <tr>
                       <th scope="row">
                         <%= i%>
@@ -225,9 +191,7 @@
                         <%=products.name %>
                       </td>
                       <td>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+
                         <%=products.category %>
                       </td>
                       <td>R$ <%=products.price %>
@@ -244,16 +208,10 @@
                         <div class="modal  fade" id="staticBackdrop-<%= i %>" data-bs-backdrop="static"
                           data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
                           aria-hidden="true">
-=======
->>>>>>> teste-ts
                         <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#confirmRemove-<%= i %>"><i class="icon ph-bold ph-trash"></i></button>
                         <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#staticBackdrop-<%= i %>"><i class="icon ph-bold ph-pen"></i></button>
                         <!-- Modal de edição -->
                         <div class="modal  fade" id="staticBackdrop-<%= i %>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-<<<<<<< HEAD
-=======
->>>>>>> 517f877580d3447b5aee3b4daa854b8e6db091ec
->>>>>>> teste-ts
                           <div class="modal-dialog modal-lg">
                             <div class="modal-content">
                               <div class="modal-header">
@@ -340,9 +298,6 @@
             </tbody>
           </table>
         </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
       </section>
 
     </div>
@@ -355,8 +310,7 @@
         <div class="modal-header">
           <h1 class="modal-title fs-5" id="staticBackdropLabel">Cadastrar Produto</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-=======
->>>>>>> teste-ts
+
       
       </main> 
       <!-- Modal de cadastro -->
@@ -368,7 +322,17 @@
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-              <form class="row g-3" action="/admin/create/" method="POST">
+              <form class="row g-3" action="/admin/create/"  enctype="multipart/form-data" method="POST">
+
+                <div class="profile-pic">
+                  <label class="-label" for="file">
+                    <span class="glyphicon glyphicon-camera"></span>
+                    <span>Change Image</span>
+                  </label>
+                  <input id="file"   name="productImage" type="file" onchange="loadFile(event)" />
+                  <img src="https://cdn.pixabay.com/photo/2017/08/06/21/01/louvre-2596278_960_720.jpg" id="output"
+                    width="200" />
+                </div>
                 <div class="col-md-6">
                   <label for="inputEmail4" class="form-label">Nome do Produto</label>
                   <input type="text" name="name" class="form-control" placeholder="Nome do Produto" id="inputEmail4">
@@ -379,85 +343,35 @@
                 </div>
                 <div class="col-12">
                   <label for="desc" class="form-label">Descrição</label>
-                  <input type="text" class="form-control" name="description"  id="desc" placeholder="Descrição">
+                  <input type="text" class="form-control" name="description" id="desc" placeholder="Descrição">
                 </div>
                 <div class="col-4">
                   <label for="inputAddress2" class="form-label">SKU</label>
                   <input type="text" class="form-control" id="inputAddress2" name="sku" placeholder="Código SKU">
                 </div>
-                
+    
                 <div class="col-md-4">
-                  <label for="inputPrice"  class="form-label ">Preço</label> 
-                  <input type="text" name="price" placeholder="Preço do Produto" name="price" class="form-control money" id="price" >
+                  <label for="inputPrice" class="form-label ">Preço</label>
+                  <input type="text" name="price" placeholder="Preço do Produto" name="price" class="form-control money"
+                    id="price">
                 </div>
                 <div class="col-md-4">
                   <label for="branding" class="form-label">Marca</label>
-                  <input type="text" placeholder="Marca do Produto" name="brand"  class="form-control" id="branding">
+                  <input type="text" placeholder="Marca do Produto" name="brand" class="form-control" id="branding">
                 </div>
-               
-                
+    
+    
                 <div class="col-12">
                   <button type="submit" class="btn btn-primary">Cadastrar</button>
                 </div>
-              </div>
+            </div>
             </form>
             <div class="modal-footer">
              
             </div>
           </div>
-<<<<<<< HEAD
-=======
->>>>>>> 517f877580d3447b5aee3b4daa854b8e6db091ec
->>>>>>> teste-ts
         </div>
-        <div class="modal-body">
-          <form class="row g-3" action="/admin/create/"  enctype="multipart/form-data" method="POST">
-
-            <div class="profile-pic">
-              <label class="-label" for="file">
-                <span class="glyphicon glyphicon-camera"></span>
-                <span>Change Image</span>
-              </label>
-              <input id="file"   name="productImage" type="file" onchange="loadFile(event)" />
-              <img src="https://cdn.pixabay.com/photo/2017/08/06/21/01/louvre-2596278_960_720.jpg" id="output"
-                width="200" />
-            </div>
-            <div class="col-md-6">
-              <label for="inputEmail4" class="form-label">Nome do Produto</label>
-              <input type="text" name="name" class="form-control" placeholder="Nome do Produto" id="inputEmail4">
-            </div>
-            <div class="col-md-6">
-              <label for="category" class="form-label">Categoria</label>
-              <input placeholder="Categoria do Produto" name="category" type="text" class="form-control" id="category">
-            </div>
-            <div class="col-12">
-              <label for="desc" class="form-label">Descrição</label>
-              <input type="text" class="form-control" name="description" id="desc" placeholder="Descrição">
-            </div>
-            <div class="col-4">
-              <label for="inputAddress2" class="form-label">SKU</label>
-              <input type="text" class="form-control" id="inputAddress2" name="sku" placeholder="Código SKU">
-            </div>
-
-            <div class="col-md-4">
-              <label for="inputPrice" class="form-label ">Preço</label>
-              <input type="text" name="price" placeholder="Preço do Produto" name="price" class="form-control money"
-                id="price">
-            </div>
-            <div class="col-md-4">
-              <label for="branding" class="form-label">Marca</label>
-              <input type="text" placeholder="Marca do Produto" name="brand" class="form-control" id="branding">
-            </div>
-
-
-            <div class="col-12">
-              <button type="submit" class="btn btn-primary">Cadastrar</button>
-            </div>
-        </div>
-        </form>
-        <div class="modal-footer">
-
-        </div>
+        
       </div>
     </div>
   </div>

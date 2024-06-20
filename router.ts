@@ -7,7 +7,7 @@ import  {indexAdmin,create,deleteProduct,editProduct} from "./src/controller/Adm
 import multer from 'multer';    
 import { ativacaoIndex } from "./src/controller/AtbPageController.js"; 
 import {multerConfig} from "./src/config/multerConfig"; 
-
+const uploads = multer(multerConfig); 
 //GET Routs
 router.get("/", index) 
 router.get("/products/",indexProductPage);   
