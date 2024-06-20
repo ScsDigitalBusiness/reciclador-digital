@@ -1,6 +1,6 @@
 const mongoose = require("mongoose")
-import validator from "validator"; 
-import bcrypt from "bcryptjs"; 
+const  validator = require ("validator"); 
+const bcrypt  = require("bcryptjs") ; 
 
 import {  AccountIn } from "../interfaces/Account.interface";
 const SingupSchema = mongoose.Schema({

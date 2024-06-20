@@ -1,9 +1,9 @@
-import express from "express"; 
+const  express=  require("express") ; 
 const router = express.Router();  
 import {index} from "./src/controller/HomeControler";  
 import { indexProductPage } from "./src/controller/ProductPageController";
 import  {indexAdmin,create,deleteProduct,editProduct} from "./src/controller/AdminPageController";  
-import multer from 'multer';    
+const  multer = require ('multer');    
 import { ativacaoIndex } from "./src/controller/AtbPageController.js"; 
 import Multer from "./src/config/multerConfig"; 
 
