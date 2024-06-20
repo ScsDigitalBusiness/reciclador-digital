@@ -17,6 +17,7 @@ router.get("/admin/",indexAdmin);
 router.post("/admin/create/", uploads.single("productImage"),create); 
 router.post("/admin/delete/:id",deleteProduct)
 router.post("/admin/edit/:id",uploads.single("productImageEdited"),editProduct); 
+//Routs material
 
 
 export default router;
