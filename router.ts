@@ -6,7 +6,7 @@ import  {indexAdmin,create,deleteProduct,editProduct} from "./src/controller/Adm
 import multer from 'multer';    
 import { ativacaoIndex } from "./src/controller/AtbPageController.js"; 
 import {multerConfig} from "./src/config/multerConfig"; 
-import { createMaterial, deletMaterial, editMaterial, materialPape } from "./src/controller/MaterialController";
+import { createMaterial, deletMaterial, editMaterial, materialGlass, materialMetals, materialPape, materialPlastic } from "./src/controller/MaterialController";
 const uploads = multer(multerConfig); 
 
 router.get("/", index) 
@@ -18,10 +18,13 @@ router.post("/admin/create/", uploads.single("productImage"), create);
 router.post("/admin/delete/:id", deleteProduct)
 router.post("/admin/edit/:id",uploads.single("productImageEdited"), editProduct); 
 //Routs material
-router.get("/materiais/papel/", materialPape)
 router.post("/materiais/create/", uploads.single("materialImage"), createMaterial)
 router.post("/materiais/delete/:id", deletMaterial)
 router.post("/materiais/edit/:id", uploads.single("materialImageEdited"), editMaterial)
+router.get("/materiais/papel/", materialPape)
+router.get("/materiais/vidro/", materialGlass)
+router.get("/materiais/plastico/", materialPlastic)
+router.get("/materiais/metais/", materialMetals)
 
 
 export default router;

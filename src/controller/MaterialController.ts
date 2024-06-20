@@ -28,8 +28,26 @@ export const deletMaterial = async (req: any, res: any): Promise<any> => {
   res.redirect("back");
 };
 
+// Plastic
+export const materialPlastic = async (req: any, res: any): Promise<any> => {
+  const allMaterials = await Material.GetMaterials("Plastico");
+  res.render("MaterialPlastic", { allMaterials });
+};
+
+// Metals
+export const materialMetals = async (req: any, res: any): Promise<any> => {
+  const allMaterials = await Material.GetMaterials("Metal");
+  res.render("MaterialMetals", { allMaterials });
+};
+
 // Pape
 export const materialPape = async (req: any, res: any): Promise<any> => {
   const allMaterials = await Material.GetMaterials("Papel");
   res.render("MaterialPape", { allMaterials });
+};
+
+// Glass
+export const materialGlass = async (req: any, res: any): Promise<any> => {
+  const allMaterials = await Material.GetMaterials("Vidro");
+  res.render("MaterialGlass", { allMaterials });
 };
