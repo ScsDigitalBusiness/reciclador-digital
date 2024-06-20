@@ -6,11 +6,17 @@ export const indexAdmin = async (req:any,res:any) : Promise<any> =>{
 
     res.render("AdminPage", {allProducts});  //render
 } 
-export  const create =  async (req : any,res :any): Promise<any> => {
-    const productModel = new Products(req.body);  
+export  const create =  async (req : any,res :any): Promise<any> => {    
+    let body: Object = {}; 
+    if(!req.file) {
+        body =  {...req.body}
+    }else {
+        body =  {...req.body,productImage: req.file.filename}
+    }
+    const productModel = new Products(body);  
     await productModel.create(); 
-    res.redirect("back")
-} 
+    res.redirect("back") 
+}  
 export const deleteProduct = async (req :any,res:any) :Promise<any> =>{
     const productModel = new Products(req.body);   
     await productModel.delete(req.params.id); 
