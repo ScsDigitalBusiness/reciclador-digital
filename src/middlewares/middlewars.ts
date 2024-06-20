@@ -1,3 +1,3 @@
-exports.middlewareGlobal = (req,res) =>{
+export const middlewareGlobal = (req:any,res:any) =>{
     
 }

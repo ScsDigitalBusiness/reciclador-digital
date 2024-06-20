@@ -1,1 +1,1 @@
-const {SingUp} = require("../models/SingupAndLoginModel")
+import SingUp from "../models/SingupAndLoginModel";
