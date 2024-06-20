@@ -1,3 +1,0 @@
-exports.middlewareGlobal = (req,res) =>{
-    
-}
