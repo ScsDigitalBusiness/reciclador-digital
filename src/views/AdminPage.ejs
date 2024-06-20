@@ -11,54 +11,8 @@
  </head>
    <body>  
     
-  <div class="container-side">
-    <div class="sidebar">
-      <div class="menu-btn"><i class="ph-bold ph-caret-left"></i></div>
-      <div class="head">
-        <div class="user-img"><img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MTUzMjAyMTh8&ixlib=rb-4.0.3&q=85" alt=""></div>
-        <div class="user-details">
-          <p class="title">Administrador</p>
-          <p class="name">Kalvin Calimag</p>
-        </div>
-      </div>
-      <div class="nav">
-        <div class="menu">
-          <p class="title">Main</p>
-          <ul>
-            <li><a href="#"><i class="icon ph-bold ph-house-simple"></i><span class="text">Dashboard</span></a></li>
-            <li><a href="#"><i class="icon ph-bold ph-cube"></i><span class="text">Materiais</span><i class="arrow ph-bold ph-caret-down"></i></a>
-              <ul class="sub-menu">
-                <li><a href="#"><span class="text">Pláticos</span></a></li>
-                <li><a href="#"><span class="text">Metais</span></a></li> 
-                <li><a href="#"><span class="text">Papeis </span></a></li> 
-                <li><a href="#"><span class="text">Vidros</span></a></li>
-  
-                
-              </ul>
-            </li>
-            <li  class="active"><a href="#"><i class="icon ph-bold ph-box-arrow-up"></i><span class="text">Produtos</span></a></li>
-            <li><a href="#"><i class="icon ph-bold ph-user"></i><span class="text">Usuários</span></a>
-             
-            </li>
-            <li><a href="#"><i class="icon ph-bold ph-file-text"></i><span class="text">Articles</span></a></li>
-          </ul>
-        </div>
-        <div class="menu">
-          <p class="title">Settings</p>
-          <ul>
-            <li><a href="#"><i class="icon ph-bold ph-gear"></i><span class="text">Settings</span></a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="menu">
-        <p class="title">Account</p>
-        <ul>
-          <li><a href="#"><i class="icon ph-bold ph-info"></i><span class="text">FAQ</span></a></li>
-          <li><a href="#"><i class="icon ph-bold ph-sign-out"></i><span class="text">Logout</span></a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
+    <%- include('./partials/_sidebar.ejs') %>
+    
       <main class="principal">
         
        <div class="row ">
@@ -105,7 +59,7 @@
           </div>
 
         </div>
-        
+        <!-- Tabela -->
         <div class="content d-flex align-items-center justify-content-center">
           <section class="home-section">
             <div class="table-area w-100">
@@ -131,9 +85,9 @@
                       <td>R$ <%=products.price %></td>
                       <td><%=products.brand %></td>
                       <td>
-                        <a href="/admin/delete/<%= products._id %>"><button type="button" class="btn btn-danger"><i class="icon ph-bold ph-trash"></i></button></a>
+                        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#confirmRemove-<%= i %>"><i class="icon ph-bold ph-trash"></i></button>
                         <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#staticBackdrop-<%= i %>"><i class="icon ph-bold ph-pen"></i></button>
-                        
+                        <!-- Modal de edição -->
                         <div class="modal  fade" id="staticBackdrop-<%= i %>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                           <div class="modal-dialog modal-lg">
                             <div class="modal-content">
@@ -180,6 +134,33 @@
                               </div>
                             </div>
                           </div>
+
+                          <!-- Modal de deletar -->
+                          <div class="modal  fade" id="confirmRemove-<%= i %>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="confirmRemoveLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h1 class="modal-title fs-5" id="confirmRemoveLabel">Deletar Produto</h1>
+                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                  <form class="row g-3" action="/admin/delete/<%= products.id %>" method="POST">
+                                    
+                                      <div class="col-md-12">
+                                                <h4>Tem certeza que deseja deletar este produto? </h4>
+                                      </div>
+                                   
+                                    
+                                    <div class="col-12">
+                                      <button type="submit" class="btn btn-primary">Remover</button>
+                                    </div>
+
+                                  </div>
+                                </form>
+                              </div>
+                            </div>
+                        </div> 
+
                       </td>
         
                     </tr>
@@ -192,6 +173,7 @@
         </div>
       
       </main> 
+      <!-- Modal de cadastro -->
       <div class="modal  fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
