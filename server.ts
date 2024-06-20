@@ -1,10 +1,11 @@
-import express from "express"; 
+const  express = require("express"); 
 const app = express();
-import  session from "express-session";
-import  flash from "connect-flash";
-import  mongoose  from "mongoose";
-import  MongoStore  from "connect-mongo"; 
-import path from "path";
+const   session  =  require("express-session");
+const  flash = require ("connect-flash");
+const mongoose = require("mongoose");
+const   MongoStore = require("connect-mongo"); 
+const  path = require("path"); 
+const helmet = require("helmet"); 
 require("dotenv").config();
 import  routs from "./router";
 import {middlewareGlobal} from "./src/middlewares/middlewars"
@@ -22,6 +23,8 @@ app.set("views", path.resolve(__dirname, "src", "views"))  //<- local onde o nos
 mongoose.connect(process.env.CONNECTION_URL).then(() => {
   console.log("Conectando...");
   app.emit("Connected"); //quando estiver conectado, o express vai emitir um status conectado
+}).catch((e)=>{
+  throw new Error(e); 
 })
 
 //quando estiver conectado, o servidor vai estar escutando na porta que está no arquivo .env 
@@ -41,7 +44,8 @@ const sessionOptions = session({
     httpOnly: true,
     maxAge: 1000 * 60 * 7 * 1000,
   },
-});
+}); 
+
 
 //usando as configurações
 
@@ -49,3 +53,4 @@ app.use(sessionOptions);
 app.use(flash());
 app.use(routs);
 app.use(middlewareGlobal); 
+app.use(helmet()); 
