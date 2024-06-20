@@ -1,23 +1,27 @@
-const  express=  require("express") ; 
+import express from "express"; 
 const router = express.Router();  
 import {index} from "./src/controller/HomeControler";  
-
 import { indexProductPage } from "./src/controller/ProductPageController";
 import  {indexAdmin,create,deleteProduct,editProduct} from "./src/controller/AdminPageController";  
 import multer from 'multer';    
 import { ativacaoIndex } from "./src/controller/AtbPageController.js"; 
 import {multerConfig} from "./src/config/multerConfig"; 
+import { createMaterial, deletMaterial, editMaterial, materialPape } from "./src/controller/MaterialController";
 const uploads = multer(multerConfig); 
 
 router.get("/", index) 
-router.get("/products/atb/index",ativacaoIndex) 
+router.get("/products/atb/index", ativacaoIndex) 
 //Routs products
-router.get("/products/",indexProductPage);   
-router.get("/admin/",indexAdmin); 
-router.post("/admin/create/", uploads.single("productImage"),create); 
-router.post("/admin/delete/:id",deleteProduct)
-router.post("/admin/edit/:id",uploads.single("productImageEdited"),editProduct); 
+router.get("/products/", indexProductPage);   
+router.get("/admin/", indexAdmin); 
+router.post("/admin/create/", uploads.single("productImage"), create); 
+router.post("/admin/delete/:id", deleteProduct)
+router.post("/admin/edit/:id",uploads.single("productImageEdited"), editProduct); 
 //Routs material
+router.get("/materiais/papel/", materialPape)
+router.post("/materiais/create/", uploads.single("materialImage"), createMaterial)
+router.post("/materiais/delete/:id", deletMaterial)
+router.post("/materiais/edit/:id", uploads.single("materialImageEdited"), editMaterial)
 
 
 export default router;
