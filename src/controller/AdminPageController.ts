@@ -23,8 +23,14 @@ export const deleteProduct = async (req :any,res:any) :Promise<any> =>{
     res.redirect("back"); 
 } 
 
-export const editProduct = async(req:any,res:any):Promise<any> =>{
-    const productModel = new Products(req.body); 
+export const editProduct = async(req:any,res:any):Promise<any> =>{ 
+    let body:object = {}; 
+    if(!req.file) {
+        body =  {...req.body}; 
+    }else {
+        body = {...req.body,productImage:req.file.filename } 
+    }
+    const productModel = new Products(body); 
     await productModel.edit(req.params.id); 
     res.redirect("back"); 
 }

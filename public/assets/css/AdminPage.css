@@ -65,6 +65,9 @@
   display: flex;
   justify-content: space-between;
 }
+.form .img-product {
+  height: 10vh;
+}
 
 .content {
   display: flex;
@@ -390,8 +393,7 @@
           clip-path: circle();
 }
 
-.product-photo {
-  background-color: red;
+.img-product {
   height: 5vh;
   width: 3vw;
   display: flex;
@@ -399,4 +401,5 @@
           clip-path: circle();
   align-items: center;
   justify-content: center;
+  margin: 1px;
 }/*# sourceMappingURL=AdminPage.css.map */

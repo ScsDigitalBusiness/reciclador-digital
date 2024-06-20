@@ -15,10 +15,7 @@ router.get("/products/atb/index",ativacaoIndex)
 router.get("/admin/",indexAdmin); 
 router.post("/admin/create/", uploads.single("productImage"),create); 
 router.get("/admin/delete/:id",deleteProduct)
-router.post("/admin/edit/:id",editProduct); 
+router.post("/admin/edit/:id",uploads.single("productImageEdited"),editProduct); 
 
-//POST Routs
-router.post("/admin/delete/:id",deleteProduct)
-router.post("/admin/create/",create); 
-router.post("/admin/edit/:id",editProduct)
+
 export default router;
