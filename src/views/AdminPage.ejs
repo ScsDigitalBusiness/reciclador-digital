@@ -209,13 +209,15 @@
                                   <div class="modal-body">
                                     <form class="row g-3" action="/admin/delete/<%= products.id %>" method="POST">
 
-                                      <div class="col-md-12">
-                                        <h4>Tem certeza que deseja deletar este produto? </h4>
+                                      <div class="col-md-12 d-flex justify-content-center mt-3">
+                                        <h4>Tem certeza que deseja deletar este produto: <%= products.name %>? </h4>
                                       </div>
 
 
-                                      <div class="col-12">
-                                        <button type="submit" class="btn btn-primary">Remover</button>
+                                      <div class="col-12 d-flex justify-content-center mt-5">
+                                        <button type="button" class="btn btn-dark me-2" data-bs-dismiss="modal"
+                                        aria-label="Close">Cancelar</button>
+                                        <button type="submit" class="btn btn-danger">Remover</button>
                                       </div>
 
                                   </div>
