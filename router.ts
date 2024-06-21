@@ -7,6 +7,7 @@ import multer from 'multer';
 import { ativacaoIndex } from "./src/controller/AtbPageController.js"; 
 import {multerConfig} from "./src/config/multerConfig"; 
 import { createMaterial, deletMaterial, editMaterial, materialGlass, materialMetals, materialPape, materialPlastic } from "./src/controller/MaterialController";
+import { settingsPage } from "./src/controller/ConfigPageController";
 const uploads = multer(multerConfig); 
 
 router.get("/", index) 
@@ -25,6 +26,8 @@ router.get("/materiais/papel/", materialPape)
 router.get("/materiais/vidro/", materialGlass)
 router.get("/materiais/plastico/", materialPlastic)
 router.get("/materiais/metais/", materialMetals)
+//Routs settings
+router.get("/configuracoes/", settingsPage)
 
 
 export default router;
