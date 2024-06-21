@@ -24,7 +24,7 @@ export default class Material {
                     }
           };
 
-          static async GetMaterials(category:string): Promise<any> {
+          static async GetMaterialsOf(category:string): Promise<any> {
                     try {
                               const allMaterials = await MaterialModel.find({category: category})
                               return allMaterials;

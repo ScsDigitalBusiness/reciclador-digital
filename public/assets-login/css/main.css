@@ -1,0 +1,95 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.home {
+  display: grid;
+  grid-template-areas:
+    "s1 s2"
+    "s1 s2";
+  height: 100vh;
+}
+.section1 {
+  grid-area: s1;
+  background: url(../utilites/bg1.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: center;
+  width: 50vw;
+}
+.section1 h1 {
+  font-size: 5em;
+}
+.section2 {
+  grid-area: s2;
+  grid-template-areas:
+    "text text"
+    "form form";
+  width: 50vw;
+}
+.text-form {
+  grid-area: text;
+  height: 30%;
+  gap: 5vh;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+}
+.text-form h3 {
+  font-size: 2em;
+  padding-left: 20vh;
+}
+.text-form p {
+  padding-left: 20vh;
+  color: #dadada;
+}
+.text {
+  padding-left: 10vh;
+  color: white;
+}
+
+.form-area-login {
+  height: 70%;
+grid-area: form; 
+  display: flex;
+  align-items: start;
+  justify-content: center;
+}
+
+.form-area-login input {
+  width: 30vw;
+}
+
+
+
+
+.check-more p {
+  font-weight: bold;
+  font-size: 0.7em;
+}
+.forgot {
+  position: relative;
+  color: gray;
+}
+.form-button {
+  background-color: #8853fd;
+  padding: 3vh;
+  width: 100%;
+  border-radius: 1vh;
+  border: none;
+  color: white;
+  font-size: 1.2em;
+}
+.alert-new-user {
+    color: #DADAE1;
+    position: absolute; 
+    bottom: 10vh; 
+    left: 60vw;
+} 
