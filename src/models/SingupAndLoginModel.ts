@@ -1,9 +1,9 @@
 const mongoose = require("mongoose");
 const validator = require('validator');
 const bcryptjs = require("bcrypt-ts");
-
+import { AccountIn } from "../interfaces/Account.interface";
 const SignupSchema = mongoose.Schema({
-   nome: { type: String, required: true },
+   name: { type: String, required: true },
    email: { type: String, required: true },
    password: { type: String, required: true },
    passwordConfirmed: { type: String, required: true },
@@ -14,10 +14,10 @@ const SignupSchema = mongoose.Schema({
 const SignupModel = mongoose.model("Accounts", SignupSchema);
 
 
-class SignUp {
-   private body: any;
+export default class SignUp {
+   public body: any;
    public errors: Array<string>;
-   private  user: any
+   private user: any
    constructor(body: any) {
       this.body = body;
       this.errors = [];
@@ -52,20 +52,23 @@ class SignUp {
       }
 
    }
-   public async register(): Promise<any> { 
-      const salt = bcryptjs.genSaltSync();
-      this.body.password  = bcryptjs.hashSync(this.body.password, salt);
-      this.body.passwordConfirmed = bcryptjs.hashSync(this.body.passwordConfirmed, salt);
-      this.validation();
-      
-      if (this.errors.length === 0) {
-         try {
+   public async register(): Promise<any> {
+      try {
+         /* const salt = bcryptjs.genSaltSync();
+      this.body.password  = bcryptjs.hashSync(this.body.password); 
+      this.body.passwordConfirmed = bcryptjs.hashSync(this.body.passwordConfirmed);
+      console.log(this.body.password) */
+         this.validation();
+         if (this.errors.length === 0) {
+
             this.user = await SignupModel.create(this.body);
 
-         } catch (e: any) {
-            throw new Error(e);
+
          }
+      } catch (e: any) {
+         throw new Error(e);
       }
+
    }
    public async login(): Promise<any> {
       try {
@@ -116,7 +119,6 @@ class SignUp {
 
 
 
-exports.SignUp = SignUp;
 
 
 
