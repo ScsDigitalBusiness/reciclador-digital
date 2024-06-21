@@ -11,12 +11,12 @@ export const indexSignup = (req:any,res:any) =>{
     res.render("SignUp")
 }  
 export const createAccount =  async (req:any,res:any) =>{   
-   console.log(req.body)
-   const  singUpModel = new SingUp(req.body);   
+   const  singUpModel = new SingUp(req.body);  
+   console.log(singUpModel.body) 
    await singUpModel.Register();  
    if(singUpModel.errors.length >0) {
         req.flash("errors",singUpModel.errors); 
-        res.redirecrt("back"); 
+        res.redirect("back"); 
     } else {
         res.redirect("back")
     }

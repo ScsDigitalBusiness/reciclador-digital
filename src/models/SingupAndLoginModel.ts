@@ -16,7 +16,7 @@ const SingupModel = mongoose.model("Accounts", SingupSchema)
 
 class SingUp {  
 
-   private body: any;  
+   public body: any;  
    public errors: Array<string>;  
    private user: any; 
    
@@ -63,7 +63,7 @@ class SingUp {
    }; 
 
      public async Register():Promise<any> { 
-      
+     try {
       const salt:string = bcryptjs.genSaltSync();
       this.body.password = bcryptjs.hashSync(this.body.password, salt);
       this.body.passwordConfirmed = bcryptjs.hashSync(this.body.passwordConfirmed, salt);  
@@ -72,12 +72,13 @@ class SingUp {
       this.Validation();
 
       if (this.errors.length === 0) {
-         try {
-            this.user = await SingupModel.create(this.body);         
-         } catch (e:any) {
-            throw new Error(e);
-         }
+       this.user = await SingupModel.create(this.body);         
+      return; 
       }
+     }catch(e:any) {
+      throw new Error(e); 
+     }
+     
    };
 
    async Login() {

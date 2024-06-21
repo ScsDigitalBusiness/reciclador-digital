@@ -16,7 +16,7 @@ router.get("/products/atb/index", ativacaoIndex)
 router.get("/login/",indexLogin);   
 router.get("/login/auth",Auth);    
 router.get("/signup/",indexSignup)
-router.post("/signup/create",createAccount); 
+router.post("/signup/create/",createAccount); 
 
 //Routs products
 router.get("/products/", indexProductPage);    
