@@ -98,6 +98,16 @@ class SingUp {
       }
    } 
 
+   async GetUser(id:string): Promise<any> {
+      try {
+         const user: string | undefined = await SingupModel.find({_id:id})
+         return user;
+         
+      } catch(e:any) {
+         throw new Error(e)
+      }
+   }
+
 }
 
 export default  SingUp;
