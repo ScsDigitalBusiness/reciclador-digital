@@ -1,6 +1,6 @@
 const mongoose = require("mongoose")
 import validator from "validator"; 
-import bcrypt from "bcryptjs"; 
+const bcryptjs  = require("bcryptjs"); 
 import {  AccountIn } from "../interfaces/Account.interface";
 const SingupSchema = mongoose.Schema({ 
 
@@ -16,11 +16,11 @@ const SingupModel = mongoose.model("Accounts", SingupSchema)
 
 class SingUp {  
 
-   public body: any;  
+   private body: any;  
    public errors: Array<string>;  
-   public user: any; 
+   private user: any; 
    
-   constructor(body: object) {
+   constructor(body: AccountIn) {
          this.body = body,
          this.errors = [],
          this.user = null
@@ -33,7 +33,11 @@ class SingUp {
    };
 
   private  Validation() {
-      this.CleanUp();
+      this.CleanUp(); 
+       if(!this.body.password) { 
+         this.errors.push("Insira uma senha !"); 
+         throw new Error("Senha requirida!"); 
+       }
       if (!validator.isEmail(this.body.email)) {
          this.errors.push("E-mail Incorreto!")
          return;
@@ -48,7 +52,7 @@ class SingUp {
             this.errors.push("Já possui uma conta com esse E-mail!")
             return;
          }
-         if (!bcrypt.compare(this.body.password, this.body.passwordConfirmed)) {
+         if (!bcryptjs.compare(this.body.password, this.body.passwordConfirmed)) {
             this.errors.push("Senhas não conferem!");
             return;
          }
@@ -58,10 +62,13 @@ class SingUp {
       }
    }; 
 
-    async Register() {
-      const salt = bcrypt.genSaltSync();
-      this.body.password = bcrypt.hashSync(this.body.password, salt);
-      this.body.passwordConfirmed = bcrypt.hashSync(this.body.passwordConfirmed, salt);
+     public async Register():Promise<any> { 
+      
+      const salt:string = bcryptjs.genSaltSync();
+      this.body.password = bcryptjs.hashSync(this.body.password, salt);
+      this.body.passwordConfirmed = bcryptjs.hashSync(this.body.passwordConfirmed, salt);  
+
+      this.UserExist(); 
       this.Validation();
 
       if (this.errors.length === 0) {
@@ -81,7 +88,7 @@ class SingUp {
             this.errors.push("Usuário não existe!");
             return;
          }
-         if (!bcrypt.compareSync(this.body.password, this.user.password)) {
+         if (!bcryptjs.compareSync(this.body.password, this.user.password)) {
             this.errors.push("Senha incorreta!");
             return;
          }
