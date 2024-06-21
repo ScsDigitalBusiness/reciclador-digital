@@ -1,5 +1,5 @@
 import session from "express-session";
-import SingUp from "../models/SingupAndLoginModel"; 
+ const  {SignUp} = require( "../models/SingupAndLoginModel");  
 
 export const  indexLogin =  (req:any,res:any)  =>{
     res.render("Login")
@@ -11,13 +11,13 @@ export const indexSignup = (req:any,res:any) =>{
     res.render("SignUp")
 }  
 export const createAccount =  async (req:any,res:any) =>{   
-   const  singUpModel = new SingUp(req.body);  
+   const  singUpModel = new SignUp(req.body);  
    console.log(singUpModel.body) 
-   await singUpModel.Register();  
+   await singUpModel.register();  
    if(singUpModel.errors.length >0) {
         req.flash("errors",singUpModel.errors); 
         res.redirect("back"); 
-    } else {
-        res.redirect("back")
+    } else { 
+       res.redirect("back")
     }
 }

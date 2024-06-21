@@ -1,8 +1,8 @@
 export  interface AccountIn {
     name: string,
     email: string,
-    password:any,
-    confirmedPassword:any,
+    password:string,
+    confirmedPassword:string,
     userImage?: string  
 
 }
