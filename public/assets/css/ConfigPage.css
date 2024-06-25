@@ -1,0 +1,7 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+.container form {
+  width: 50vw;
+}/*# sourceMappingURL=ConfigPage.css.map */
