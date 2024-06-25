@@ -22,6 +22,7 @@
         </div>
         <div class="form-area-login">
             <form action="/signup/create/" class="form-login" method="POST"> 
+              <%- include('./partials/mensages.ejs') %> 
                 <div class="form-floating mb-3">
                     <input type="text" class="form-control" name="name" id="floatingInput" placeholder="Nome de Usuárrio">
                     <label for="floatingInput">Nome</label>
@@ -35,7 +36,7 @@
                     <label for="floatingInput">Senha</label>
                   </div>
                   <div class="form-floating mb-3">
-                    <input type="password" class="form-control" name="confirmedPassword" id="floatingInput" placeholder="">
+                    <input type="password" class="form-control" name="passwordConfirmed" id="floatingInput" placeholder="">
                     <label for="floatingInput">Confirmar Senha</label>
                   </div>
               <button  class="form-button" type="submit">Criar Conta</button>

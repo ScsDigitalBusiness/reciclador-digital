@@ -2,7 +2,7 @@ const  express =  require("express") ;
 const router = express.Router();  
 import {index} from "./src/controller/HomeControler";  
 import { indexProductPage } from "./src/controller/ProductPageController"; 
-import { indexLogin,Auth,indexSignup,createAccount} from "./src/controller/SingupAdnLoginController";
+import {SignUpAndLoginController} from "./src/controller/SingupAdnLoginController";
 import  {indexAdmin,create,deleteProduct,editProduct} from "./src/controller/AdminPageController";  
 import multer from 'multer';    
 import { ativacaoIndex } from "./src/controller/AtbPageController.js"; 
@@ -14,10 +14,10 @@ const uploads = multer(multerConfig);
 router.get("/", index) 
 router.get("/products/atb/index", ativacaoIndex)  
 //login and SignUp routes 
-router.get("/login/",indexLogin);   
-router.get("/login/auth",Auth);    
-router.get("/signup/",indexSignup)
-router.post("/signup/create",createAccount); 
+router.get("/login/", SignUpAndLoginController.indexLogin);   
+router.post("/login/auth", SignUpAndLoginController.Auth);    
+router.get("/signup/", SignUpAndLoginController.indexSignup)
+router.post("/signup/create/", SignUpAndLoginController.createAccount); 
 
 //Routs products
 router.get("/products/", indexProductPage);    

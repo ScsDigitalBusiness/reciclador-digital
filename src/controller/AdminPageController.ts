@@ -1,10 +1,14 @@
 import  Products from "../models/ProductsModels"
 
 export const indexAdmin = async (req:any,res:any) : Promise<any> =>{  
+    if(req.session.user) {
     const productModel = new Products(req.body);   
     const allProducts =  await productModel.GetProducts(); 
-
-    res.render("AdminPage", {allProducts});  //render
+     res.render("AdminPage", {allProducts});
+    }else  {
+        res.render("NoPermission"); 
+    }
+      //render
 } 
 export  const create =  async (req : any,res :any): Promise<any> => {    
     let body: Object = {}; 

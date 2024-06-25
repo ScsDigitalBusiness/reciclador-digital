@@ -51,6 +51,6 @@ const sessionOptions = session({
 
 app.use(sessionOptions);
 app.use(flash());
-app.use(routs);
 app.use(middlewareGlobal); 
+app.use(routs);
 //app.use(helmet()); 
