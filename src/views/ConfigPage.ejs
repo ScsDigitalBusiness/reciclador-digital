@@ -37,12 +37,12 @@
                 >
                 <div class="mt-2 flex items-center gap-x-3">
 
-                  <% for( let i = 0; i < user.length; i++ ) { %>
+               
 
                     <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
 
                       <% if (user.userImage) { %>
-                        <img src="/uploads/<%=user.userImage%>" id="output-<%= i %>"
+                        <img src="/uploads/<%=user.userImage%>" id="output"
                         width="200" />
                        <% }else { %> 
                         <svg
@@ -50,7 +50,7 @@
                         viewBox="0 0 24 24"
                         fill="currentColor"
                         aria-hidden="true"
-                        id="output-<%= i %>"
+                        id="output"
                       >
                         <path
                           fill-rule="evenodd"
@@ -107,7 +107,7 @@
                     id="email"
                     name="email"
                     type="email" 
-                    <%=user.email%>
+                    value="<%= user.email %>"
                     autocomplete="em ail"
                     class="form-control block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
@@ -140,7 +140,7 @@
     <div class="modal-content d-fçex justify-content-end">
       <div class="modal-body d-flex justify-content-center">
 
-        <form action="" method="post" enctype="multipart/form-data">
+       
 
           <div
         class="mt-2 flex justify-center rounded-lg border border-dashed border-gray-900/25 px-6 py-10" >
@@ -180,11 +180,11 @@
         <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Concelar</button>
         <button type="submit" class="btn btn-primary">Enviar</button>
       </div>
-    </form>
+
     </div>
   </div>
 </div>
-<% } %>
+
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.js"

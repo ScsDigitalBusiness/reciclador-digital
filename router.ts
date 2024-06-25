@@ -36,7 +36,9 @@ router.get("/materiais/plastico/", materialPlastic)
 router.get("/materiais/metais/", materialMetals)
 
 //Routs settings
-router.get("/configuracoes/", settingsPage)
+router.get("/configuracoes/", settingsPage) 
+router.get("/configuracoes/post", settingsPage)
+
 
 
 export default router;
