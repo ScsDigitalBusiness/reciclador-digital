@@ -1,5 +1,4 @@
 const  express = require("express"); 
-const app = express();
 const   session  =  require("express-session");
 const  flash = require ("connect-flash");
 const mongoose = require("mongoose");
@@ -7,8 +6,9 @@ const   MongoStore = require("connect-mongo");
 const  path = require("path"); 
 //const helmet = require("helmet"); 
 require("dotenv").config();
-const routs = require("./router.ts") ;
-const  middlewareGlobal =require("./src/middlewares/middlewars");  
+const routs = require("./router") ;
+const  {middlewareGlobal}  = require ("./src/middlewares/middlewars");  
+const app = express();
 
 app.use(express.urlencoded({ extended: true }));  //body parse configuration 
 
