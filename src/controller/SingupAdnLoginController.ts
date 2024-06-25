@@ -1,23 +1,36 @@
 import session from "express-session";
-import SingUp from "../models/SingupAndLoginModel"; 
+import SignUp from "../models/SingupAndLoginModel";
+export abstract class SignUpAndLoginController {
+    static indexLogin(req: any, res: any) {
+        res.render("Login")
 
-export const  indexLogin =  (req:any,res:any)  =>{
-    res.render("Login")
-}  
-export const Auth  =  (req:any, res:any) =>{
-
-}
-export const indexSignup = (req:any,res:any) =>{
-    res.render("SignUp")
-}  
-export const createAccount =  async (req:any,res:any) =>{   
-   console.log(req.body)
-   const  singUpModel = new SingUp(req.body);   
-   await singUpModel.Register();  
-   if(singUpModel.errors.length >0) {
-        req.flash("errors",singUpModel.errors); 
-        res.redirecrt("back"); 
-    } else {
-        res.redirect("back")
     }
-}
+    static async Auth(req: any, res: any) {
+        const singUpModel = new SignUp(req.body); 
+        await singUpModel.login(); 
+        if(singUpModel.errors.length >  0) {
+            req.flash("errors",singUpModel.errors);  
+            res.redirect("back"); 
+
+        }else {
+            req.session.user =  singUpModel.user; 
+            res.redirect("/admin/"); 
+       }
+    }
+    static indexSignup(req: any, res: any) {
+        res.render("SignUp")
+    }
+    static async createAccount(req: any, res: any): Promise<any> {
+        let body = { ...req.body, office: "Colaborador" } 
+        const singUpModel = new SignUp(body);
+        await singUpModel.register();
+        if (singUpModel.errors.length > 0) {
+            req.flash("errors", singUpModel.errors);
+            res.redirect("back");
+        } else { 
+            req.flash("success","Conta criada com sucesso!"); 
+            res.redirect("/login/")
+        }
+    }
+} 
+
