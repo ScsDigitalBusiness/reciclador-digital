@@ -9,7 +9,8 @@
   grid-template-areas:
     "s1 s2"
     "s1 s2";
-  height: 100vh;
+  height: 100vh; 
+  overflow: hidden;
 }
 .section1 {
   grid-area: s1;

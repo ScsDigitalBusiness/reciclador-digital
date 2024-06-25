@@ -14,7 +14,7 @@ router.get("/", index)
 router.get("/products/atb/index", ativacaoIndex)  
 //login and SignUp routes 
 router.get("/login/", SignUpAndLoginController.indexLogin);   
-router.get("/login/auth", SignUpAndLoginController.Auth);    
+router.post("/login/auth", SignUpAndLoginController.Auth);    
 router.get("/signup/", SignUpAndLoginController.indexSignup)
 router.post("/signup/create/", SignUpAndLoginController.createAccount); 
 

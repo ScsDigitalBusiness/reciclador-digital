@@ -14,7 +14,7 @@ const MaterialSchema = mongoose.Schema({
 const MaterialModel = mongoose.model("Materials", MaterialSchema);
 
 export default class Material {
-    static async Create(body: any): Promise<any> {
+     static async Create(body: any): Promise<any> {
         try {
             const materialCreate = await MaterialModel.create(body)
             return materialCreate;

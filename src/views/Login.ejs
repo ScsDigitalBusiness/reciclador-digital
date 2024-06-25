@@ -21,7 +21,8 @@
           <p>Welcome back! Please login to your <br> account</p>
         </div>
         <div class="form-area-login"> 
-            <form action="" class="form-login">
+            <form action="/login/auth" class="form-login" method="POST"> 
+              <%- include('./partials/mensages.ejs') %> 
               <div class="form-floating mb-3">
                 <input type="email" class="form-control" name="email" id="floatingInput" placeholder="name@example.com">
                 <label for="floatingInput">Email</label>
@@ -30,7 +31,7 @@
                 <input type="password" class="form-control" name="password" id="floatingInput" placeholder="">
                 <label for="floatingInput">Senha</label>
               </div>
-              <button  class="form-button" type="button">Login</button>
+              <button  class="form-button" type="submit">Login</button>
             </form> 
             <div class="alert-new-user">
               <p>New User? <a href="/signup/"><span style="color:#8853fd;">Sign up</span></a></p>

@@ -17,7 +17,7 @@ const SignupModel = mongoose.model("Accounts", SignupSchema);
 export default class SignUp {
    public body: any;
    public errors: Array<string>;
-   private user: any
+   public  user: any
    constructor(body: any) {
       this.body = body;
       this.errors = [];
@@ -37,33 +37,30 @@ export default class SignUp {
    }
    private validation() {
       this.cleanUP();
-      if (!validator.isEmail(this.body.email)) {
-         this.errors.push("E-mail incorreto !");
-         return;
-      };
       this.userExist();
-      if (this.body.password < 3) {
-         this.errors.push("Senha inválida, precistar ter no minimo 4 caraceters");
-         return;
-      }
       if (!bcryptjs.compare(this.body.password, this.body.passwordConfirmed)) {
          this.errors.push("Senhas não conferem !");
          return;
       }
+      if (!validator.isEmail(this.body.email)) {
+         this.errors.push("E-mail incorreto !");
+         return;
+      };
+      if (this.body.password < 3) {
+         this.errors.push("Senha inválida, precistar ter no minimo 4 caraceters");
+         return;
+      }
+   
 
    }
    public async register(): Promise<any> {
       try {
-         /* const salt = bcryptjs.genSaltSync();
-      this.body.password  = bcryptjs.hashSync(this.body.password); 
-      this.body.passwordConfirmed = bcryptjs.hashSync(this.body.passwordConfirmed);
-      console.log(this.body.password) */
+         const salt = bcryptjs.genSaltSync();
+         this.body.password = bcryptjs.hashSync(this.body.password);
+         this.body.passwordConfirmed = bcryptjs.hashSync(this.body.passwordConfirmed);
          this.validation();
-         if (this.errors.length === 0) {
-
+         if (this.errors.length === 0) {  
             this.user = await SignupModel.create(this.body);
-
-
          }
       } catch (e: any) {
          throw new Error(e);
