@@ -8,7 +8,7 @@ export const indexAdmin = async (req:any,res:any) : Promise<any> =>{
     }else  {
         res.render("NoPermission"); 
     }
-      //render
+     
 } 
 export  const create =  async (req : any,res :any): Promise<any> => {    
     let body: Object = {}; 
