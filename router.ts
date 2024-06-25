@@ -41,8 +41,9 @@ router.get("/users/",UsersController.usersIndex);
 router.post("/users/edit/:id",UsersController.edit); 
 router.post("/users/delete/:id",UsersController.delete); 
 //Routs settings
-router.get("/configuracoes/", Config.settingsPage)
-router.post("/configuracoes/update/:id", uploads.single("userImageEdited"), Config.updateProfile)
+router.get("/configuracoes/", Config.settingsPage) 
+router.get("/logout",logout)
+
 
 
 export default router;
