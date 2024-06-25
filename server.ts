@@ -7,7 +7,7 @@ const   MongoStore = require("connect-mongo");
 const  path = require("path"); 
 //const helmet = require("helmet"); 
 require("dotenv").config();
-import  routs from "./router";
+const routs = require("./router.ts") ;
 import {middlewareGlobal} from "./src/middlewares/middlewars"
 
 app.use(express.urlencoded({ extended: true }));  //body parse configuration 
