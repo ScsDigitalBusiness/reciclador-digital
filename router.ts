@@ -8,7 +8,7 @@ import multer from 'multer';
 import { ativacaoIndex } from "./src/controller/AtbPageController.js"; 
 import {multerConfig} from "./src/config/multerConfig";  
 import { createMaterial, deletMaterial, editMaterial, materialGlass, materialMetals, materialPape, materialPlastic } from "./src/controller/MaterialController";
-import { settingsPage } from "./src/controller/ConfigPageController"; 
+import Config from "./src/controller/ConfigPageController"; 
 import UsersController from './src/controller/UsersController';
 const uploads = multer(multerConfig); 
 
@@ -41,9 +41,8 @@ router.get("/users/",UsersController.usersIndex);
 router.post("/users/edit/:id",UsersController.edit); 
 router.post("/users/delete/:id",UsersController.delete); 
 //Routs settings
-router.get("/configuracoes/", settingsPage) 
-router.get("/logout/",logout)
-
+router.get("/configuracoes/", Config.settingsPage)
+router.post("/configuracoes/update/:id", uploads.single("userImageEdited"), Config.updateProfile)
 
 
 export default router;

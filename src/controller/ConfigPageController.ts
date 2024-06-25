@@ -1,11 +1,24 @@
 import SingUp from "../models/SingupAndLoginModel"
 import session from 'express-session';
 
-export const settingsPage = async (req:any, res:any) => { 
-    if(req.session.user && req.session.user.status==="authorized") {
-            let singUp = new SingUp(req.body);
-            res.render("ConfigPage") 
-    }else {
-        res.render("NoPermission")
-    }
+export default abstract class Config {
+
+  static settingsPage(req:any, res:any) {
+    res.render("ConfigPage")
+  }
+  
+  static async updateProfile(req:any, res:any) {
+    let body: Object = {};
+    if (!req.file) {
+    body = { ...req.body };
+  } else {
+    body = { ...req.body, userPhoto: req.file.filename };
+  }
+
+    let updateUser = new SingUp(body)
+    let user = await updateUser.updateProfile(req.params.id)
+    req.session.user = user
+
+    res.redirect("back")
+  }
 }

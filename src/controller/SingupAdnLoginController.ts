@@ -1,5 +1,6 @@
 import session from "express-session";
 import SignUp from "../models/SingupAndLoginModel";
+
 export abstract class SignUpAndLoginController {
     static indexLogin(req: any, res: any) {
         res.render("Login")

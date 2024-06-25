@@ -2,7 +2,15 @@
           <div class="sidebar">
             <div class="menu-btn"><i class="ph-bold ph-caret-left"></i></div>
             <div class="head">
-              <div class="user-img"><img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MTUzMjAyMTh8&ixlib=rb-4.0.3&q=85" alt=""></div>
+              <div class="user-img">
+                <% if (user.userPhoto) { %>
+                  <img src="/uploads/<%=user.userPhoto%>" alt="">
+
+                  <% } else { %>
+                    <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MTUzMjAyMTh8&ixlib=rb-4.0.3&q=85" alt="">
+                 
+                <% } %>
+              </div>
               <div class="user-details">
                 <p class="title"><%=user.office%></p>
                 <p class="name"><%=user.name%></p>
