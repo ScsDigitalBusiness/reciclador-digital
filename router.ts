@@ -43,7 +43,7 @@ router.post("/users/delete/:id",UsersController.delete);
 //Routs settings
 router.get("/configuracoes/", Config.settingsPage) 
 router.get("/logout",logout)
-
+router.post("/configuracoes/update/:id", uploads.single("userImageEdited"), Config.updateProfile)
 
 
 export default router;
