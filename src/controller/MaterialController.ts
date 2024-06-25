@@ -30,24 +30,24 @@ export const deletMaterial = async (req: any, res: any): Promise<any> => {
 
 // Plastic
 export const materialPlastic = async (req: any, res: any): Promise<any> => {
-  const allMaterials = await Material.GetMaterials("Plastico");
+  const allMaterials = await Material.GetMaterialsOf("Plastico");
   res.render("MaterialPlastic", { allMaterials });
 };
 
 // Metals
 export const materialMetals = async (req: any, res: any): Promise<any> => {
-  const allMaterials = await Material.GetMaterials("Metal");
+  const allMaterials = await Material.GetMaterialsOf("Metal");
   res.render("MaterialMetals", { allMaterials });
 };
 
 // Pape
 export const materialPape = async (req: any, res: any): Promise<any> => {
-  const allMaterials = await Material.GetMaterials("Papel");
+  const allMaterials = await Material.GetMaterialsOf("Papel");
   res.render("MaterialPape", { allMaterials });
 };
 
 // Glass
 export const materialGlass = async (req: any, res: any): Promise<any> => {
-  const allMaterials = await Material.GetMaterials("Vidro");
+  const allMaterials = await Material.GetMaterialsOf("Vidro");
   res.render("MaterialGlass", { allMaterials });
 };
