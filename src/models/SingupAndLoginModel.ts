@@ -16,7 +16,7 @@ const SignupSchema = mongoose.Schema({
 const SignupModel = mongoose.model("Accounts", SignupSchema);
 
 
-export default class SignUp {
+export default class SignUp implements AccountIn {
    public body: any;
    public errors: Array<string>;
    public  user: any
@@ -37,7 +37,7 @@ export default class SignUp {
       }
 
    }
-   private validation() {
+   public validation() {
       this.cleanUP();
       this.userExist();
       if (!bcryptjs.compare(this.body.password, this.body.passwordConfirmed)) {
@@ -85,7 +85,7 @@ export default class SignUp {
          throw new Error(e);
       }
    }
-   private cleanUP() {
+   public cleanUP() {
       for (let key in this.body) {
          if (typeof this.body[key] !== "string") this.body[key] = "";
 

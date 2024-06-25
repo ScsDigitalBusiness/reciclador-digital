@@ -13,7 +13,7 @@ const MaterialSchema = mongoose.Schema({
 
 const MaterialModel = mongoose.model("Materials", MaterialSchema);
 
-export default class Material {
+export default abstract class Material   {
      static async Create(body: any): Promise<any> {
         try {
             const materialCreate = await MaterialModel.create(body)
@@ -34,7 +34,7 @@ export default class Material {
         }
     };
 
-    static async Delete(id: string) {
+    static async Delete(id: string): Promise<any> {
         try {
             await MaterialModel.findByIdAndDelete({ _id: id })
 
@@ -43,7 +43,7 @@ export default class Material {
         }
     };
 
-    static async Update(id: string, body: any) {
+    static async Update(id: string, body: any): Promise<any> {
         try {
             await MaterialModel.findByIdAndUpdate(id, body)
 
