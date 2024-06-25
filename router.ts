@@ -42,7 +42,7 @@ router.post("/users/edit/:id",UsersController.edit);
 router.post("/users/delete/:id",UsersController.delete); 
 //Routs settings
 router.get("/configuracoes/", settingsPage) 
-router.get("/logout/",logout)
+router.get("/logout",logout)
 
 
 
