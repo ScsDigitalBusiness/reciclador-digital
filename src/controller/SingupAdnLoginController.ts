@@ -21,7 +21,7 @@ export abstract class SignUpAndLoginController {
         res.render("SignUp")
     }
     static async createAccount(req: any, res: any): Promise<any> {
-        let body = { ...req.body, office: "Colaborador" } 
+        let body = { ...req.body, office: "Colaborador", status:"unauthorized"} 
         const singUpModel = new SignUp(body);
         await singUpModel.register();
         if (singUpModel.errors.length > 0) {

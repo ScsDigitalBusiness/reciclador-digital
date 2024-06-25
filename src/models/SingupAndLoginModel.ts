@@ -8,7 +8,9 @@ const SignupSchema = mongoose.Schema({
    password: { type: String, required: true },
    passwordConfirmed: { type: String, required: true },
    userPhoto: { type: String, required: false },
-   office: { type: String, required: false }
+   office: { type: String, required: false },
+   status: { type: String, required: true } 
+
 });
 
 const SignupModel = mongoose.model("Accounts", SignupSchema);
@@ -100,7 +102,7 @@ export default class SignUp {
    }
    public async editPermissionsOfUser(id: string): Promise<any> {
       try {
-         this.user = await SignupModel.findByIdAndUpdate(id, { office: this.body.office }, { new: true });
+         this.user = await SignupModel.findByIdAndUpdate(id, { office: this.body.office, status: this.body.status }, { new: true });
       } catch (e: any) {
          throw new Error(e);
       }
@@ -110,7 +112,7 @@ export default class SignUp {
          this.user = await SignupModel.findByIdAndDelete({ _id: id });
       } catch (e: any) {
          throw new Error(e);
-      }
+      } 
    }
 }
 

@@ -5,6 +5,7 @@ export  interface AccountIn {
     passwordConfirmed:string,
     office:string,
     userImage?: string   
+    status?: string   
 
 
 }

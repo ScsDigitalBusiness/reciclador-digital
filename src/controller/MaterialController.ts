@@ -30,27 +30,47 @@ export const deletMaterial = async (req: any, res: any): Promise<any> => {
 
 
 // Plastic
-export const materialPlastic = async (req: any, res: any): Promise<any> => {
-  const allMaterials = await Material.GetMaterialsOf("Plastico");
-  res.render("MaterialPlastic", { allMaterials });
+export const materialPlastic = async (req: any, res: any): Promise<any> => { 
+  if(req.session.user && req.session.user.status==="authorized") {
+    const allMaterials = await Material.GetMaterialsOf("Plastico");
+    res.render("MaterialPlastic", { allMaterials });
+    
+}else {
+res.render("NoPermission")
+}
 };
 
 // Metals
-export const materialMetals = async (req: any, res: any): Promise<any> => {
-  const allMaterials = await Material.GetMaterialsOf("Metal");
-  res.render("MaterialMetals", { allMaterials });
+export const materialMetals = async (req: any, res: any): Promise<any> => { 
+  if(req.session.user && req.session.user.status==="authorized") {
+    const allMaterials = await Material.GetMaterialsOf("Metal");
+    res.render("MaterialMetals", { allMaterials });
+   
+}else {
+res.render("NoPermission")
+}
 };
 
 // Pape
 
-export const materialPape = async (req: any, res: any): Promise<any> => {
-  const allMaterials = await Material.GetMaterialsOf("Papel");
-  res.render("MaterialPape", { allMaterials });
+export const materialPape = async (req: any, res: any): Promise<any> => { 
+  if(req.session.user && req.session.user.status==="authorized") {
+    const allMaterials = await Material.GetMaterialsOf("Papel");
+    res.render("MaterialPape", { allMaterials });
+    
+}else {
+res.render("NoPermission")
+}
 };
 
 
 // Glass
-export const materialGlass = async (req: any, res: any): Promise<any> => {
-  const allMaterials = await Material.GetMaterialsOf("Vidro");
-  res.render("MaterialGlass", { allMaterials });
+export const materialGlass = async (req: any, res: any): Promise<any> => { 
+  if(req.session.user && req.session.user.status==="authorized") {
+    const allMaterials = await Material.GetMaterialsOf("Vidro");
+    res.render("MaterialGlass", { allMaterials });
+  
+}else {
+res.render("NoPermission")
+}
 };
