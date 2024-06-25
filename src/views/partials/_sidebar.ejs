@@ -12,7 +12,7 @@
                 <% } %>
               </div>
               <div class="user-details">
-                <p class="title">Administrador</p>
+                <p class="title"><%=user.office%></p>
                 <p class="name"><%=user.name%></p>
               </div>
             </div>
@@ -30,9 +30,17 @@
         
                       
                     </ul>
+<<<<<<< HEAD
                   </li>
                   <li><a href="/admin/"><i class="icon ph-bold ph-box-arrow-up"></i><span class="text">Produtos</span></a></li>
                   <li><a href="#"><i class="icon ph-bold ph-user"></i><span class="text">Usuários</span></a>
+=======
+                  </li> 
+                  <li  class="active"><a href="/admin/"><i class="icon ph-bold ph-box-arrow-up"></i><span class="text">Produtos</span></a></li>
+                  <% if(user.office === "Administrador")  { %>
+                    <li><a href="/users/"><i class="icon ph-bold ph-user"></i><span class="text">Usuários</span></a>
+                   <% }%>
+>>>>>>> d4014b4d6ba4f98a7736dd99c2019c7fd24a4728
                    
                   </li>
                   <li><a href="#"><i class="icon ph-bold ph-file-text"></i><span class="text">Articles</span></a></li>
@@ -49,7 +57,7 @@
               <p class="title">Account</p>
               <ul>
                 <li><a href="#"><i class="icon ph-bold ph-info"></i><span class="text">FAQ</span></a></li>
-                <li><a href="#"><i class="icon ph-bold ph-sign-out"></i><span class="text">Logout</span></a></li>
+                <li><a href="/logout/"><i class="icon ph-bold ph-sign-out"></i><span class="text">Logout</span></a></li>
               </ul>
             </div>
           </div>

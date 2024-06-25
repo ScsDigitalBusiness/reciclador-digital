@@ -37,16 +37,30 @@
                 >
                 <div class="mt-2 flex items-center gap-x-3">
 
+<<<<<<< HEAD
                     <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
 
                       <% if (user.userPhoto) { %>
                         <img src="/uploads/<%=user.userPhoto%>" id="userImage" class=" w-32 h-32 rounded-full" />
+=======
+               
+
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+
+                      <% if (user.userImage) { %>
+                        <img src="/uploads/<%=user.userImage%>" id="output"
+                        width="200" />
+>>>>>>> d4014b4d6ba4f98a7736dd99c2019c7fd24a4728
                        <% }else { %> 
                         <svg
                         class="w-32 h-32 text-gray-300"
                         viewBox="0 0 24 24"
                         fill="currentColor"
                         aria-hidden="true"
+<<<<<<< HEAD
+=======
+                        id="output"
+>>>>>>> d4014b4d6ba4f98a7736dd99c2019c7fd24a4728
                       >
                         <path
                           fill-rule="evenodd"
@@ -103,6 +117,7 @@
                     id="email"
                     name="email"
                     type="email" 
+<<<<<<< HEAD
                     value="<%=user.email%>"
                     autocomplete="email"
                     class="form-control block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
@@ -137,6 +152,9 @@
                     id="passwordConfirmed"
                     name="passwordConfirmed"
                     type="password" 
+=======
+                    value="<%= user.email %>"
+>>>>>>> d4014b4d6ba4f98a7736dd99c2019c7fd24a4728
                     autocomplete="em ail"
                     class="form-control block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
@@ -170,7 +188,11 @@
     <div class="modal-content d-fçex justify-content-end">
       <div class="modal-body d-flex justify-content-center">
 
+<<<<<<< HEAD
         <form action="/configuracoes/update/<%= user._id %>" method="post" enctype="multipart/form-data">
+=======
+       
+>>>>>>> d4014b4d6ba4f98a7736dd99c2019c7fd24a4728
 
           <div
         class="mt-2 flex justify-center rounded-lg border border-dashed border-gray-900/25 px-6 py-10" >
@@ -210,10 +232,14 @@
         <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Concelar</button>
         <button type="submit" class="btn btn-primary">Enviar</button>
       </div>
-    </form>
+
     </div>
   </div>
 </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> d4014b4d6ba4f98a7736dd99c2019c7fd24a4728
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.js"
