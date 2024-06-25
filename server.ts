@@ -8,7 +8,7 @@ const  path = require("path");
 //const helmet = require("helmet"); 
 require("dotenv").config();
 const routs = require("./router.ts") ;
-import {middlewareGlobal} from "./src/middlewares/middlewars"
+const  middlewareGlobal =require("./src/middlewares/middlewars");  
 
 app.use(express.urlencoded({ extended: true }));  //body parse configuration 
 
