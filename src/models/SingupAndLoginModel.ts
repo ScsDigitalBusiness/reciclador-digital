@@ -16,6 +16,7 @@ const SignupSchema = mongoose.Schema({
 
 const SignupModel = mongoose.model("Accounts", SignupSchema);
 
+<<<<<<< HEAD
 export default class SignUp {
   public body: any;
   public errors: Array<string>;
@@ -83,6 +84,46 @@ export default class SignUp {
       if(!this.body.userPhoto) {
          const profileUpdated = await SignupModel.findByIdAndUpdate(id, body,{ new: true })
          return profileUpdated;
+=======
+
+export default class SignUp implements AccountIn {
+   public body: any;
+   public errors: Array<string>;
+   public  user: any
+   constructor(body: any) {
+      this.body = body;
+      this.errors = [];
+      this.user = null;
+   }
+   public async userExist(): Promise<any> {
+      try {
+         const existUser: Promise<any> | null = await SignupModel.findOne({ email: this.body.email });
+         if (existUser) {
+            this.errors.push("Já possui uma conta com esse E-mail!");
+            return;
+         }
+      } catch (e: any) {
+         throw new Error(e);
+      }
+
+   }
+   public validation() {
+      this.cleanUP();
+      this.userExist();
+      if (!bcryptjs.compare(this.body.password, this.body.passwordConfirmed)) {
+         this.errors.push("Senhas não conferem !");
+         return;
+      }
+      if (!validator.isEmail(this.body.email)) {
+         this.errors.push("E-mail incorreto !");
+         return;
+      };
+      if (this.body.password < 3) {
+         this.errors.push("Senha inválida, precistar ter no minimo 4 caraceters");
+         return;
+      }
+   
+>>>>>>> thiago-dev
 
       } else {
          const profileUpdated = await SignupModel.findByIdAndUpdate(id, {userPhoto: this.body.userPhoto},{ new: true })
@@ -109,7 +150,7 @@ export default class SignUp {
          throw new Error(e);
       }
    }
-   private cleanUP() {
+   public cleanUP() {
       for (let key in this.body) {
          if (typeof this.body[key] !== "string") this.body[key] = "";
 
