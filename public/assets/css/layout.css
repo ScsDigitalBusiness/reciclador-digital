@@ -4,12 +4,13 @@ LAYOUT UTILIZADO NO SITE.
 
 .content {
     display: grid;
-    grid-template-areas: 
+    grid-template-areas:  
     "home home" 
     "clientes clientes"
     "vantage vantage" 
     "projetos projetos" 
     "contato contato" 
     "footer footer"
-    ;
+    ; 
+    width: 100vw;
 }

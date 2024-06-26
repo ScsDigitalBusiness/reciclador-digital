@@ -7,7 +7,8 @@ DEVELOPER  : THIAGO
   align-items: center;
   justify-content: start;
   flex-direction: column;
-  padding: 1vh;
+  padding: 1vh; 
+  width: 100%;
   background-color: #011105;
   padding-bottom: 15vh;
   border-bottom: 1px solid #00421f;
