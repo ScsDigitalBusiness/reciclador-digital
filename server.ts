@@ -23,9 +23,7 @@ app.set("views", path.resolve(__dirname, "src", "views"))  //<- local onde o nos
 mongoose.connect(process.env.CONNECTION_URL).then(() => {
   console.log("Conectando...");
   app.emit("Connected"); //quando estiver conectado, o express vai emitir um status conectado
-}).catch((e:any)=>{
-  throw new Error(e); 
-})
+}); 
 
 //quando estiver conectado, o servidor vai estar escutando na porta que está no arquivo .env 
 app.on("Connected", () => {
