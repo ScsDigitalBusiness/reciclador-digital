@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="/pages/product-page/assets/css/vantage.css" />
     <link rel="stylesheet" href="/pages/product-page/assets/css/projects.css" /> 
     <link rel="stylesheet" href="/pages/product-page/assets/css/more.css"> 
-    <link rel="stylesheet" href="pages/product-pagepage/product-page/assets/css/footer.css"> 
+    <link rel="stylesheet" href="/pages/product-page/assets/css/footer.css"> 
     <link rel="stylesheet" href="/pages/product-page/assets/css/mediaQueries/tablet.css"> 
     <link rel="stylesheet" href="/pages/product-page/assets/css/mediaQueries/desktop.css">
     <title>Reciclador Digital</title>
@@ -28,9 +28,9 @@
           <!-- nav-links -->
           <nav class="nav-links">
             <ul class="links">
-              <li id="home-link">Home</li>
+              <li id="home-link" onclick="location.href ='/'">Home</li>
               <li id="quem-somos-link">Quem somos</li>
-              <li id="product">Produtos
+              <li id="product"onclick="location.href ='/products/'">Produtos
               </li>
               <a href="https://api.whatsapp.com/send?phone=553198328108&text=Ol%C3%A1,%20quero%20saber%20mais%20sobre%20o%20Reciclador%20Digital%20!">
                 <li id="contato-link">Contato</li>
@@ -60,7 +60,7 @@
             <div class="buttons">
               <div id="go-to-form" class="button more">
                 Mais
-                <img src="/product-page/assets/utilites/arow.svg" alt="" />
+                <img src="/assets/utilites/arow.svg" alt="" />
               </div>
               <div class="button all-products">
                 Início
@@ -98,7 +98,25 @@
           </p>
         </div>
         <div id="cards-area-projects" class="cards-area-projects">
-                <!--  -->
+                <!--  -->  
+          <%  allProducts.forEach(product=>{ %> 
+            <div class="projetct-card-body">
+              <div class="info-project-name">
+                <div class="img-project">
+                <img src="/uploads/<%=product.productImage  %>" alt="" />
+                 
+                </div>
+                <h2><%= product.name%></h2>
+              </div>
+              <div class="description">
+                <%= product.description %>
+              </div>
+              <button class="project-card-button" onclick="location.href = '<%= product.urlOfUpsellPage%>'" type="button">
+                Saiba Mais
+              </button>
+         </div>
+          <%  }) %>
+               
         </div>
       </section>  
     <!-- MORE-AREA -->
@@ -111,22 +129,22 @@
             Descubra o Reciclador Digital, onde recicladores impulsionam a economia verde, comprando e vendendo materiais recicláveis. Seja parte dessa revolução ambiental. Invista no Reciclador Digital hoje.
           </p> 
           <div class="buttons-2 buttons">
-            <div id="go-to-form2" class="button more">
+            <div id="go-to-form2" class="button more"onclick="location.href ='/'">
               Mais
-              <img src="/pages/product-page/assets/utilites/arow.svg" alt="" />
+              <img src="/assets/utilites/arow.svg" alt="" />
             </div>
-            <div class="button all-products">
+            <div class="button all-products" onclick="location.href ='/products/'">
               Produtos
-              <img src="/pages/product-page/assets/utilites/arow2w.svg" alt="" />
+              <img src="/assets/utilites/arow2w.svg" alt="" />
             </div>
           </div> 
         </div> 
-        <div class="image-more"><img src="/pages/product-page/assets/utilites/celular.png" alt=""></div>
+        <div class="image-more"><img src="/assets/utilites/celular.png" alt=""></div>
       </section>  
       <!-- footer-area -->
       <footer class="footer">
         <div class="logo-footer">
-            <img src="/pages/product-page/assets/utilites/logo.png" alt="">
+            <img src="/assets/utilites/logo.png" alt="">
         </div>
         <div class="text">
             <p>Seja parte da mudança, seja um investidor agora!</p>  <br>
@@ -135,8 +153,7 @@
         </div>
       </footer>
       </main>
-    <script src="/pages/product-page/assets/js/product-info-show.js"></script> 
-    <script src="/pages/product-page/assets/js/redirections.js"></script>
-    <script src="/pages/product-page/assets/js/main.js"></script>
+    <script src="/assets/pages/product-page/assets/js/redirections.js"></script>
+    <script src="/assets/pages/product-page/assets/js/main.js"></script>
   </body>
 </html>

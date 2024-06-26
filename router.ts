@@ -1,6 +1,6 @@
 const  express =  require("express") ; 
 const router = express.Router();  
-import {index} from "./src/controller/HomeControler";  
+import  HomeController from "./src/controller/HomeControler";  
 import { indexProductPage } from "./src/controller/ProductPageController"; 
 import {SignUpAndLoginController} from "./src/controller/SingupAdnLoginController";
 import  {indexAdmin,create,deleteProduct,editProduct,logout} from "./src/controller/AdminPageController";  
@@ -10,10 +10,10 @@ import {multerConfig} from "./src/config/multerConfig";
 import { createMaterial, deletMaterial, editMaterial, materialGlass, materialMetals, materialPape, materialPlastic } from "./src/controller/MaterialController";
 import Config from "./src/controller/ConfigPageController"; 
 import UsersController from './src/controller/UsersController';
+import ProjectsController from './src/controller/ProjectsController';
 const uploads = multer(multerConfig); 
 
-router.get("/", index) 
-router.get("/products/atb/index", ativacaoIndex)  
+router.get("/", HomeController.index) 
 //login and SignUp routes 
 router.get("/login/", SignUpAndLoginController.indexLogin);   
 router.post("/login/auth", SignUpAndLoginController.Auth);    
@@ -39,7 +39,14 @@ router.get("/materiais/metais/", materialMetals)
 //usuários-page 
 router.get("/users/",UsersController.usersIndex);  
 router.post("/users/edit/:id",UsersController.edit); 
-router.post("/users/delete/:id",UsersController.delete); 
+router.post("/users/delete/:id",UsersController.delete);  
+//Projetcts Page 
+router.get("/projects",ProjectsController.index);  
+router.post("/projects/create",uploads.single("projectImage"),ProjectsController.create);    
+router.post("/projects/delete/:id",ProjectsController.delete);
+router.post("/projects/edit/:id",uploads.single("projectImageEdited"),ProjectsController.edit);   
+
+
 //Routs settings
 router.get("/configuracoes/", Config.settingsPage) 
 router.get("/logout",logout)
