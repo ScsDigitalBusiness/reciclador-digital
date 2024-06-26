@@ -7,7 +7,8 @@ const ProductSchema = mongoose.Schema({
     description: { type: String, required: true },
     sku: { type: String, required: true },
     brand: { type: String, required: true },
-    productImage: { type: String, required: false }
+    productImage: { type: String, required: false }, 
+    urlOfUpsellPage:{type:String, required:false}
 });
 
 const ProductModel = mongoose.model("Products", ProductSchema)

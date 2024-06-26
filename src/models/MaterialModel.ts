@@ -7,8 +7,7 @@ const MaterialSchema = mongoose.Schema({
     weigth: { type: String, required: true },
     price: { type: String, required: true },
     brand: { type: String, required: true },
-    materialImage: { type: String, required: false }
-
+    materialImage: { type: String, required: false }, 
 })
 
 const MaterialModel = mongoose.model("Materials", MaterialSchema);

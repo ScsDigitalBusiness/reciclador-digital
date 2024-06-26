@@ -159,10 +159,15 @@
                                             <input placeholder="Categoria do Produto" value="<%= products.category %>"
                                               name="category" type="text" class="form-control" id="category">
                                           </div>
-                                          <div class="col-12">
+                                          <div class="col-6">
                                             <label for="desc" class="form-label">Descrição</label>
                                             <input type="text" class="form-control" value="<%= products.description %>"
-                                              name="description" id="desc" placeholder="Descrição">
+                                              name="description" id="desc" placeholder="Descrição"> 
+                                            
+                                          </div> 
+                                          <div class="col-6">
+                                            <label for="url" class="form-label">URL de Página Upsell</label>
+                                            <input type="url" class="form-control" name="urlOfUpsellPage" value="<%= products.urlOfUpsellPage %>" id="url" placeholder="URL de Página de Destino">
                                           </div>
                                           <div class="col-4">
                                             <label for="inputAddress2" class="form-label">SKU</label>
@@ -266,9 +271,13 @@
                 <input placeholder="Categoria do Produto" name="category" type="text" class="form-control"
                   id="category">
               </div>
-              <div class="col-12">
+              <div class="col-6">
                 <label for="desc" class="form-label">Descrição</label>
                 <input type="text" class="form-control" name="description" id="desc" placeholder="Descrição">
+              </div> 
+              <div class="col-6">
+                <label for="url" class="form-label">URL de Página Upsell</label>
+                <input type="url" class="form-control" name="urlOfUpsellPage" id="url" placeholder="URL de Página de Destino">
               </div>
               <div class="col-4">
                 <label for="inputAddress2" class="form-label">SKU</label>
