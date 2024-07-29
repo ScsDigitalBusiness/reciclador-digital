@@ -1,11 +1,11 @@
 .projects {
-  width: 100vw;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   background-color: #010f04;
-  padding-bottom: 20vh;
+  padding-bottom: 20vh; 
 }
 .projects-title {
   text-align: center;
@@ -23,7 +23,8 @@
   flex-direction: column;
   gap: 5vh;
   padding: 2vh;
-  padding-top: 10vh; 
+  padding-top: 10vh;  
+  width: 100vw; 
 
 }
 .projetct-card-body {
@@ -35,7 +36,7 @@
   justify-content: center;
   flex-direction: column;
   gap: 2vh;
-  border-radius: 2vh;
+  border-radius: 2vh; 
 }
 .info-project-name {
   gap: 2vh;

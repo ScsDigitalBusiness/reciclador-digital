@@ -53,4 +53,4 @@ router.get("/logout",Admin.logout)
 router.post("/configuracoes/update/:id", uploads.single("userImageEdited"), Config.updateProfile)
 
 
-export default router;
+module.exports = router;

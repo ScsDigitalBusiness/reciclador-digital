@@ -8,7 +8,9 @@ const SignupSchema = mongoose.Schema({
    password: { type: String, required: true },
    passwordConfirmed: { type: String, required: true },
    userPhoto: { type: String, required: false },
-   office: { type: String, required: false }
+   office: { type: String, required: false }, 
+   status: { type: String, required: false }
+
 });
 
 const SignupModel = mongoose.model("Accounts", SignupSchema);

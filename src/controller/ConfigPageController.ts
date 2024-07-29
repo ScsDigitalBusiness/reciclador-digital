@@ -18,7 +18,6 @@ export default abstract class Config {
     let updateUser = new SingUp(body)
     let user = await updateUser.updateProfile(req.params.id)
     req.session.user = user
-
-    res.redirect("back")
+     res.redirect("back"); 
   }
 }
