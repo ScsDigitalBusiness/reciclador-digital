@@ -3,8 +3,6 @@ const router = express.Router();
 import  HomeController from "./src/controller/HomeControler";
 import SignUpAndLoginController from "./src/controller/SingupAdnLoginController";
 import  Admin from "./src/controller/AdminPageController";  
-import multer from 'multer';    
-const uploads = multer(multerConfig); 
 import { ativacaoIndex } from "./src/controller/AtbPageController.js"; 
 import {multerConfig} from "./src/config/multerConfig";  
 import Materials from "./src/controller/MaterialController";
@@ -12,6 +10,8 @@ import Config from "./src/controller/ConfigPageController";
 import UsersController from './src/controller/UsersController';
 import ProjectsController from './src/controller/ProjectsController';
 import Product from "./src/controller/ProductPageController";
+import multer from 'multer';    
+const uploads = multer(multerConfig); 
 
 router.get("/", HomeController.index) 
 //login and SignUp routes 

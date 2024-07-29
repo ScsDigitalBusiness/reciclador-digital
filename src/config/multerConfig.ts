@@ -1,12 +1,11 @@
 import multer from 'multer'; 
-import path from "path"; 
-import { Request } from 'express';
+import path from "path";
 
 let erroMsg:any = "Arquivo inválido!";
 
 export const multerConfig =  {
     
-    fileFilter: (req: Request, file:any, cb:any) =>{
+    fileFilter: (req:any, file:any, cb:any) =>{
         if(file.mimetype !== 'image/png' && file.mimetype !== 'image/jpeg' ) {
           
             return cb(new multer.MulterError(erroMsg));
