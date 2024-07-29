@@ -1,10 +1,6 @@
 export default interface  ModelIn {
-    body: any; 
+    body: object; 
     errors: Array<string>; 
-    valueCapted: any;
-    create():Promise<any>; 
-    getAll():Promise<any>; 
-    edit(id:string):Promise<any>; 
-    delete(id:string):Promise<any>; 
+    valueCapted: object | null;
 
 }  

@@ -1,13 +1,13 @@
 import SingUp from "../models/SingupAndLoginModel"
-import session from 'express-session';
+import { Request, Response } from "express";
 
 export default abstract class Config {
 
-  static settingsPage(req:any, res:any) {
+  static settingsPage(req: Request, res: Response): void {
     res.render("ConfigPage")
   }
   
-  static async updateProfile(req:any, res:any) {
+  static async updateProfile(req: Request, res: Response): Promise<void> {
     let body: Object = {};
     if (!req.file) {
     body = { ...req.body };

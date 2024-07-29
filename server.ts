@@ -1,14 +1,12 @@
-const  express = require("express"); 
+import express from "express"; 
 const app = express();
-const   session  =  require("express-session");
-const  flash = require ("connect-flash");
-const mongoose = require("mongoose");
-const   MongoStore = require("connect-mongo"); 
-const  path = require("path"); 
+import flash from "connect-flash";
+import mongoose from "mongoose";
+import path from "path"; 
 //const helmet = require("helmet"); 
 require("dotenv").config();
 import  routs from "./router";
-import {middlewareGlobal} from "./src/middlewares/middlewars"
+import {Middlewares, sessionOptions} from "./src/middlewares/middlewars"
 
 app.use(express.urlencoded({ extended: true }));  //body parse configuration 
 
@@ -20,7 +18,8 @@ app.set("view engine", "ejs");
 app.set("views", path.resolve(__dirname, "src", "views"))  //<- local onde o nosso HTML está
 
 //Conectando no Banco de Dados
-mongoose.connect(process.env.CONNECTION_URL).then(() => {
+const urlConnect = process.env.CONNECTION_URL as string
+mongoose.connect(urlConnect).then(() => {
   console.log("Conectando...");
   app.emit("Connected"); //quando estiver conectado, o express vai emitir um status conectado
 }); 
@@ -33,22 +32,10 @@ app.on("Connected", () => {
   });
 });
 
-const sessionOptions = session({
-  secret: "Sessions Aplication",
-  resave: false,
-  saveUninitialized: false,
-  store: MongoStore.create({ mongoUrl: process.env.CONNECTION_URL }),
-  cookie: {
-    httpOnly: true,
-    maxAge: 1000 * 60 * 7 * 1000,
-  },
-}); 
-
-
 //usando as configurações
 
 app.use(sessionOptions);
 app.use(flash());
-app.use(middlewareGlobal); 
+app.use(Middlewares.global); 
 app.use(routs);
 //app.use(helmet()); 

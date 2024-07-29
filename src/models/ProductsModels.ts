@@ -14,16 +14,16 @@ const ProductSchema = mongoose.Schema({
 const ProductModel = mongoose.model("Products", ProductSchema)
 
  export default class Products { 
-    public body:object; 
-    public errors:  any;
+    public body: object; 
+    public errors:  Array<string>;
     public product: object | boolean |null ;  
-    constructor(body:any) {
+    constructor(body:object) {
         this.body  = body;
         this.errors = [];
         this.product = null;
     };
 
-   public async create(): Promise<any> {
+   public async create(): Promise<void> {
         try {
             this.product  = await ProductModel.create(this.body)
 
@@ -32,7 +32,7 @@ const ProductModel = mongoose.model("Products", ProductSchema)
         }
     };
 
-   public  async GetProducts(): Promise<any>  {
+   public  async GetProducts(): Promise<object>  {
         try {
             const allProducts = await ProductModel.find();
             return allProducts;
@@ -41,14 +41,14 @@ const ProductModel = mongoose.model("Products", ProductSchema)
             throw new Error(e)
         }
     } 
-    public async delete(id:string) {
+    public async delete(id: string): Promise<void> {
         try  {
             this.product = await ProductModel.findByIdAndDelete({_id:id}); 
         }catch(e:any) {
             throw new Error(e);
         }
     } 
-    public async  edit(id:string) {
+    public async  edit(id:string): Promise<void> {
         try{
             this.product = await ProductModel.findByIdAndUpdate(id,this.body); 
         }catch(e:any) {

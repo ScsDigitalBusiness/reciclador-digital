@@ -1,37 +1,41 @@
-import Material from "../models/MaterialModel";
+import { AccountIn } from '../interfaces/Account.interface';
+import Material from '../models/MaterialModel';
+import { Request, Response } from 'express';
 
 //All Materials
-export const createMaterial = async (req: any, res: any): Promise<any> => {
-  let body: Object = {};
-  if (!req.file) {
-    body = { ...req.body };
-  } else {
-    body = { ...req.body, materialImage: req.file.filename };
-  }
-  await Material.Create(body);
-  res.redirect("back");
-};
 
-export const editMaterial = async (req: any, res: any): Promise<any> => {
-  let body: Object = {};
-  if (!req.file) {
-    body = { ...req.body };
-  } else {
-    body = { ...req.body, materialImage: req.file.filename };
-  }
-  await Material.Update(req.params.id, body);
-  res.redirect("back");
-};
+export default class Materials {
+  static async createMaterial(req: Request, res: Response): Promise<void> {
+    let body: Object = {};
+    if (!req.file) {
+      body = { ...req.body };
+    } else {
+      body = { ...req.body, materialImage: req.file.filename };
+    }
+    await Material.Create(body);
+    res.redirect("back");
+  };
 
-export const deletMaterial = async (req: any, res: any): Promise<any> => {
-  await Material.Delete(req.params.id);
-  res.redirect("back");
-};
+  static async editMaterial(req: Request, res: Response): Promise<void> {
+    let body: Object = {};
+    if (!req.file) {
+      body = { ...req.body };
+    } else {
+      body = { ...req.body, materialImage: req.file.filename };
+    }
+    await Material.Update(req.params.id, body);
+    res.redirect("back");
+  };
 
+  static async deletMaterial(req: Request, res: Response): Promise<void> {
+    await Material.Delete(req.params.id);
+    res.redirect("back");
+  };
 
-// Plastic
-export const materialPlastic = async (req: any, res: any): Promise<any> => { 
-  if(req.session.user && req.session.user.status==="authorized") {
+  // Plastic
+static async materialPlastic(req: Request, res: Response): Promise<void> { 
+  const user: AccountIn = req.session.user as AccountIn 
+  if(user && user.status==="authorized") {
     const allMaterials = await Material.GetMaterialsOf("Plastico");
     res.render("MaterialPlastic", { allMaterials });
     
@@ -41,8 +45,9 @@ res.render("NoPermission")
 };
 
 // Metals
-export const materialMetals = async (req: any, res: any): Promise<any> => { 
-  if(req.session.user && req.session.user.status==="authorized") {
+static async materialMetals(req: Request, res: Response): Promise<void> { 
+  const user: AccountIn = req.session.user as AccountIn 
+  if(user && user.status==="authorized") {
     const allMaterials = await Material.GetMaterialsOf("Metal");
     res.render("MaterialMetals", { allMaterials });
    
@@ -52,9 +57,9 @@ res.render("NoPermission")
 };
 
 // Pape
-
-export const materialPape = async (req: any, res: any): Promise<any> => { 
-  if(req.session.user && req.session.user.status==="authorized") {
+static async materialPape(req: Request, res: Response): Promise<void> { 
+  const user: AccountIn = req.session.user as AccountIn 
+  if(user && user.status==="authorized") {
     const allMaterials = await Material.GetMaterialsOf("Papel");
     res.render("MaterialPape", { allMaterials });
     
@@ -63,10 +68,10 @@ res.render("NoPermission")
 }
 };
 
-
 // Glass
-export const materialGlass = async (req: any, res: any): Promise<any> => { 
-  if(req.session.user && req.session.user.status==="authorized") {
+static async materialGlass(req: Request, res: Response): Promise<void> { 
+  const user: AccountIn = req.session.user as AccountIn 
+  if(user && user.status==="authorized") {
     const allMaterials = await Material.GetMaterialsOf("Vidro");
     res.render("MaterialGlass", { allMaterials });
   
@@ -74,3 +79,5 @@ export const materialGlass = async (req: any, res: any): Promise<any> => {
 res.render("NoPermission")
 }
 };
+
+}

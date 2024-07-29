@@ -1,44 +1,62 @@
+import { AccountIn } from "../interfaces/Account.interface";
 import  Products from "../models/ProductsModels"
+import { Request, Response } from "express";
 
-export const indexAdmin = async (req:any,res:any) : Promise<any> =>{  
-    if(req.session.user && req.session.user.status==="authorized") {
-    const productModel = new Products(req.body);   
-    const allProducts =  await productModel.GetProducts(); 
-     res.render("AdminPage", {allProducts});
-    }else  {
-        res.render("NoPermission"); 
-    }
-     
-} 
-export  const create =  async (req : any,res :any): Promise<any> => {    
-    let body: Object = {}; 
-    if(!req.file) {
-        body =  {...req.body}
-    }else {
-        body =  {...req.body,productImage: req.file.filename}
-    }
-    const productModel = new Products(body);  
-    await productModel.create(); 
-    res.redirect("back") 
-}  
-export const deleteProduct = async (req :any,res:any) :Promise<any> =>{
-    const productModel = new Products(req.body);   
-    await productModel.delete(req.params.id); 
-    res.redirect("back"); 
-} 
+export default class Admin {
 
-export const editProduct = async(req:any,res:any):Promise<any> =>{ 
-    let body:object = {}; 
-    if(!req.file) {
-        body =  {...req.body}; 
-    }else {
-        body = {...req.body,productImage:req.file.filename } 
+    static async indexAdmin(req: Request,res: Response) : Promise<void> {
+        const user: AccountIn = req.session.user as AccountIn  
+        if(user && user.status==="authorized") {
+        const productModel = new Products(req.body);   
+        const allProducts =  await productModel.GetProducts(); 
+         res.render("AdminPage", {allProducts});
+        }else  {
+            res.render("NoPermission"); 
+        }
+         
+    } 
+
+    static async create (req: Request, res: Response): Promise<void> {    
+        let body: Object = {}; 
+        if(!req.file) {
+            body =  {...req.body}
+        }else {
+            body =  {...req.body,productImage: req.file.filename}
+        }
+        const productModel = new Products(body);  
+        await productModel.create(); 
+        res.redirect("back") 
+    }  
+
+    static  async deleteProduct(req: Request, res: Response) :Promise<void> {
+        const productModel = new Products(req.body);   
+        await productModel.delete(req.params.id); 
+        res.redirect("back"); 
+    } 
+
+    static async editProduct(req: Request, res: Response):Promise<void> { 
+        let body:object = {}; 
+        if(!req.file) {
+            body =  {...req.body}; 
+        }else {
+            body = {...req.body,productImage:req.file.filename } 
+        }
+        const productModel = new Products(body); 
+        await productModel.edit(req.params.id); 
+        res.redirect("back"); 
+    } 
+
+    static logout(req: Request,res: Response): void {
+        req.session.destroy((err) => {
+            if (err) {
+                      throw new Error(err)
+
+            } else {
+                      res.clearCookie("user");
+                      res.redirect("/login/")
+        
+            }
+          });
     }
-    const productModel = new Products(body); 
-    await productModel.edit(req.params.id); 
-    res.redirect("back"); 
-} 
-export const logout = (req:any,res:any) =>{
-    req.session.destroy(); 
-    res.redirect("/login/"); 
+
 }

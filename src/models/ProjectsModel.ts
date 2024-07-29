@@ -13,15 +13,15 @@ const ProjectsSchema = mongoose.Schema({
 const ProjectsModel  = mongoose.model("Projects",ProjectsSchema); 
 
 export default class Projects implements ModelIn {
-        body:any ;
+        body:object ;
         errors:Array<string>;   
-        valueCapted : any; 
-        constructor(body:any) {
+        valueCapted : object | null; 
+        constructor(body: object) {
             this.body = body; 
             this.errors = [];  
             this.valueCapted = null
         }  
-       async   create():Promise<any> {
+       async   create(): Promise<void> {
          try{
             this.valueCapted = await ProjectsModel.create(this.body);  
             return; 
@@ -29,14 +29,14 @@ export default class Projects implements ModelIn {
             throw new Error(e); 
          }
        } 
-       async delete(id:string) :Promise<any>{
+       async delete(id:string): Promise<void>{
         try {
             this.valueCapted = await ProjectsModel.findByIdAndDelete({_id:id}); 
         }catch(e:any) {
             throw new Error(e); 
         }
        } 
-       async getAll() :Promise<any> {
+       async getAll(): Promise<object> {
          try{   
             const allProjects = await ProjectsModel.find(); 
             return allProjects;  
@@ -44,7 +44,7 @@ export default class Projects implements ModelIn {
             throw new Error(e); 
          }
        } 
-       async edit(id:string):Promise<any> {
+       async edit(id:string): Promise<void> {
           try {
             this.valueCapted = await ProjectsModel.findByIdAndUpdate(id,this.body);  
             return; 

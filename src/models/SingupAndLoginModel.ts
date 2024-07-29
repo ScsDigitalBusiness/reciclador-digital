@@ -1,7 +1,6 @@
 const mongoose = require("mongoose");
 const validator = require("validator");
 const bcryptjs = require("bcrypt-ts");
-import { AccountIn } from "../interfaces/Account.interface";
 
 const SignupSchema = mongoose.Schema({
    name: { type: String, required: true },
