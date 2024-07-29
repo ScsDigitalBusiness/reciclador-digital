@@ -5,8 +5,8 @@ import mongoose from "mongoose";
 import path from "path"; 
 //const helmet = require("helmet"); 
 require("dotenv").config();
-import  routs from "./router";
 import {Middlewares, sessionOptions} from "./src/middlewares/middlewars"
+import router from "./router";
 
 app.use(express.urlencoded({ extended: true }));  //body parse configuration 
 
@@ -38,5 +38,5 @@ app.on("Connected", () => {
 app.use(sessionOptions);
 app.use(flash());
 app.use(Middlewares.global); 
-app.use(routs);
+app.use(router);
 //app.use(helmet()); 
