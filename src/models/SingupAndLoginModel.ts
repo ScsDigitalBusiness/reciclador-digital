@@ -1,8 +1,8 @@
-const mongoose = require("mongoose");
-const validator = require("validator");
-const bcryptjs = require("bcrypt-ts");
+import mongoose, { Schema } from "mongoose";
+import validator from "validator";
+import bcryptjs from "bcryptjs";
 
-const SignupSchema = mongoose.Schema({
+const SignupSchema = new Schema({
    name: { type: String, required: true },
    email: { type: String, required: true },
    password: { type: String, required: true },
@@ -27,7 +27,7 @@ export default class SignUp {
    }
    public async userExist(): Promise<any> {
       try {
-         const existUser: Promise<any> | null = await SignupModel.findOne({ email: this.body.email });
+         const existUser= await SignupModel.findOne({ email: this.body.email });
          if (existUser) {
             this.errors.push("Já possui uma conta com esse E-mail!");
             return;
